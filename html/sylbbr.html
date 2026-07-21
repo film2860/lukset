@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML LANG="EN-US">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<STYLE TYPE="text/css">
+<!--
+img { margin-bottom: -4px }
+.r { font-family: "Arial Narrow";
+     font-size: x-small;
+   }
+.i { font-family: "Arial Narrow";
+     font-size: x-small;
+     color: gray;
+   }
+-->
+</STYLE>
+<STYLE TYPE="text/css">
+<!--
+  .setvar { color: red; }
+  .wff { color: blue; }
+  .class { color: #C3C; }
+  .symvar { border-bottom:1px dotted;color:#C3C}
+  .typecode { color: gray }
+  .hidden { color: gray }
+  @font-face {
+    font-family: XITSMath-Regular;
+    src: url(xits-math.woff);
+  }
+  .math { font-family: XITSMath-Regular }
+-->
+</STYLE>
+<LINK href="mmset.css" title="mmset"
+    rel="stylesheet" type="text/css">
+<LINK href="mmsetalt.css" title="mmsetalt"
+    rel="alternate stylesheet" type="text/css">
+<TITLE>sylbbr - Metamath Proof Explorer</TITLE>
+<LINK REL="shortcut icon" HREF="favicon.ico" TYPE="image/x-icon">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+  <TR>
+    <TD ALIGN=LEFT VALIGN=TOP WIDTH="25%"><A HREF=
+    "./index.html"><IMG SRC=""
+      BORDER=0
+      ALT="MPE Home"
+      TITLE="MPE Home"
+      HEIGHT=32 WIDTH=32 ALIGN=TOP STYLE="margin-bottom:0px"></A>
+    </TD>
+    <TD ALIGN=CENTER COLSPAN=2 VALIGN=TOP><FONT SIZE="+3" COLOR="#006633"><B>
+Metamath Proof Explorer
+      </B></FONT></TD>
+    <TD ALIGN=RIGHT VALIGN=TOP WIDTH="25%">
+      <FONT SIZE=-1 FACE=sans-serif>
+      <A HREF="sylbir.html">
+      &lt; Previous</A>&nbsp;&nbsp;
+      <A HREF="sylbb1.html">Next &gt;</A>
+      </FONT><FONT FACE=sans-serif SIZE=-2>
+      <BR><A HREF="mmtheorems2.html#sylbbr">Nearby theorems</A>
+      </FONT>
+    </TD>
+  </TR>
+  <TR>
+    <TD COLSPAN=2 ALIGN=LEFT VALIGN=TOP><FONT SIZE=-2
+      FACE=sans-serif>
+      &nbsp;<A HREF="index.html">Home</A>&nbsp; &gt;
+      &nbsp;<A HREF="mmtheorems.html">Th. List</A>&nbsp; &gt;
+      &nbsp;sylbbr
+      </FONT>
+    </TD>
+    <TD COLSPAN=2 ALIGN=RIGHT VALIGN=TOP>
+      <FONT SIZE=-2 FACE=sans-serif>
+
+      </FONT>
+    </TD>
+  </TR>
+</TABLE>
+<HR NOSHADE SIZE=1>
+<CENTER><B><FONT SIZE="+1">Theorem <FONT
+COLOR="#006633">sylbbr</FONT></FONT></B>&nbsp;<SPAN CLASS=r
+STYLE="color:#299100">140</SPAN></CENTER>
+<CENTER><TABLE><TR><TD ALIGN=LEFT><B>Description: </B>A mixed syllogism
+inference from two biconditionals.
+<P STYLE="margin-bottom:0em">
+       Note on the various syllogism-like statements in set.mm.  The
+       hypothetical syllogism <A HREF="syl.html">syl</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F51300">17</SPAN> infers an implication from two implications
+       (and there are <A HREF="3syl.html">3syl</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F41500">18</SPAN> and <A HREF="4syl.html">4syl</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F31700">19</SPAN> for chaining more inferences).  There
+       are four inferences inferring an implication from one implication and
+       one biconditional: <A HREF="sylbi.html">sylbi</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#4F8D00">122</SPAN>, <A HREF="sylib.html">sylib</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#4D8D00">123</SPAN>, <A
+HREF="sylbir.html">sylbir</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#2C9100">139</SPAN>, <A HREF="sylibr.html">sylibr</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#2E9100">138</SPAN>; four
+       inferences inferring an implication from two biconditionals: <A
+HREF="sylbb.html">sylbb</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#4C8E00">124</SPAN>,
+       <A HREF="sylbbr.html">sylbbr</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#299100">140</SPAN>, <A HREF="sylbb1.html">sylbb1</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#279200">141</SPAN>, <A
+HREF="sylbb2.html">sylbb2</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#259200">142</SPAN>; four inferences inferring a
+       biconditional from two biconditionals: <A
+HREF="bitri.html">bitri</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#009227">164</SPAN>, <A HREF="bitr2i.html">bitr2i</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#009229">165</SPAN>, <A
+HREF="bitr3i.html">bitr3i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#00922C">166</SPAN>,
+       <A HREF="bitr4i.html">bitr4i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#00922F">167</SPAN> (and more for chaining more biconditionals). 
+There are also
+       closed forms and deduction versions of these, like, among many others,
+       <A HREF="syl5.html">syl5</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#E24000">37</SPAN>, <A HREF="syl6.html">syl6</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#E04200">38</SPAN>, <A
+HREF="bitrid.html">bitrid</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#009135">169</SPAN>, <A HREF="bitrdi.html">bitrdi</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#009132">168</SPAN> and variants.  (Contributed by BJ,
+       21-Apr-2019.)</TD></TR></TABLE></CENTER>
+
+<CENTER><TABLE BORDER CELLSPACING=0 BGCOLOR="#EEFFFA"
+SUMMARY="Hypotheses">
+<CAPTION><B>Hypotheses</B></CAPTION>
+<TR><TH>Ref
+</TH><TH>Expression</TH></TR>
+<TR ALIGN=LEFT><TD>sylbbr.1</TD><TD>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>sylbbr.2</TD><TD>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D713;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN></TD></TR>
+</TABLE></CENTER>
+<CENTER><TABLE BORDER CELLSPACING=0 BGCOLOR="#EEFFFA"
+SUMMARY="Assertion">
+<CAPTION><B>Assertion</B></CAPTION>
+<TR><TH>Ref
+</TH><TH>Expression</TH></TR>
+<TR ALIGN=LEFT><TD><FONT COLOR="#006633"><B>sylbbr</B></FONT></TD><TD>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>)</SPAN></TD></TR>
+</TABLE></CENTER>
+
+
+<HR NOSHADE SIZE=1>
+<CENTER><TABLE BORDER CELLSPACING=0 BGCOLOR="#EEFFFA"
+SUMMARY="Proof of theorem">
+<CAPTION><B>Proof of Theorem <FONT
+   COLOR="#006633">sylbbr</FONT></B></CAPTION>
+<TR><TH>Step</TH><TH>Hyp</TH><TH>Ref
+</TH><TH>Expression</TH></TR>
+<TR ALIGN=LEFT><TD>1</TD><TD>&nbsp;</TD><TD>sylbbr.2</TD><TD><A NAME="1"></A>
+<SPAN CLASS=i>. . 3</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D713;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN>)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>2</TD><TD><A HREF="#1">1</A></TD><TD><A HREF="biimpri.html"
+TITLE="Infer a converse implication from a logical equivalence. Inference associated with ~...">biimpri</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#399000">133</SPAN></TD><TD><A NAME="2"></A>
+<SPAN CLASS=i>. 2</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>3</TD><TD>&nbsp;</TD><TD>sylbbr.1</TD><TD><A NAME="3"></A>
+<SPAN CLASS=i>. 2</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &harr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+<TR ALIGN=LEFT><TD>4</TD><TD><A HREF="#2">2</A>, <A HREF="#3">3</A></TD><TD><A
+HREF="sylibr.html"
+TITLE="A mixed syllogism inference from an implication and a biconditional. Useful for...">sylibr</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#2E9100">138</SPAN></TD><TD><A NAME="4"></A>
+<SPAN CLASS=i>1</SPAN>
+<SPAN CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+CLASS=wff STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>)</SPAN></TD></TR>
+</TABLE></CENTER>
+<CENTER><TABLE CELLSPACING=5><TR><TD ALIGN=LEFT><FONT SIZE=-1><B>Colors of
+variables:</B>  <SPAN CLASS=wff STYLE="color:blue;font-style:normal">wff</SPAN>
+<SPAN CLASS=setvar STYLE="color:red;font-style:normal">setvar</SPAN> <SPAN
+CLASS=class STYLE="color:#C3C;font-style:normal">class</SPAN></FONT></TD></TR>
+<TR><TD ALIGN=LEFT><FONT SIZE=-1><B>Syntax hints:</B>  &nbsp;<SPAN CLASS=math>
+&rarr; </SPAN><A HREF="wi.html">wi</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#FA0200">4</SPAN> &nbsp;<SPAN CLASS=math> &harr; </SPAN><A
+HREF="wb.html">wb</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#6D8800">106</SPAN></FONT></TD></TR>
+<TR><TD ALIGN=LEFT><FONT SIZE=-1><B>This theorem was proved from axioms:</B>
+&nbsp;<A HREF="ax-mp.html">ax-mp</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F90300">5</SPAN> &nbsp;<A HREF="ax-i1.html">ax-i1</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F90400">6</SPAN> &nbsp;<A
+HREF="ax-i2.html">ax-i2</A>&nbsp;<SPAN CLASS=r STYLE="color:#F90500">7</SPAN>
+&nbsp;<A HREF="ax-i3.html">ax-i3</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F80600">8</SPAN> &nbsp;<A HREF="ax-i4.html">ax-i4</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F80700">9</SPAN> &nbsp;<A
+HREF="ax-n1.html">ax-n1</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F70900">11</SPAN></FONT></TD></TR>
+<TR><TD ALIGN=LEFT><FONT SIZE=-1><B>This theorem depends on definitions:</B>
+&nbsp;<A HREF="df-bi.html">df-bi</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#6B8800">107</SPAN></FONT></TD></TR>
+<TR><TD ALIGN=LEFT><FONT SIZE=-1><B>This theorem is referenced by:</B> &nbsp;<A
+HREF="bitri.html">bitri</A>
+&nbsp;<SPAN CLASS=r STYLE="color:#009227">164</SPAN></FONT></TD></TR>
+</TABLE></CENTER>
+<TABLE BORDER=0 WIDTH="100%">
+<TR><TD WIDTH="25%">&nbsp;</TD>
+<TD ALIGN=CENTER VALIGN=BOTTOM>
+<FONT SIZE=-2 FACE=sans-serif>
+Copyright terms:
+<A HREF="https://creativecommons.org/licenses/by/2.5/">Public domain</A>
+</FONT></TD><TD ALIGN=RIGHT VALIGN=BOTTOM WIDTH="25%">
+<FONT SIZE=-2 FACE=sans-serif>
+<A HREF="http://validator.w3.org/check?uri=referer">
+W3C validator</A>
+</FONT></TD></TR></TABLE>
+</BODY></HTML>
