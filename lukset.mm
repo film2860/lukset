@@ -293,11 +293,9 @@ $)
       ( wi a1i ) CAEBACDFF $.
   $}
   
-  ${
     $( Weaken ~ ax-i1 . (Contributed by film2860, 22-Jul-2026.) $)
-    axi1w $p |- ( ph -> ( ps -> ( ch -> ps ) ) ) $=
+    axl1w $p |- ( ph -> ( ps -> ( ch -> ps ) ) ) $=
       wps wch wps wi wi wph wps wch ax-i1 a1i $.
-  $}
 
   ${
     mp1i.1 $e |- ph $.
@@ -345,7 +343,6 @@ $)
       ( 3syl syl ) ADEABCDFGHJIK $.
   $}
 
-
   ${
     mpi.1 $e |- ps $.
     mpi.2 $e |- ( ph -> ( ps -> ch ) ) $.
@@ -385,6 +382,15 @@ $)
   $}
 
   ${
+    com12ALT.1 $e |- ( ph -> ( ps -> ch ) ) $.
+    $( ~ com12 but with ~ ax-i4 instead of ~ ax-i3 . (Contributed by film2860, 22-Jul-2026.) $)
+    com12ALT $p |- ( ps -> ( ph -> ch ) ) $=
+      wps wch wps wi wps wi wps wch wi wch wi wph wch wi wps wch wps wi ax-i1
+      wch wps ax-i4 wph wps wch wi wi wps wch wi wch wi wph wch wi wi
+      com12ALT.1 wph wps wch wi wch ax-i2 ax-mp 3syl $.
+  $}
+
+  ${
     mpcom.1 $e |- ( ps -> ph ) $.
     mpcom.2 $e |- ( ph -> ( ps -> ch ) ) $.
     $( Modus ponens inference with commutation of antecedents.  Commuted form
@@ -401,7 +407,11 @@ $)
     mpd $p |- ( ph -> ( ph -> ch ) ) $=
       ( com12 mpcom ) BACDABCEFG $.
   $}
-
+  
+  $( A modus ponens statement. (Contributed by film2860, 22-July-2026.) $)
+  mps $p |- ( ph -> ( ( ph -> ps ) -> ps ) ) $=
+    wph wps wph wi wph wi wph wps wi wps wi wph wps wph wi ax-i1 wps wph ax-i4
+    syl $.
 
   $( Principle of identity.  (Contributed by Lllllllllwith10ls,
      25-May-2026.) $)
@@ -440,13 +450,21 @@ $)
       ( wi a1d a1i ) BCDFFABDCEGH $.
   $}
 
+  ${
   $( A double form of ~ ax-i1 .  Its associated inference is ~ 2a1i .  Its
      associated deduction is ~ 2a1d .  (Contributed by BJ, 10-Aug-2020.)
      (Proof shortened by Wolf Lammen, 1-Sep-2020.) $)
   2a1 $p |- ( ph -> ( ps -> ( ch -> ph ) ) ) $=
     ( id 2a1d ) AABCADE $.
+  $}
 
-
+  $( Proving that ~ ax-i3 is redundant.  (Contributed by film2860, 22-Jul-2026.) $)
+  axi3 $p |- ( ( ph -> ( ps -> ch ) ) -> ( ps -> ( ph -> ch ) ) ) $=
+    wph wps wch wi wi wps wch wi wch wi wph wch wi wi wps wph wch wi wi wph wps
+    wch wi wch ax-i2 wps wps wch wi wch wi wi wps wch wi wch wi wph wch wi wi
+    wps wph wch wi wi wi wps wch mps wps wps wch wi wch wi wph wch wi ax-i2
+    ax-mp syl $.
+  
   ${
     $( Analog of ax-2 in classical logic.  (Contributed by Lllllllllwith10ls,
        26-May-2026.) $)
@@ -454,7 +472,6 @@ $)
         -> ch ) ) ) ) $=
       ( wi ax-i3 ax-i2 com12 syl ) ABCDDBACDZDZABDZAIDZDABCEKJLABIFGH $.
   $}
-
 
   ${
     a2i.1 $e |- ( ph -> ( ps -> ch ) ) $.
