@@ -295,7 +295,7 @@ $)
   
   ${
     $( Weaken ~ ax-i1 . (Contributed by film2860, 22-Jul-2026.) $)
-    axl1w $p |- ( ph -> ( ps -> ( ch -> ps ) ) ) $=
+    axi1w $p |- ( ph -> ( ps -> ( ch -> ps ) ) ) $=
       wps wch wps wi wi wph wps wch ax-i1 a1i $.
   $}
 
