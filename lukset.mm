@@ -292,6 +292,12 @@ $)
     2a1i $p |- ( ps -> ( ch -> ph ) ) $=
       ( wi a1i ) CAEBACDFF $.
   $}
+  
+  ${
+    axl1w $p |- ( ph -> ( ps -> ( ch -> ps ) ) ) $=
+    $( Weaken ~ ax-l1. (Contributed by film2860, 22-Jul-2026.) $)
+      wps wch wps wi wi wph wps wch ax-i1 a1i $.
+  $}
 
   ${
     mp1i.1 $e |- ph $.
@@ -347,6 +353,16 @@ $)
        25-May-2026.) $)
     mpi $p |- ( ph -> ch ) $=
       ( wi ax-i3 mp2 ) ABCFFBACFEDABCGH $.
+  $}
+  
+  ${
+    mpiALT.1 $e |- ps $.
+    mpiALT.2 $e |- ( ph -> ( ps -> ch ) ) $.
+    $( ~ mpi but with ~ ax-i4 instead of ~ ax-i3. (Contributed by film2860, 22-Jul-2026.) $)
+    mpiALT $p |- ( ph -> ch ) $=
+      wch wps wi wps wi wph wch wi wps wch wps wi mpiw.1 a1i wch wps wi wps wi
+      wps wch wi wch wi wph wch wi wch wps ax-i4 wph wps wch wi wi wps wch wi
+      wch wi wph wch wi wi mpiw.2 wph wps wch wi wch ax-i2 ax-mp syl ax-mp $.
   $}
 
   ${
