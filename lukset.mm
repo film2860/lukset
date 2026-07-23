@@ -344,7 +344,7 @@ $)
     mpi.1 $e |- ps $.
     mpi.2 $e |- ( ph -> ( ps -> ch ) ) $.
     $( A nested modus ponens inference. (Contributed by Lllllllllwith10ls,
-       25-May-2026.) (Remove dependence of an unecessary axiom by film2860, 22-Jul-2026.) $)
+       25-May-2026.) (Remove dependence of an unnecessary axiom by film2860, 22-Jul-2026.) $)
     mpi $p |- ( ph -> ch ) $=
       ( wi a1i ax-i3 ax-i2 ax-mp syl ) CBFZBFZACFZBLDGMBCFZCFZNCBHAOFPNFEAOCIJK
       J $.
@@ -363,7 +363,8 @@ $)
   ${
     com12.1 $e |- ( ph -> ( ps -> ch ) ) $.
     $( Inference that swaps (commutes) antecedents in an implication.  Its
-       associated inference is ~ mpi . (Contributed by film2860, 22-Jul-2026.) $)
+       associated inference is ~ mpi . (Contributed by Lllllllllwith10ls,
+       25-May-2026.) (Remove dependence of an unnecessary axiom by film2860, 22-Jul-2026.) $)
     com12 $p |- ( ps -> ( ph -> ch ) ) $=
       ( wi ax-i1 ax-i3 ax-i2 ax-mp 3syl ) BCBEZBEBCEZCEZACEZBKFCBGALEMNEDALCHIJ
       $.
