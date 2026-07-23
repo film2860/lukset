@@ -295,7 +295,7 @@ $)
   
     $( Weaken ~ ax-i1 . (Contributed by film2860, 22-Jul-2026.) $)
     axl1w $p |- ( ph -> ( ps -> ( ch -> ps ) ) ) $=
-      wps wch wps wi wi wph wps wch ax-i1 a1i $.
+      ( wi ax-i1 a1i ) BCBDDABCEF $.
 
   ${
     mp1i.1 $e |- ph $.
@@ -357,9 +357,8 @@ $)
     mpiALT.2 $e |- ( ph -> ( ps -> ch ) ) $.
     $( ~ mpi but with ~ ax-i4 instead of ~ ax-i3 . (Contributed by film2860, 22-Jul-2026.) $)
     mpiALT $p |- ( ph -> ch ) $=
-      wch wps wi wps wi wph wch wi wps wch wps wi mpiALT.1 a1i wch wps wi wps wi
-      wps wch wi wch wi wph wch wi wch wps ax-i4 wph wps wch wi wi wps wch wi
-      wch wi wph wch wi wi mpiALT.2 wph wps wch wi wch ax-i2 ax-mp syl ax-mp $.
+      ( wi a1i ax-i4 ax-i2 ax-mp syl ) CBFBFACFBCBFDGCBFBFBCFCFACFCBHABCFFBCFCF
+      ACFFEABCFCIJKJ $.
   $}
 
   ${
@@ -385,9 +384,8 @@ $)
     com12ALT.1 $e |- ( ph -> ( ps -> ch ) ) $.
     $( ~ com12 but with ~ ax-i4 instead of ~ ax-i3 . (Contributed by film2860, 22-Jul-2026.) $)
     com12ALT $p |- ( ps -> ( ph -> ch ) ) $=
-      wps wch wps wi wps wi wps wch wi wch wi wph wch wi wps wch wps wi ax-i1
-      wch wps ax-i4 wph wps wch wi wi wps wch wi wch wi wph wch wi wi
-      com12ALT.1 wph wps wch wi wch ax-i2 ax-mp 3syl $.
+      ( wi ax-i1 ax-i4 ax-i2 ax-mp 3syl ) BCBEBEBCECEACEBCBEFCBGABCEEBCECEACEED
+      ABCECHIJ $.
   $}
 
   ${
@@ -410,13 +408,13 @@ $)
   
   $( A modus ponens statement. (Contributed by film2860, 22-July-2026.) $)
   mps $p |- ( ph -> ( ( ph -> ps ) -> ps ) ) $=
-    wph wps wph wi wph wi wph wps wi wps wi wph wps wph wi ax-i1 wps wph ax-i4
-    syl $.
+    ( wi ax-i1 ax-i4 syl ) ABACACABCBCABACDBAEF $.
 
   $( Principle of identity.  (Contributed by Lllllllllwith10ls,
      25-May-2026.) $)
   id $p |- ( ph -> ph )
-    $= ( wi ax-i1 mpi ) AAAABBZAAACAECD $.
+    $=
+    ( wi ax-i1 mpi ) AAAABBAAACAAAABBCD $.
 
 
   $( Principle of identity ~ id with antecedent.  (Contributed by NM,
@@ -460,17 +458,16 @@ $)
 
   $( Proving that ~ ax-i3 is redundant.  (Contributed by film2860, 22-Jul-2026.) $)
   axi3 $p |- ( ( ph -> ( ps -> ch ) ) -> ( ps -> ( ph -> ch ) ) ) $=
-    wph wps wch wi wi wps wch wi wch wi wph wch wi wi wps wph wch wi wi wph wps
-    wch wi wch ax-i2 wps wps wch wi wch wi wi wps wch wi wch wi wph wch wi wi
-    wps wph wch wi wi wi wps wch mps wps wps wch wi wch wi wph wch wi ax-i2
-    ax-mp syl $.
+    ( wi ax-i2 mps ax-mp syl ) ABCDDBCDCDACDDBACDDABCDCEBBCDCDDBCDCDACDDBACDDDB
+    CFBBCDCDACDEGH $.
   
   ${
     $( Analog of ax-2 in classical logic.  (Contributed by Lllllllllwith10ls,
        26-May-2026.) $)
     a2 $p |- ( ( ph -> ( ps -> ch ) ) -> ( ( ph -> ps ) -> ( ph -> ( ph
         -> ch ) ) ) ) $=
-      ( wi ax-i3 ax-i2 com12 syl ) ABCDDBACDZDZABDZAIDZDABCEKJLABIFGH $.
+      ( wi ax-i3 ax-i2 com12 syl ) ABCDDBACDDABDAACDDDABCEABDBACDDAACDDABACDFGH
+      $.
   $}
 
   ${
@@ -478,7 +475,7 @@ $)
     $( Inference "distributing" an antecedent.  (Contributed by
        Lllllllllwith10ls, 26-May-2026.) $)
     a2i $p |- ( ( ph -> ps ) -> ( ph -> ( ph -> ch ) ) ) $=
-      ( wi com12 ax-i2 mpi ) ABEBACEZEAIEABCDFABIGH $.
+      ( wi com12 ax-i2 mpi ) ABEBACEEAACEEABCDFABACEGH $.
   $}
 
 
@@ -487,7 +484,7 @@ $)
     $( Inference adding common antecedents in an implication.  Its associated
        inference is ~ syl .  (Contributed by NM, 28-Dec-1992.) $)
     imim2i $p |- ( ( ch -> ph ) -> ( ch -> ps ) ) $=
-      ( wi ax-i2 com12 ax-mp ) ABEZCAEZCBEZEDJIKCABFGH $.
+      ( wi ax-i2 com12 ax-mp ) ABECAECBEEDCAEABECBECABFGH $.
   $}
 
 
@@ -535,8 +532,8 @@ $)
        the consequent of the first premise.  (Contributed by Lllllllllwith10ls,
        25-May-2026.) $)
     syl6 $p |- ( ph -> ( ps -> th ) ) $=
-      ( wi ax-i2 a1i ax-i4 ax-mp syl ) ABCGZBDGZEMCDGZNGZNBCDHNOGZOGPNGOQFINOJK
-      LL $.
+      ( wi ax-i2 a1i ax-i4 ax-mp syl ) ABCGBDGEBCGCDGBDGGBDGBCDHBDGCDGGCDGGCDGB
+      DGGBDGGCDGBDGCDGGFIBDGCDGJKLL $.
   $}
 
 
@@ -558,7 +555,7 @@ $)
      thought of as a closed form of modus ponens ~ ax-mp .  Theorem *2.27 of
      [WhiteheadRussell] p. 104.  (Contributed by NM, 15-Jul-1993.) $)
   pm2.27 $p |- ( ph -> ( ( ph -> ps ) -> ps ) ) $=
-    ( wi id com12 ) ABCZABFDE $.
+    ( wi id com12 ) ABCABABCDE $.
 
 
   ${
@@ -602,7 +599,7 @@ $)
        third antecedent of the second premise.  (Contributed by NM,
        12-Jan-1993.)  (Proof shortened by Wolf Lammen, 3-Aug-2012.) $)
     syl7 $p |- ( ch -> ( th -> ( ph -> ta ) ) ) $=
-      ( wi id com12 syl syl6 ) CDBEHZAEHGAMEABMEHFMBEMIJKJL $.
+      ( wi id com12 syl syl6 ) CDBEHAEHGABEHEABBEHEHFBEHBEBEHIJKJL $.
   $}
 
 
@@ -613,7 +610,7 @@ $)
        the consequent of the first premise.  (Contributed by NM, 1-Aug-1994.)
        (Proof shortened by Wolf Lammen, 3-Aug-2012.) $)
     syl8 $p |- ( ph -> ( ps -> ( ch -> ta ) ) ) $=
-      ( wi id syl6 ) ABCDHZCEHFKCDEKIGJJ $.
+      ( wi id syl6 ) ABCDHCEHFCDHCDECDHIGJJ $.
   $}
 
   ${
@@ -623,7 +620,7 @@ $)
        by NM, 13-May-1993.)  (Proof shortened by Josh Purinton,
        29-Dec-2000.) $)
     syl9 $p |- ( ph -> ( th -> ( ps -> ta ) ) ) $=
-      ( wi ax-i2 com12 syl ) ABCHZDBEHZHFDLMDCEHZLMHGLNMBCEIJKJK $.
+      ( wi ax-i2 com12 syl ) ABCHDBEHHFDBCHBEHDCEHBCHBEHHGBCHCEHBEHBCEIJKJK $.
   $}
 
   ${
@@ -710,7 +707,7 @@ $)
     mt4i.2 $e |- ( ph -> ( -. ps -> -. ch ) ) $.
     $( Modus tollens inference.  (Contributed by Wolf Lammen, 12-May-2013.) $)
     mt4i $p |- ( ph -> ps ) $=
-      ( wn wi con4 com12 ax-mp syl ) ABFCFGZBECLBGDLCBBCHIJK $.
+      ( wn wi con4 com12 ax-mp syl ) ABFCFGBECBFCFGBGDBFCFGCBBCHIJK $.
   $}
 
   ${
@@ -745,7 +742,7 @@ $)
      form is ~ pm2.24 and its associated inference is ~ pm2.21i .  (Contributed
      by NM, 29-Dec-1992.)  (Proof shortened by Wolf Lammen, 14-Sep-2012.) $)
   pm2.21 $p |- ( -. ph -> ( ph -> ps ) ) $=
-    ( wn id pm2.21d ) ACZABFDE $.
+    ( wn id pm2.21d ) ACABACDE $.
 
   $( Theorem *2.24 of [WhiteheadRussell] p. 104.  Its associated inference is
      ~ pm2.24i .  Commuted form of ~ pm2.21 .  (Contributed by NM,
@@ -770,8 +767,9 @@ $)
   $( Double negation elimination.  (Contributed by Lllllllllwith10ls,
      26-May-2026.) $)
   notnotr $p |- ( -. -. ph -> ph ) $=
-    ( wn wi ax-i1 ax-n1 syl pm2.27 ax-mp ) ABZBZAAACCZACZAJKBZBZJCZLJNDOIMCLMIE
-    AKEFFKLACAADKAGHF $.
+    ( wn wi ax-i1 ax-n1 syl pm2.27 ax-mp ) ABBAAACCACAABBAAACCBBABBCAAACCACABBA
+    AACCBBDAAACCBBABBCABAAACCBCAAACCACAAACCBABEAAAACCEFFAAACCAAACCACACAADAAACCA
+    GHF $.
 
 
   ${
@@ -780,14 +778,14 @@ $)
        (Proof shortened by Wolf Lammen, 15-Jul-2021.)  (Revised by Steven
        Nguyen, 27-Dec-2022.) $)
     notnotri $p |- ph $=
-      ( wn pm2.21i mt4 ) ACZCZABFGCBDE $.
+      ( wn pm2.21i mt4 ) ACCABACACCCBDE $.
   $}
 
 
   $( Double negation introduction.  (Contributed by Lllllllllwith10ls,
      26-May-2026.) $)
   notnot $p |- ( ph -> -. -. ph ) $=
-    ( wn notnotr con4i ) ABZBAECD $.
+    ( wn notnotr con4i ) ABBAABCD $.
 
   ${
     notnoti.1 $e |- ph $.
@@ -802,29 +800,29 @@ $)
     con2d.1 $e |- ( ph -> ( ps -> -. ch ) ) $.
     $( A contraposition deduction.  (Contributed by NM, 19-Aug-1993.) $)
     con2d $p |- ( ph -> ( ch -> -. ps ) ) $=
-      ( wn notnotr syl5 con4d ) ABEZCIEBACEBFDGH $.
+      ( wn notnotr syl5 con4d ) ABECBEEBACEBFDGH $.
   $}
 
   $( Contraposition.  Theorem *2.03 of [WhiteheadRussell] p. 100.  (Contributed
      by NM, 29-Dec-1992.)  (Proof shortened by Wolf Lammen, 12-Feb-2013.) $)
   con2 $p |- ( ( ph -> -. ps ) -> ( ps -> -. ph ) ) $=
-    ( wn wi id con2d ) ABCDZABGEF $.
+    ( wn wi id con2d ) ABCDABABCDEF $.
 
   $( Contraposition.  (Contributed by Lllllllllwith10ls, 26-May-2026.) $)
   con1 $p |- ( ( -. ph -> ps ) -> ( -. ps -> ph ) ) $=
-    ( wn wi notnot imim2i con4d ) ACZBDABCZBICHBEFG $.
+    ( wn wi notnot imim2i con4d ) ACBDABCBBCCACBEFG $.
 
   $( Contraposition.  (Contributed by Lllllllllwith10ls, 26-May-2026.) $)
   con3 $p |- ( ( ph -> ps ) -> ( -. ps -> -. ph ) ) $=
-    ( wi wn notnotr imim1i con1 syl ) ABCADZDZBCBDICJABAEFIBGH $.
+    ( wi wn notnotr imim1i con1 syl ) ABCADDBCBDADCADDABAEFADBGH $.
 
   ${
     nsyl3.1 $e |- ( ph -> -. ps ) $.
     nsyl3.2 $e |- ( ch -> ps ) $.
     $( A negated syllogism inference.  (Contributed by NM, 1-Dec-1995.) $)
     nsyl3 $p |- ( ch -> -. ph ) $=
-      ( wn wi notnotr con3 ax-mp syl ax-n1 ) AFZFZCFZGCMGNAOAHABFZODCBGPOGECBIJ
-      KKMCLJ $.
+      ( wn wi notnotr con3 ax-mp syl ax-n1 ) AFFCFGCAFGAFFACFAHABFCFDCBGBFCFGEC
+      BIJKKAFCLJ $.
   $}
 
 
@@ -859,7 +857,7 @@ $)
     con1d.1 $e |- ( ph -> ( -. ps -> ch ) ) $.
     $( A contraposition deduction.  (Contributed by NM, 27-Dec-1992.) $)
     con1d $p |- ( ph -> ( -. ch -> ps ) ) $=
-      ( wn notnot syl6 con4d ) ABCEZABECIEDCFGH $.
+      ( wn notnot syl6 con4d ) ABCEABECCEEDCFGH $.
   $}
 
 
@@ -869,7 +867,7 @@ $)
        (Contributed by NM, 3-Jan-1993.)  (Proof shortened by Mel L. O'Cat,
        28-Nov-2008.)  (Proof shortened by Wolf Lammen, 19-Jun-2013.) $)
     con1i $p |- ( -. ps -> ph ) $=
-      ( wn id nsyl2 ) BDZBAGECF $.
+      ( wn id nsyl2 ) BDBABDECF $.
   $}
 
 
@@ -894,7 +892,7 @@ $)
     $( A contraposition deduction.  Deduction form of ~ con3 .  (Contributed by
        NM, 10-Jan-1993.) $)
     con3d $p |- ( ph -> ( -. ch -> -. ps ) ) $=
-      ( wn notnotr syl5 con1d ) ABEZCIEBACBFDGH $.
+      ( wn notnotr syl5 con1d ) ABECBEEBACBFDGH $.
   $}
 
   ${
@@ -903,14 +901,14 @@ $)
        associated inference is ~ mto .  (Contributed by NM, 3-Jan-1993.)
        (Proof shortened by Wolf Lammen, 20-Jun-2013.) $)
     con3i $p |- ( -. ps -> -. ph ) $=
-      ( wn id nsyl ) BDZBAGECF $.
+      ( wn id nsyl ) BDBABDECF $.
   $}
 
   $( Theorem *3.2 of [WhiteheadRussell] p. 111, expressed with primitive
      connectives (see {TODO} pm3.2 ).  (Contributed by NM, 29-Dec-1992.)
      (Proof shortened by Josh Purinton, 29-Dec-2000.) $)
   pm3.2im $p |- ( ph -> ( ps -> -. ( ph -> -. ps ) ) ) $=
-    ( wn wi pm2.27 con2d ) AABCZDBAGEF $.
+    ( wn wi pm2.27 con2d ) AABCDBABCEF $.
 
 
   ${
@@ -1031,7 +1029,7 @@ $)
        (Contributed by NM, 19-Aug-1993.)  (Proof shortened by Wolf Lammen,
        10-Sep-2013.) $)
     mt2 $p |- -. ph $=
-      ( wn notnotr syl con4i ax-mp ) BAEZCJBJEABEAFDGHI $.
+      ( wn notnotr syl con4i ax-mp ) BAECAEBAEEABEAFDGHI $.
   $}
 
 
@@ -1047,7 +1045,7 @@ $)
        intuitionistic logic.  Inference associated with ~ con3i .  (Contributed
        by NM, 19-Aug-1993.)  (Proof shortened by Wolf Lammen, 11-Sep-2013.) $)
     mto $p |- -. ph $=
-      ( wn notnot syl mt2 ) ABEZCABIEDBFGH $.
+      ( wn notnot syl mt2 ) ABECABBEEDBFGH $.
   $}
 
 
@@ -1057,7 +1055,7 @@ $)
     $( Modus tollens inference.  (Contributed by NM, 5-Jul-1994.)  (Proof
        shortened by Wolf Lammen, 15-Sep-2012.) $)
     mtoi $p |- ( ph -> -. ps ) $=
-      ( wn wi con3d com12 ax-mp ) CFZABFZGDAKLABCEHIJ $.
+      ( wn wi con3d com12 ax-mp ) CFABFGDACFBFABCEHIJ $.
   $}
 
 
@@ -1118,7 +1116,8 @@ $)
     $( And defined by implication (Contributed by Lllllllllwith10ls,
        28-May-2026.) $)
     impandli $p |- ph $=
-      ( wn wi pm2.27 notnot syl mt4 ) ADZBDZEKEZDZACJLMDJKFLGHI $.
+      ( wn wi pm2.27 notnot syl mt4 ) ADBDEBDEDACADADBDEBDEADBDEBDEDDADBDFADBDE
+      BDEGHI $.
   $}
 
 
@@ -1127,26 +1126,26 @@ $)
     $( And defined by implication (Contributed by Lllllllllwith10ls,
        28-May-2026.) $)
     impandri $p |- ps $=
-      ( wn wi notnot jarri mt4 ) ADBDZEZIEZDZBCJILDKFGH $.
+      ( wn wi notnot jarri mt4 ) ADBDEBDEDBCADBDEBDADBDEBDEDDADBDEBDEFGH $.
   $}
 
   $( And defined by implication (Contributed by Lllllllllwith10ls,
      28-May-2026.) $)
   impandl $p |- ( -. ( ( -. ph -> -. ps ) -> -. ps ) -> ph ) $=
-      ( wn wi pm2.27 con1i ) AACZBCZDHDGHEF $.
+    ( wn wi pm2.27 con1i ) AACBCDBCDACBCEF $.
 
 
   $( And defined by implication (Contributed by Lllllllllwith10ls,
      28-May-2026.) $)
   impandr $p |- ( -. ( ( -. ph -> -. ps ) -> -. ps ) -> ps ) $=
-      ( wn wi simprim ) ACBCDBE $.
+    ( wn wi simprim ) ACBCDBE $.
 
 
   $( And defined by implication (Contributed by Lllllllllwith10ls,
      29-May-2026.) $)
   impand $p |- ( ph -> ( ps -> -. ( ( -. ph -> -. ps ) -> -. ps ) ) ) $=
-      ( wn wi notnot pm2.24 imim1i con3rr3 syl ) AACZCBJBCZDZKDZCDAEBMJBKCMJDBE
-      MAKALKAKFGHIHI $.
+    ( wn wi notnot pm2.24 imim1i con3rr3 syl ) AACCBACBCDBCDCDAEBACBCDBCDACBBCC
+    ACBCDBCDACDBEACBCDBCDABCAACBCDBCABCFGHIHI $.
 
 
   ${
@@ -1156,21 +1155,22 @@ $)
        31-May-2026.) $)
     impandd $p |- ( ph -> -. ( ( -. ps -> -. ch ) -> -. ch ) ) $=
       ( wn notnoti notnot con3 ax-i4 con3i imim1i syl11 ax-i1 syl6 syl7 con3rr3
-      wi mpi syl mtoi ) ABFZCFZRZUCRZABRZFZUFDGAAFZFUEUGRAHUEUFUHUEACRZUFUHREUF
-      UBUHRZUEUIUHABIUCUHRZUEUJUHRZUIUKUEUHULUHUCRZUCRUKUHUEUHUCJUMUDUCUBUHUCAB
-      DKLLMUHUJNOACIMPSQTUA $.
+      wi mpi syl mtoi ) ABFCFRCFRABRFABRDGAAFFBFCFRCFRABRFRAHBFCFRCFRABRAFBFCFR
+      CFRACRABRAFREABRBFAFRBFCFRCFRACRAFABICFAFRBFCFRCFRBFAFRAFRACRCFAFRBFCFRCF
+      RAFBFAFRAFRAFCFRCFRCFAFRAFBFCFRCFRAFCFJAFCFRBFCFRCFBFAFCFABDKLLMAFBFAFRNO
+      ACIMPSQTUA $.
   $}
 
   $( Property of the biconditional connective.  (Contributed by
      Lllllllllwith10ls, 28-May-2026.) $)
   impbia $p |- ( -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph )
   ) -> ( ph <-> ps ) ) $=
-    ( wb wi wn df-bi impandri ) ABCZABDEBADEZDIDEZDJHDABFG $.
+    ( wb wi wn df-bi impandri ) ABCABDEBADEDBADEDEDABDEBADEDBADEDEABCDABFG $.
 
   $( Property of the biconditional connective.  (Contributed by NM,
      11-May-1999.) $)
   impbi $p |- ( ( ph -> ps ) -> ( ( ps -> ph ) -> ( ph <-> ps ) ) ) $=
-    ( wi wn wb impand impbia syl6 ) ABCZBACZIDJDZCKCDABEIJFABGH $.
+    ( wi wn wb impand impbia syl6 ) ABCBACABCDBACDCBACDCDABEABCBACFABGH $.
 
   ${
     impbid21d.1 $e |- ( ps -> ( ch -> th ) ) $.
@@ -1187,7 +1187,7 @@ $)
     $( Deduce an equivalence from two implications.  (Contributed by
        Lllllllllwith10ls, 31-May-2026.) $)
     impbid $p |- ( ph -> ( ps <-> ch ) ) $=
-      ( wi wn wb impandd impbia syl ) ABCFZGCBFZGZFNFGBCHALMDEIBCJK $.
+      ( wi wn wb impandd impbia syl ) ABCFGCBFGFCBFGFGBCHABCFCBFDEIBCJK $.
   $}
 
 
@@ -1205,13 +1205,13 @@ $)
      Lllllllllwith10ls, 29-May-2026.) $)
   biimpa $p |- ( ( ph <-> ps ) -> -. ( ( -. ( ph -> ps ) ->
   -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) ) $=
-    ( wb wi wn df-bi impandli ) ABCZABDEBADEZDIDEZDJHDABFG $.
+    ( wb wi wn df-bi impandli ) ABCABDEBADEDBADEDEDABDEBADEDBADEDEABCDABFG $.
 
 
   $( Property of the biconditional connective.  (Contributed by
      Lllllllllwith10ls, 29-May-2026.) $)
   biimp $p |- ( ( ph <-> ps ) -> ( ph -> ps ) ) $=
-    ( wb wi wn biimpa impandl syl ) ABCABDZEBADZEZDKDEIABFIJGH $.
+    ( wb wi wn biimpa impandl syl ) ABCABDEBADEDBADEDEABDABFABDBADGH $.
 
   ${
     biimpi.1 $e |- ( ph <-> ps ) $.
@@ -1252,7 +1252,7 @@ $)
   $( Property of the biconditional connective.  (Contributed by
      Lllllllllwith10ls, 29-May-2026.) $)
   biimpr $p |- ( ( ph <-> ps ) -> ( ps -> ph ) ) $=
-    ( wb wi wn biimpa ax-i1 nsyl2 ) ABCABDEBADZEZDZJDIABFJKGH $.
+    ( wb wi wn biimpa ax-i1 nsyl2 ) ABCABDEBADEDBADEDBADABFBADEABDEBADEDGH $.
 
   $( Commutative law for the biconditional.  (Contributed by Wolf Lammen,
      10-Nov-2012.) $)
@@ -1535,7 +1535,7 @@ $)
      Proposition 54 of [Frege1879] p. 50; see also {TODO} eqid .  (Contributed
      by NM, 2-Jun-1993.) $)
   biid $p |- ( ph <-> ph ) $=
-    ( id impbii ) AAABZDC $.
+    ( id impbii ) AAABABC $.
 
   $( Principle of identity with antecedent.  (Contributed by NM,
      25-Nov-1995.) $)
@@ -1821,7 +1821,7 @@ $)
     con4bid.1 $e |- ( ph -> ( -. ps <-> -. ch ) ) $.
     $( A contraposition deduction.  (Contributed by NM, 21-May-1994.) $)
     con4bid $p |- ( ph -> ( ps <-> ch ) ) $=
-      ( wn biimprd con4d biimpd impcon4bid ) ABCACBABEZCEZDFGAJKDHI $.
+      ( wn biimprd con4d biimpd impcon4bid ) ABCACBABECEDFGABECEDHI $.
   $}
 
   ${
@@ -1829,13 +1829,13 @@ $)
     $( Deduction negating both sides of a logical equivalence.  (Contributed by
        NM, 21-May-1994.) $)
     notbid $p |- ( ph -> ( -. ps <-> -. ch ) ) $=
-      ( wn notnotb 3bitr3g con4bid ) ABEZCEZABCIEJEDBFCFGH $.
+      ( wn notnotb 3bitr3g con4bid ) ABECEABCBEECEEDBFCFGH $.
   $}
 
   $( Contraposition.  Theorem *4.11 of [WhiteheadRussell] p. 117.  (Contributed
      by NM, 21-May-1994.)  (Proof shortened by Wolf Lammen, 12-Jun-2013.) $)
   notbi $p |- ( ( ph <-> ps ) <-> ( -. ph <-> -. ps ) ) $=
-    ( wb wn id notbid con4bid impbii ) ABCZADBDCZIABIEFJABJEGH $.
+    ( wb wn id notbid con4bid impbii ) ABCADBDCABCABABCEFADBDCABADBDCEGH $.
 
   ${
     notbii.1 $e |- ( ph <-> ps ) $.
@@ -1985,7 +1985,7 @@ $)
        (Contributed by NM, 26-May-1993.)  (Proof shortened by Andrew Salmon,
        7-May-2011.)  (Proof shortened by Wolf Lammen, 16-May-2013.) $)
     bibi2i $p |- ( ( ch <-> ph ) <-> ( ch <-> ps ) ) $=
-      ( wb id bitrdi bitr4di impbii ) CAEZCBEZJCABJFDGKCBAKFDHI $.
+      ( wb id bitrdi bitr4di impbii ) CAECBECAECABCAEFDGCBECBACBEFDHI $.
 
     $( Inference adding a biconditional to the right in an equivalence.
        (Contributed by NM, 26-May-1993.) $)
@@ -2005,14 +2005,14 @@ $)
   $( Theorem *4.84 of [WhiteheadRussell] p. 122.  (Contributed by NM,
      3-Jan-2005.) $)
   imbi1 $p |- ( ( ph <-> ps ) -> ( ( ph -> ch ) <-> ( ps -> ch ) ) ) $=
-    ( wb wi biimpr ax-i2 syl biimp impbid ) ABDZACEZBCEZKBAELMEABFBACGHKABEMLEA
-    BIABCGHJ $.
+    ( wb wi biimpr ax-i2 syl biimp impbid ) ABDACEBCEABDBAEACEBCEEABFBACGHABDAB
+    EBCEACEEABIABCGHJ $.
 
   $( Theorem *4.85 of [WhiteheadRussell] p. 122.  (Contributed by NM,
      3-Jan-2005.)  (Proof shortened by Wolf Lammen, 19-May-2013.) $)
   imbi2 $p |- ( ( ph <-> ps ) -> ( ( ch -> ph ) <-> ( ch -> ps ) ) ) $=
-    ( wb wi biimp ax-i2 syl5com biimpr impbid ) ABDZCAEZCBEZKABELMABFCABGHKBAEM
-    LABICBAGHJ $.
+    ( wb wi biimp ax-i2 syl5com biimpr impbid ) ABDCAECBEABDABECAECBEABFCABGHAB
+    DBAECBECAEABICBAGHJ $.
 
   ${
     imbi1i.1 $e |- ( ph <-> ps ) $.
@@ -2038,8 +2038,8 @@ $)
   $( Contraposition.  Theorem *4.12 of [WhiteheadRussell] p. 117.  (Contributed
      by NM, 15-Apr-1995.)  (Proof shortened by Wolf Lammen, 3-Jan-2013.) $)
   con2bi $p |- ( ( ph <-> -. ps ) <-> ( ps <-> -. ph ) ) $=
-    ( wn wb notbi notnotb bibi2i bicom 3bitr2i ) ABCZDACZJCZDKBDBKDAJEBLKBFGKBH
-    I $.
+    ( wn wb notbi notnotb bibi2i bicom 3bitr2i ) ABCDACBCCDACBDBACDABCEBBCCACBF
+    GACBHI $.
 
   ${
     con2bid.1 $e |- ( ph -> ( ps <-> -. ch ) ) $.
@@ -2103,13 +2103,13 @@ $)
     $( A false consequent falsifies an antecedent.  (Contributed by NM,
        19-Aug-1993.)  (Proof shortened by Wolf Lammen, 12-Nov-2012.) $)
     mt2bi $p |- ( -. ps <-> ( ps -> -. ph ) ) $=
-      ( wn wi a1bi con2b bitri ) BDZAIEBADEAICFABGH $.
+      ( wn wi a1bi con2b bitri ) BDABDEBADEABDCFABGH $.
   $}
 
   $( Modus-tollens-like theorem.  (Contributed by NM, 7-Apr-2001.)  (Proof
      shortened by Wolf Lammen, 12-Nov-2012.) $)
   mtt $p |- ( -. ph -> ( -. ps <-> ( ps -> ph ) ) ) $=
-    ( wn wi biimt con34b bitr4di ) ACZBCZHIDBADHIEBAFG $.
+    ( wn wi biimt con34b bitr4di ) ACBCACBCDBADACBCEBAFG $.
 
   $( If a proposition is false, then implying it is equivalent to being false.
      One of four theorems that can be used to simplify an implication
@@ -2123,13 +2123,13 @@ $)
   $( Theorem *5.501 of [WhiteheadRussell] p. 125.  (Contributed by NM,
      3-Jan-2005.) $)
   pm5.501 $p |- ( ph -> ( ps <-> ( ph <-> ps ) ) ) $=
-    ( wb pm5.1im biimp com12 impbid ) ABABCZABDHABABEFG $.
+    ( wb pm5.1im biimp com12 impbid ) ABABCABDABCABABEFG $.
 
   $( The negation of a wff is equivalent to the wff's equivalence to falsehood.
      (Contributed by Juha Arpiainen, 19-Jan-2006.)  (Proof shortened by Wolf
      Lammen, 28-Jan-2013.) $)
   nbn2 $p |- ( -. ph -> ( -. ps <-> ( ph <-> ps ) ) ) $=
-    ( wn wb pm5.501 notbi bitr4di ) ACZBCZHIDABDHIEABFG $.
+    ( wn wb pm5.501 notbi bitr4di ) ACBCACBCDABDACBCEABFG $.
 
   $( Transfer negation via an equivalence.  (Contributed by NM, 3-Oct-2007.)
      (Proof shortened by Wolf Lammen, 28-Jan-2013.) $)
@@ -2142,7 +2142,7 @@ $)
        falsehood.  (Contributed by NM, 21-Jun-1993.)  (Proof shortened by Wolf
        Lammen, 3-Oct-2013.) $)
     nbn $p |- ( -. ps <-> ( ps <-> ph ) ) $=
-      ( wb wn bibif ax-mp bicomi ) BADZBEZAEIJDCBAFGH $.
+      ( wb wn bibif ax-mp bicomi ) BADBEAEBADBEDCBAFGH $.
   $}
 
   ${
@@ -2263,8 +2263,8 @@ $)
     $( Inference disjoining the antecedents of two implications.  (Contributed
        by Lllllllllwith10ls, 19-Jun-2026.) $)
     jaoi $p |- ( ( ph \/ ch ) -> ps ) $=
-      ( wo wi pm2.53 ax-i4 imim1i pm2.54 3syl mpisyl ) ACFZABFZABGZBNACGCGCAGZA
-      GZOACHACIRBAGZAGPBGOSQACBAEJJBAIABKLLDABHM $.
+      ( wo wi pm2.53 ax-i4 imim1i pm2.54 3syl mpisyl ) ACFABFABGBACFACGCGCAGAGA
+      BFACHACICAGAGBAGAGABGBGABFBAGCAGACBAEJJBAIABKLLDABHM $.
   $}
 
   ${
@@ -2324,7 +2324,7 @@ $)
     $( Deduction introducing a disjunct.  (Contributed by Lllllllllwith10ls,
        18-Jun-2026.) $)
     orci $p |- ( ph \/ ps ) $=
-      ( wi a1i ax-i4 ax-mp orri ) ABBADZADABDBDAICEBAFGH $.
+      ( wi a1i ax-i4 ax-mp orri ) ABBADADABDBDABADCEBAFGH $.
 
     $( Deduction introducing a disjunct.  (Contributed by Lllllllllwith10ls,
        18-Jun-2026.) $)
@@ -2411,8 +2411,8 @@ $)
     $( Infer negated disjunction of negated premises.  (Contributed by
        Lllllllllwith10ls, 18-Jun-2026.) $)
     pm3.2ni $p |- -. ( ph \/ ps ) $=
-      ( wo wi wn pm2.53 pm2.21 ax-i4 syl5 mpisyl mto ) ABEZACNABFBFZBGZAABHDPBA
-      FOABAIABJKLM $.
+      ( wo wi wn pm2.53 pm2.21 ax-i4 syl5 mpisyl mto ) ABEACABEABFBFBGAABHDBGBA
+      FABFBFABAIABJKLM $.
   $}
 
   $( Theorem *2.45 of [WhiteheadRussell] p. 106.  (Contributed by NM,
@@ -2477,7 +2477,7 @@ $)
   $( Theorem *2.621 of [WhiteheadRussell] p. 107.  (Contributed by NM,
      3-Jan-2005.) $)
   pm2.621 $p |- ( ( ph -> ps ) -> ( ( ph \/ ps ) -> ps ) ) $=
-    ( wi id idd jaod ) ABCZABBGDGBEF $.
+    ( wi id idd jaod ) ABCABBABCDABCBEF $.
 
   $( Theorem *2.07 of [WhiteheadRussell] p. 101.  (Contributed by NM,
      3-Jan-2005.) $)
@@ -2502,12 +2502,12 @@ $)
   $( Theorem *2.4 of [WhiteheadRussell] p. 106.  (Contributed by
      Lllllllllwith10ls, 18-Jun-2026.) $)
   pm2.4 $p |- ( ( ph \/ ( ph \/ ps ) ) -> ( ph \/ ps ) ) $=
-    ( wo wi orc pm2.53 mpi ) AABCZCAHDHABEAHFG $.
+    ( wo wi orc pm2.53 mpi ) AABCCAABCDABCABEAABCFG $.
 
   $( Theorem *2.41 of [WhiteheadRussell] p. 106.  (Contributed by
      Lllllllllwith10ls, 18-Jun-2026.) $)
   pm2.41 $p |- ( ( ps \/ ( ph \/ ps ) ) -> ( ph \/ ps ) ) $=
-    ( wo wi olc pm2.53 mpi ) BABCZCBHDHBAEBHFG $.
+    ( wo wi olc pm2.53 mpi ) BABCCBABCDABCBAEBABCFG $.
 
   ${
     orim12i.1 $e |- ( ph -> ps ) $.
@@ -2558,13 +2558,13 @@ $)
   $( Theorem *4.37 of [WhiteheadRussell] p. 118.  (Contributed by
      Lllllllllwith10ls, 19-Jun-2026.) $)
   orbi1 $p |- ( ( ph <-> ps ) -> ( ( ph \/ ch ) <-> ( ps \/ ch ) ) ) $=
-    ( wb wo biimp orc syl6 wi olc a1i jaod biimpr impbid ) ABDZACEZBCEZOAQCOABQ
-    ABFBCGHCQIOCBJKLOBPCOBAPABMACGHCPIOCAJKLN $.
+    ( wb wo biimp orc syl6 wi olc a1i jaod biimpr impbid ) ABDACEBCEABDABCECABD
+    ABBCEABFBCGHCBCEIABDCBJKLABDBACECABDBAACEABMACGHCACEIABDCAJKLN $.
 
   $( Axiom *1.5 (Assoc) of [WhiteheadRussell] p. 96.  (Contributed by NM,
      3-Jan-2005.) $)
   pm1.5 $p |- ( ( ph \/ ( ps \/ ch ) ) -> ( ps \/ ( ph \/ ch ) ) ) $=
-    ( wo orc olcd olc orim2i jaoi ) ABACDZDBCDAJBACEFCJBCAGHI $.
+    ( wo orc olcd olc orim2i jaoi ) ABACDDBCDAACDBACEFCACDBCAGHI $.
 
   $( Swap two disjuncts.  (Contributed by NM, 5-Aug-1993.)  (Proof shortened by
      Wolf Lammen, 14-Nov-2012.) $)
@@ -2575,7 +2575,8 @@ $)
      p. 118.  (Contributed by NM, 5-Aug-1993.)  (Proof shortened by Andrew
      Salmon, 26-Jun-2011.) $)
   orass $p |- ( ( ( ph \/ ps ) \/ ch ) <-> ( ph \/ ( ps \/ ch ) ) ) $=
-    ( wo orcom or12 orbi2i 3bitri ) ABDZCDCIDACBDZDABCDZDICECABFJKACBEGH $.
+    ( wo orcom or12 orbi2i 3bitri ) ABDCDCABDDACBDDABCDDABDCECABFCBDBCDACBEGH
+    $.
 
   $( Theorem *2.31 of [WhiteheadRussell] p. 104.  (Contributed by NM,
      3-Jan-2005.) $)
@@ -2596,30 +2597,30 @@ $)
   $( A rearrangement of disjuncts.  (Contributed by NM, 18-Oct-1995.)  (Proof
      shortened by Andrew Salmon, 26-Jun-2011.) $)
   or32 $p |- ( ( ( ph \/ ps ) \/ ch ) <-> ( ( ph \/ ch ) \/ ps ) ) $=
-    ( wo orass or12 orcom 3bitri ) ABDCDABCDDBACDZDIBDABCEABCFBIGH $.
+    ( wo orass or12 orcom 3bitri ) ABDCDABCDDBACDDACDBDABCEABCFBACDGH $.
 
   $( Rearrangement of 4 disjuncts.  (Contributed by NM, 12-Aug-1994.) $)
   or4 $p |- ( ( ( ph \/ ps ) \/ ( ch \/ th ) ) <->
                 ( ( ph \/ ch ) \/ ( ps \/ th ) ) ) $=
-    ( wo or12 orbi2i orass 3bitr4i ) ABCDEZEZEACBDEZEZEABEJEACELEKMABCDFGABJHAC
-    LHI $.
+    ( wo or12 orbi2i orass 3bitr4i ) ABCDEEEACBDEEEABECDEEACEBDEEBCDEECBDEEABCD
+    FGABCDEHACBDEHI $.
 
   $( Rearrangement of 4 disjuncts.  (Contributed by NM, 10-Jan-2005.) $)
   or42 $p |- ( ( ( ph \/ ps ) \/ ( ch \/ th ) ) <->
                  ( ( ph \/ ch ) \/ ( th \/ ps ) ) ) $=
-    ( wo or4 orcom orbi2i bitri ) ABECDEEACEZBDEZEJDBEZEABCDFKLJBDGHI $.
+    ( wo or4 orcom orbi2i bitri ) ABECDEEACEBDEEACEDBEEABCDFBDEDBEACEBDGHI $.
 
   $( Distribution of disjunction over disjunction.  (Contributed by NM,
      25-Feb-1995.) $)
   orordi $p |- ( ( ph \/ ( ps \/ ch ) ) <->
                ( ( ph \/ ps ) \/ ( ph \/ ch ) ) ) $=
-    ( wo oridm orbi1i or4 bitr3i ) ABCDZDAADZIDABDACDDJAIAEFAABCGH $.
+    ( wo oridm orbi1i or4 bitr3i ) ABCDDAADBCDDABDACDDAADABCDAEFAABCGH $.
 
   $( Distribution of disjunction over disjunction.  (Contributed by NM,
      25-Feb-1995.) $)
   orordir $p |- ( ( ( ph \/ ps ) \/ ch ) <->
                ( ( ph \/ ch ) \/ ( ps \/ ch ) ) ) $=
-    ( wo oridm orbi2i or4 bitr3i ) ABDZCDICCDZDACDBCDDJCICEFABCCGH $.
+    ( wo oridm orbi2i or4 bitr3i ) ABDCDABDCCDDACDBCDDCCDCABDCEFABCCGH $.
 
 
   $( A disjunction with a true formula is equivalent to that true formula.
@@ -2636,7 +2637,7 @@ $)
   $( A wff is equivalent to its negated disjunction with falsehood.
      (Contributed by NM, 9-Jul-2012.) $)
   biortn $p |- ( ph -> ( ps <-> ( -. ph \/ ps ) ) ) $=
-    ( wn wo wb notnot biorf syl ) AACZCBIBDEAFIBGH $.
+    ( wn wo wb notnot biorf syl ) AACCBACBDEAFACBGH $.
 
   ${
     biorfi.1 $e |- -. ph $.
@@ -2659,12 +2660,12 @@ $)
   $( Theorem *2.64 of [WhiteheadRussell] p. 107.  (Contributed by NM,
      3-Jan-2005.) $)
   pm2.64 $p |- ( ( ph \/ ps ) -> ( ( ph \/ -. ps ) -> ph ) ) $=
-    ( wn wo orel2 jao1i com12 ) ABCZDABDZAAHIBAEFG $.
+    ( wn wo orel2 jao1i com12 ) ABCDABDAABCABDBAEFG $.
 
   $( Theorem *2.42 of [WhiteheadRussell] p. 106.  (Contributed by NM,
      3-Jan-2005.) $)
   pm2.42 $p |- ( ( -. ph \/ ( ph -> ps ) ) -> ( ph -> ps ) ) $=
-    ( wn wi pm2.21 id jaoi ) ACABDZHABEHFG $.
+    ( wn wi pm2.21 id jaoi ) ACABDABDABEABDFG $.
 
 $( Some expressions connecting implication and disjunction. $)
 
@@ -2672,14 +2673,15 @@ $( Some expressions connecting implication and disjunction. $)
      [WhiteheadRussell] p. 121.  (Contributed by NM, 30-Aug-1993.)  (Proof
      shortened by Wolf Lammen, 30-Jan-2013.) $)
   pm4.72 $p |- ( ( ph -> ps ) <-> ( ps <-> ( ph \/ ps ) ) ) $=
-    ( wi wo wb olc pm2.621 impbid2 orc biimpr syl5 impbii ) ABCZBABDZEZMBNBAFAB
-    GHANOBABIBNJKL $.
+    ( wi wo wb olc pm2.621 impbid2 orc biimpr syl5 impbii ) ABCBABDEABCBABDBAFA
+    BGHAABDBABDEBABIBABDJKL $.
 
   $( Simplify an implication between implications.  (Contributed by Paul
      Chapman, 17-Nov-2012.)  (Proof shortened by Wolf Lammen, 3-Apr-2013.) $)
   imimorb $p |- ( ( ( ps -> ch ) -> ( ph -> ch ) ) <->
                   ( ph -> ( ps \/ ch ) ) ) $=
-    ( wi wo bi2.04 df-or imbi2i bitr4i ) BCDZACDDAJCDZDABCEZDJACFLKABCGHI $.
+    ( wi wo bi2.04 df-or imbi2i bitr4i ) BCDACDDABCDCDDABCEDBCDACFBCEBCDCDABCGH
+    I $.
 
 
 $(
@@ -2784,18 +2786,18 @@ $)
   $( Strengthen disjunction.  (Contributed by Lllllllllwith10ls,
      20-Jul-2026.) $)
   orso $p |- ( ( ph \/ ps ) -> ( ph (+) ps ) ) $=
-      ( wo wi wso pm2.53 jarl sorrd syl ) ABCABDBDZABEABFJABABBGHI $.
+    ( wo wi wso pm2.53 jarl sorrd syl ) ABCABDBDABEABFABDBDABABBGHI $.
 
   $( Strengthen disjunction.  (Contributed by Lllllllllwith10ls,
      20-Jul-2026.) $)
   imimsoro $p |- ( ( ( ph (+) ps ) -> ch ) -> ( ( ph \/ ps ) -> ch ) ) $=
-      ( wo wso orso imim1i ) ABDABECABFG $.
+    ( wo wso orso imim1i ) ABDABECABFG $.
 
 
   $( Axiom *1.4 of [WhiteheadRussell] p. 96.  (Contributed by
      Lllllllllwith10ls, 25-Jun-2026.) $)
   pm1.4s $p |- ( ( ph (+) ps ) -> ( ps (+) ph ) ) $=
-    ( wso pm2.53s con1d sorrd ) ABCZBAGABABDEF $.
+    ( wso pm2.53s con1d sorrd ) ABCBAABCABABDEF $.
 
   $( Commutative law for disjunction.  Theorem *4.31 of [WhiteheadRussell]
      p. 118.  (Contributed by NM, 3-Jan-1993.) $)
@@ -2858,8 +2860,8 @@ $)
     $( Infer negated disjunction of negated premises.  (Contributed by
        Lllllllllwith10ls, 25-Jun-2026.) $)
     pm3.2sni $p |- -. ( ph (+) ps ) $=
-      ( wso wn wi a1i ax-i4 ax-mp mto pm2.53s ) ABEAFZBGZNBDBMGZMGNBGMOCHBMIJKA
-      BLK $.
+      ( wso wn wi a1i ax-i4 ax-mp mto pm2.53s ) ABEAFBGAFBGBDBAFGAFGAFBGBGAFBAF
+      GCHBAFIJKABLK $.
   $}
 
 
@@ -2931,21 +2933,23 @@ $)
      (Contributed by Lllllllllwith10ls, 26-Jun-2026.) $)
   pm1.2s $p |- ( ( ( ph (+) ph ) (+) ph ) -> ( ph (+) ph ) ) $=
     ( wso wn wi pm2.53s con3i imim1i con1 wo id con2 mpi pm2.54 syl orri pm2.32
-    ax-i5 pm1.4 mp2b ori pm1.5 pm2.4 ax-mp 3syl sorrd ) AABZABZAAUGUFCZADACZADZ
-    CZADZUJUFAEUKUHAUFUJAAEFGULUIUJDUJUJAHUIUJUIUIUJIZIUMUIUMUIUMDAAADZCZDZUMDU
-    MUPUIUMUPUNUIAJAUNKLGUPUMUIUPIZUJIZUIUPUJIIUPUMIUJUIIZUPIUJUQIURUSUPUSUPDUJ
-    UIDUIDZUPDUPUTUSUPUJUIMGUIAUOQNOUJUIUPPUJUQRSUIUPUJPUIUPUJUASTNOUIUJUBUCTNU
-    DUE $.
+    ax-i5 pm1.4 mp2b ori pm1.5 pm2.4 ax-mp 3syl sorrd ) AABABAAAABABAABCADACADC
+    ADACADAABAEACADCAABCAAABACADAAEFGACADCADACACADDACADACADAHACACADACACACADIIAC
+    ACADIACACACADIACACACADIDAAADCDACACADIDACACADIAAADCDACACACADIAAADCDAADACAJAA
+    ADKLGAAADCDACACADIACAAADCDIACADIACAAADCDACADIIAAADCDACACADIIACADACIAAADCDIA
+    CADACAAADCDIIACAAADCDIACADIACADACIAAADCDACADACIAAADCDDACADACDACDAAADCDDAAAD
+    CDACADACDACDACADACIAAADCDACADACMGACAAADCQNOACADACAAADCDPACADACAAADCDIRSACAA
+    ADCDACADPACAAADCDACADUASTNOACACADUBUCTNUDUE $.
 
   $( Idempotent law for disjunction.  Theorem *4.25 of [WhiteheadRussell]
      p. 117.  (Contributed by Lllllllllwith10ls, 26-Jun-2026.) $)
   soridm $p |- ( ( ( ph (+) ph ) (+) ph ) <-> ( ph (+) ph ) ) $=
-    ( wso pm1.2s sorc impbii ) AABZABFACFADE $.
+    ( wso pm1.2s sorc impbii ) AABABAABACAABADE $.
 
   $( Theorem *4.25 of [WhiteheadRussell] p. 117.  (Contributed by NM,
      3-Jan-2005.) $)
   pm4.25s $p |- ( ( ph (+) ph ) <-> ( ( ph (+) ph ) (+) ph ) ) $=
-    ( wso soridm bicomi ) AABZABEACD $.
+    ( wso soridm bicomi ) AABABAABACD $.
 
   ${
     sorim12i.1 $e |- ( ph -> ps ) $.
@@ -2953,8 +2957,8 @@ $)
     $( Disjoin antecedents and consequents of two premises.  (Contributed by
        Lllllllllwith10ls, 20-Jul-2026.) $)
     sorim12i $p |- ( ( ph (+) ch ) -> ( ps (+) th ) ) $=
-      ( wso wn wi pm2.53s con3i imim12i sorrd syl ) ACGAHZCIZBDGACJPBDBHOCDABEK
-      FLMN $.
+      ( wso wn wi pm2.53s con3i imim12i sorrd syl ) ACGAHCIBDGACJAHCIBDBHAHCDAB
+      EKFLMN $.
   $}
 
 
@@ -2998,8 +3002,9 @@ $)
   $( Axiom *1.5 (Assoc) of [WhiteheadRussell] p. 96.  (Contributed by NM,
      3-Jan-2005.) $)
   pm1.5s $p |- ( ( ph (+) ( ps (+) ch ) ) -> ( ps (+) ( ph (+) ch ) ) ) $=
-    ( wso wn wi pm2.53s ax-i3 df-sor imbi2i 3imtr4i sorrd syl ) ABCDZDAEZNFZBAC
-    DZDANGPBQOBEZCFZFROCFZFPRQFORCHNSOBCIJQTRACIJKLM $.
+    ( wso wn wi pm2.53s ax-i3 df-sor imbi2i 3imtr4i sorrd syl ) ABCDDAEBCDFBACD
+    DABCDGAEBCDFBACDAEBECFFBEAECFFAEBCDFBEACDFAEBECHBCDBECFAEBCIJACDAECFBEACIJK
+    LM $.
 
   $( Swap two disjuncts.  (Contributed by NM, 5-Aug-1993.)  (Proof shortened by
      Wolf Lammen, 14-Nov-2012.) $)
@@ -3010,7 +3015,8 @@ $)
      p. 118.  (Contributed by NM, 5-Aug-1993.)  (Proof shortened by Andrew
      Salmon, 26-Jun-2011.) $)
   sorass $p |- ( ( ( ph (+) ps ) (+) ch ) <-> ( ph (+) ( ps (+) ch ) ) ) $=
-    ( wso sorcom sor12 sorbi2i 3bitri ) ABDZCDCIDACBDZDABCDZDICECABFJKACBEGH $.
+    ( wso sorcom sor12 sorbi2i 3bitri ) ABDCDCABDDACBDDABCDDABDCECABFCBDBCDACBE
+    GH $.
 
 
 $(
@@ -3055,17 +3061,17 @@ $)
 
   $( (Contributed by Lllllllllwith10ls, 31-May-2026.) $)
   mod-a1 $p |- ( ph -> <> ph ) $=
-      ( wn wi wpos pm2.24 df-pos sylibr ) AABACADAAEAFG $.
+    ( wn wi wpos pm2.24 df-pos sylibr ) AABACADAAEAFG $.
 
   $( (Contributed by Lllllllllwith10ls, 31-May-2026.) $)
   mod-a2 $p |- ( [] ph -> ph ) $=
-      ( wnec wn wpos df-nec mod-a1 con1i sylbi ) ABACZDZCAAEAJIFGH $.
+    ( wnec wn wpos df-nec mod-a1 con1i sylbi ) ABACDCAAEAACDACFGH $.
 
 
   $( (Contributed by Lllllllllwith10ls, 1-Jun-2026.) $)
   mod-a3 $p |- ( ph -> ( ph -> [] ph ) ) $=
-      ( wn wpos wnec wi df-pos con4 sylbi com12 con2d df-nec imbitrrdi ) AAABZC
-      ZBADANANAMNMBMEAMEMFMAGHIJAKL $.
+    ( wn wpos wnec wi df-pos con4 sylbi com12 con2d df-nec imbitrrdi ) AAABCBAD
+    AABCAABCAABABCABBABEAABEABFABAGHIJAKL $.
 
   $(
        (Contributed by Lllllllllwith10ls, 1-Jun-2026.)
