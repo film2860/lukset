@@ -240,8 +240,11 @@ $)
   $( Axiom I3.  (Contributed by Lllllllllwith10ls, 25-May-2026.) $)
   ax-i3 $a |- ( ( ( ph -> ps ) -> ps ) -> ( ( ps -> ph ) -> ph ) ) $.
 
-  $( Axiom I4.  (Contributed by Lllllllllwith10ls, 25-May-2026.) $)
-  ax-i4 $a |- ( ( ( ( ( ph -> ps ) -> ph ) -> ph ) -> ( ps -> ch ) )
+  $( Axiom I4.  (Contributed by film2860, 24-Jul-2026.) $)
+  ax-i4 $a |- ( ( ( ph -> ( ph -> ps ) ) -> ph ) -> ph ) $.
+
+  $( Axiom I5.  {TODO} In process to merge with I4.  (Contributed by Lllllllllwith10ls, 25-May-2026.) $)
+  ax-i5 $a |- ( ( ( ( ( ph -> ps ) -> ph ) -> ph ) -> ( ps -> ch ) )
   -> ( ps -> ch ) ) $.
 
   $( Axiom N1.  (Contributed by Lllllllllwith10ls, 25-May-2026.) $)
@@ -291,7 +294,7 @@ $)
   $}
   
     $( Weaken ~ ax-i1 . (Contributed by film2860, 22-Jul-2026.) $)
-    axl1w $p |- ( ph -> ( ps -> ( ch -> ps ) ) ) $=
+    axi1w $p |- ( ph -> ( ps -> ( ch -> ps ) ) ) $=
       ( wi ax-i1 a1i ) BCBDDABCEF $.
 
   ${
@@ -587,10 +590,10 @@ $)
     mpid.1 $e |- ( ph -> ch ) $.
     mpid.2 $e |- ( ph -> ( ps -> ( ch -> th ) ) ) $.
     $( A nested modus ponens deduction.  Deduction associated with ~ mpi .
-       Contributed by film2860, 23-Jul-2026.) 
-       (Contributed by ?who?, 23-Jul-2026.) $)
-    mpid $p |- ( ps -> ( ph -> ( ph -> th ) ) ) $=
-      ( wi com12 a2d mpi ) BACGAADGGEBACDABCDGFHIJ $.
+       (Contributed by film2860, 23-Jul-2026.) $)
+    mpid $p |- ( ph -> ( ph -> ( ps -> th ) ) ) $=
+      ( wi pcom12 ax-i2 ax-mp syl6 ) BADGZGZABDGGZGZANGZBADHAMGOPGABCDGZLFACGQL
+      GEACDIJKAMNIJJ $.
   $}
 
   ${
@@ -652,7 +655,80 @@ $)
     2a1dd $p |- ( ph -> ( ps -> ( th -> ( ta -> ch ) ) ) ) $=
       ( wi a1dd ) ABECGDABCEFHH $.
   $}
+ 
+  ${
+    pm2.43i.1 $e |- ( ph -> ( ph -> ( ph -> ps ) ) ) $.
+    $( Inference absorbing redundant antecedent.  Inference associated with
+       ~ pm2.43 .  (Contributed by film2860, 24-Jul-2026.) $)
+    pm2.43i $p |- ( ph -> ( ph -> ps ) ) $=
+      ( wi ax-i4 ax-i3 ax-mp ) AAABDDZDZHCHADADIHDABEHAFGG $.
+  $}
+  
 
+  ${
+    pm2.43d.1 $e |- ( ph -> ( ps -> ( ps -> ( ps -> ch ) ) ) ) $.
+    $( Deduction absorbing redundant antecedent.  Deduction associated with
+       ~ pm2.43 and ~ pm2.43i .  (Contributed by film2860, 24-Jul-2026.) $)
+    pm2.43d $p |- ( ph -> ( ps -> ( ps -> ch ) ) ) $=
+      ( wi ax-i4 ax-i3 ax-mp imim2i ) ABBBCEEZEZEAJEDKJAJBEBEKJEBCFJBGHIH $.
+  $}
+
+  ${
+    pm2.43a.1 $e |- ( ps -> ( ps -> ( ph -> ( ps -> ch ) ) ) ) $.
+    $( Inference absorbing redundant antecedent.  (Contributed by film2860, 24-Jul-2026.) $)
+    pm2.43a $p |- ( ps -> ( ph -> ( ps -> ch ) ) ) $=
+      ( wi pcom12 imim2i ax-mp com12 pm2.43d ) ABBCEZABCBABKEZBBAKEEZEBALEZEDMN
+      BBAKFGHIJI $.
+  $}
+
+  ${
+    pm2.43b.1 $e |- ( ps -> ( ph -> ( ps -> ( ps -> ch ) ) ) ) $.
+    $( Inference absorbing redundant antecedent.  (Contributed by film2860, 24-Jul-2026.) $)
+    pm2.43b $p |- ( ps -> ( ph -> ( ps -> ch ) ) ) $=
+      ( wi com12 pm2.43d ) ABBCEZABCBABHEDFGF $.
+  $}
+
+    $( Absorption of redundant antecedent. Generalization of theorem *2.43 of [WhiteheadRussell] p. 106.
+     (Contributed by film2860, 24-Jul-2026.) $)
+  pm2.43 $p |- ( ( ph -> ( ph -> ( ph -> ps ) ) ) -> ( ph -> ( ph -> ps ) ) ) $=
+    ( wi ax-i4 ax-i3 ax-mp ) AABCCZACACAGCGCABDGAEF $.
+
+  ${
+    imim2d.1 $e |- ( ph -> ( ps -> ch ) ) $.
+    $( Deduction adding nested antecedents.  Deduction associated with ~ imim2
+       and ~ imim2i .  (Contributed by NM, 10-Jan-1993.) $)
+    imim2d $p |- ( ph -> ( ( th -> ps ) -> ( th -> ch ) ) ) $=
+      ( wi imim2 syl ) ABCFDBFDCFFEBCDGH $.
+  $}
+
+  ${
+    embantd.1 $e |- ( ph -> ps ) $.
+    embantd.2 $e |- ( ph -> ( ch -> th ) ) $.
+    $( Deduction embedding an antecedent.  (Contributed by Wolf Lammen,
+       4-Oct-2013.) $)
+    embantd $p |- ( ph -> ( ph -> ( ( ps -> ch ) -> th ) ) ) $=
+      ( wi imim2d mpid ) ABCGBDEACDBFHI $.
+  $}
+
+  ${
+    3syld.1 $e |- ( ph -> ( ps -> ch ) ) $.
+    3syld.2 $e |- ( ph -> ( ch -> th ) ) $.
+    3syld.3 $e |- ( ph -> ( th -> ta ) ) $.
+    $( Triple syllogism deduction.  Deduction associated with ~ 3syld .
+       (Contributed by Jeff Hankins, 4-Aug-2009.) $)
+    3syld $p |- ( ph -> ( ph -> ( ph -> ( ps -> ta ) ) ) ) $=
+      ( wi syld imim2d sylcom ) AABDIBEIABCDFGJADEBHKL $.
+  $}
+
+  ${
+    sylsyld.1 $e |- ( ph -> ps ) $.
+    sylsyld.2 $e |- ( ph -> ( ch -> th ) ) $.
+    sylsyld.3 $e |- ( ps -> ( th -> ta ) ) $.
+    $( A double syllogism inference.  (Contributed by Alan Sare,
+       20-Apr-2011.) $)
+    sylsyld $p |- ( ph -> ( ph -> ( ch -> ta ) ) ) $=
+      ( wi syl syld ) ACDEGABDEIFHJK $.
+  $}
 
   ${
     imim12i.1 $e |- ( ph -> ps ) $.
@@ -3024,7 +3100,7 @@ $)
      (Contributed by Lllllllllwith10ls, 26-Jun-2026.) $)
   pm1.2s $p |- ( ( ( ph (+) ph ) (+) ph ) -> ( ph (+) ph ) ) $=
     ( wso wn wi pm2.53s con3i imim1i con1 wo id con2 mpi pm2.54 syl orri pm2.32
-    ax-i4 pm1.4 mp2b ori pm1.5 pm2.4 ax-mp 3syl sorrd ) AABZABZAAUGUFCZADACZADZ
+    ax-i5 pm1.4 mp2b ori pm1.5 pm2.4 ax-mp 3syl sorrd ) AABZABZAAUGUFCZADACZADZ
     CZADZUJUFAEUKUHAUFUJAAEFGULUIUJDUJUJAHUIUJUIUIUJIZIUMUIUMUIUMDAAADZCZDZUMDU
     MUPUIUMUPUNUIAJAUNKLGUPUMUIUPIZUJIZUIUPUJIIUPUMIUJUIIZUPIUJUQIURUSUPUSUPDUJ
     UIDUIDZUPDUPUTUSUPUJUIMGUIAUOQNOUJUIUPPUJUQRSUIUPUJPUIUPUJUASTNOUIUJUBUCTNU
