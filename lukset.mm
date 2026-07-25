@@ -1000,6 +1000,94 @@ $)
       ( com3r ) CABDABCDEFF $.
   $}
 
+  ${
+    com4.1 $e |- ( ph -> ( ps -> ( ch -> ( th -> ta ) ) ) ) $.
+    $( Commutation of antecedents.  Swap 3rd and 4th.  Deduction associated
+       with ~ com23 .  Double deduction associated with ~ com12 .  (Contributed
+       by NM, 25-Apr-1994.) $)
+    com34 $p |- ( ph -> ( ps -> ( th -> ( ch -> ta ) ) ) ) $=
+      ( wi pm2.04 syl6 ) ABCDEGGDCEGGFCDEHI $.
+
+    $( Commutation of antecedents.  Rotate left.  (Contributed by NM,
+       25-Apr-1994.)  (Proof shortened by Mel L. O'Cat, 15-Aug-2004.) $)
+    com4l $p |- ( ps -> ( ch -> ( th -> ( ph -> ta ) ) ) ) $=
+      ( wi com3l com34 ) BCADEABCDEGFHI $.
+
+    $( Commutation of antecedents.  Rotate twice.  (Contributed by NM,
+       25-Apr-1994.) $)
+    com4t $p |- ( ch -> ( th -> ( ph -> ( ps -> ta ) ) ) ) $=
+      ( com4l ) BCDAEABCDEFGG $.
+
+    $( Commutation of antecedents.  Rotate right.  (Contributed by NM,
+       25-Apr-1994.) $)
+    com4r $p |- ( th -> ( ph -> ( ps -> ( ch -> ta ) ) ) ) $=
+      ( com4t com4l ) CDABEABCDEFGH $.
+
+    $( Commutation of antecedents.  Swap 2nd and 4th.  Deduction associated
+       with ~ com13 .  (Contributed by NM, 25-Apr-1994.)  (Proof shortened by
+       Wolf Lammen, 28-Jul-2012.) $)
+    com24 $p |- ( ph -> ( th -> ( ch -> ( ps -> ta ) ) ) ) $=
+      ( wi com4t com13 ) CDABEGABCDEFHI $.
+
+    $( Commutation of antecedents.  Swap 1st and 4th.  (Contributed by NM,
+       25-Apr-1994.)  (Proof shortened by Wolf Lammen, 28-Jul-2012.) $)
+    com14 $p |- ( th -> ( ps -> ( ch -> ( ph -> ta ) ) ) ) $=
+      ( wi com4l com3r ) BCDAEGABCDEFHI $.
+  $}
+
+  ${
+    com5.1 $e |- ( ph -> ( ps -> ( ch -> ( th -> ( ta -> et ) ) ) ) ) $.
+    $( Commutation of antecedents.  Swap 4th and 5th.  Deduction associated
+       with ~ com34 .  Double deduction associated with ~ com23 .  Triple
+       deduction associated with ~ com12 .  (Contributed by Jeff Hankins,
+       28-Jun-2009.) $)
+    com45 $p |- ( ph -> ( ps -> ( ch -> ( ta -> ( th -> et ) ) ) ) ) $=
+      ( wi pm2.04 syl8 ) ABCDEFHHEDFHHGDEFIJ $.
+
+    $( Commutation of antecedents.  Swap 3rd and 5th.  Deduction associated
+       with ~ com24 .  Double deduction associated with ~ com13 .  (Contributed
+       by Jeff Hankins, 28-Jun-2009.) $)
+    com35 $p |- ( ph -> ( ps -> ( ta -> ( th -> ( ch -> et ) ) ) ) ) $=
+      ( wi com34 com45 ) ABDECFHABDCEFABCDEFHGIJI $.
+
+    $( Commutation of antecedents.  Swap 2nd and 5th.  Deduction associated
+       with ~ com14 .  (Contributed by Jeff Hankins, 28-Jun-2009.) $)
+    com25 $p |- ( ph -> ( ta -> ( ch -> ( th -> ( ps -> et ) ) ) ) ) $=
+      ( wi com24 com45 ) ADCEBFHADCBEFABCDEFHGIJI $.
+
+    $( Commutation of antecedents.  Rotate left.  (Contributed by Jeff Hankins,
+       28-Jun-2009.)  (Proof shortened by Wolf Lammen, 29-Jul-2012.) $)
+    com5l $p |- ( ps -> ( ch -> ( th -> ( ta -> ( ph -> et ) ) ) ) ) $=
+      ( wi com4l com45 ) BCDAEFABCDEFHGIJ $.
+
+    $( Commutation of antecedents.  Swap 1st and 5th.  (Contributed by Jeff
+       Hankins, 28-Jun-2009.)  (Proof shortened by Wolf Lammen,
+       29-Jul-2012.) $)
+    com15 $p |- ( ta -> ( ps -> ( ch -> ( th -> ( ph -> et ) ) ) ) ) $=
+      ( wi com5l com4r ) BCDEAFHABCDEFGIJ $.
+
+    $( Commutation of antecedents.  Rotate left twice.  (Contributed by Jeff
+       Hankins, 28-Jun-2009.) $)
+    com52l $p |- ( ch -> ( th -> ( ta -> ( ph -> ( ps -> et ) ) ) ) ) $=
+      ( com5l ) BCDEAFABCDEFGHH $.
+
+    $( Commutation of antecedents.  Rotate right twice.  (Contributed by Jeff
+       Hankins, 28-Jun-2009.) $)
+    com52r $p |- ( th -> ( ta -> ( ph -> ( ps -> ( ch -> et ) ) ) ) ) $=
+      ( com52l com5l ) CDEABFABCDEFGHI $.
+
+    $( Commutation of antecedents.  Rotate right.  (Contributed by Wolf Lammen,
+       29-Jul-2012.) $)
+    com5r $p |- ( ta -> ( ph -> ( ps -> ( ch -> ( th -> et ) ) ) ) ) $=
+      ( com52l ) CDEABFABCDEFGHH $.
+  $}
+
+  $( Closed form of ~ imim12i and of ~ 3syl .  (Contributed by BJ,
+     16-Jul-2019.) $)
+  imim12 $p |- ( ( ph -> ps ) ->
+                      ( ( ch -> th ) -> ( ( ps -> ch ) -> ( ph -> th ) ) ) ) $=
+    ( wi imim2 ax-i2 syl9r ) CDEBCEBDEABEADECDBFABDGH $.
+
   $( Elimination of a nested antecedent.  Sometimes called "Syll-Simp" since it
      is a syllogism applied to ~ ax-i1 ("Simplification").  (Contributed by
      Wolf Lammen, 9-May-2013.) $)
@@ -1014,6 +1102,29 @@ $)
       ( wi ax-i1 syl ) BABECBAFDG $.
   $}
 
+  ${
+    pm2.86d.1 $e |- ( ph -> ( ( ps -> ch ) -> ( ps -> th ) ) ) $.
+    $( Deduction associated with ~ pm2.86 .  (Contributed by NM, 29-Jun-1995.)
+       (Proof shortened by Wolf Lammen, 3-Apr-2013.) $)
+    pm2.86d $p |- ( ph -> ( ps -> ( ch -> th ) ) ) $=
+      ( wi ax-i1 syl5 com23 ) ACBDCBCFABDFCBGEHI $.
+  $}
+
+  $( Converse of theorem ~ a2 .  Theorem *2.86 of [WhiteheadRussell] p. 108.
+     (Contributed by NM, 25-Apr-1994.)  (Proof shortened by Wolf Lammen,
+     3-Apr-2013.) $)
+  pm2.86 $p |- ( ( ( ph -> ps ) -> ( ph -> ch ) ) ->
+                                                    ( ph -> ( ps -> ch ) ) ) $=
+    ( wi id pm2.86d ) ABDACDDZABCGEF $.
+
+  ${
+    pm2.86i.1 $e |- ( ( ph -> ps ) -> ( ph -> ch ) ) $.
+    $( Inference associated with ~ pm2.86 .  (Contributed by NM, 5-Aug-1993.)
+       (Proof shortened by Wolf Lammen, 3-Apr-2013.) $)
+    pm2.86i $p |- ( ph -> ( ps -> ch ) ) $=
+      ( wi jarri com12 ) BACABACEDFG $.
+  $}
+  
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
