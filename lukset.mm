@@ -240,12 +240,15 @@ $)
   $( Axiom I3.  (Contributed by Lllllllllwith10ls, 25-May-2026.) $)
   ax-i3 $a |- ( ( ( ph -> ps ) -> ps ) -> ( ( ps -> ph ) -> ph ) ) $.
 
-  $( Axiom I4.  (Contributed by film2860, 24-Jul-2026.) $)
-  ax-i4 $a |- ( ( ( ph -> ( ph -> ps ) ) -> ph ) -> ph ) $.
-
-  $( Axiom I5.  {TODO} In process to merge with I4.  (Contributed by Lllllllllwith10ls, 25-May-2026.) $)
-  ax-i5 $a |- ( ( ( ( ( ph -> ps ) -> ph ) -> ph ) -> ( ps -> ch ) )
+  $( Axiom I4.  (Contributed by Lllllllllwith10ls, 25-May-2026.) $)
+  ax-i4 $a |- ( ( ( ( ( ph -> ps ) -> ph ) -> ph ) -> ( ps -> ch ) )
   -> ( ps -> ch ) ) $.
+
+  $( Subaxiom of ax-i4. {TODO} Merge with Axiom I4.  (Contributed by film2860, 24-Jul-2026.) $)
+  ax-i4.1 $a |- ( ( ( ph -> ( ph -> ps ) ) -> ph ) -> ph ) $.
+
+  $( Subaxiom of ax-i4. {TODO} Merge with Axiom I4.  (Contributed by film2860, 27-Jul-2026.) $)
+  ax-i4.2 $a |- ( ( ( ph -> ps ) -> ( ps -> ph ) ) -> ( ps -> ph ) ) $.
 
   $( Axiom N1.  (Contributed by Lllllllllwith10ls, 25-May-2026.) $)
   ax-n1 $a |- ( ( -. ph -> -. ps ) -> ( ps -> ph ) ) $.
@@ -393,7 +396,7 @@ $)
   
   $( This theorem, sometimes called "Assertion" or "Pon" (for "ponens"), can be
      thought of as a closed form of modus ponens ~ ax-mp .  Theorem *2.27 of
-     [WhiteheadRussell] p. 104.  (Contributed by film2860, 22-July-2026.) $)
+     [WhiteheadRussell] p. 104. (Contributed by film2860, 22-July-2026.) $)
   pm2.27 $p |- ( ph -> ( ( ph -> ps ) -> ps ) ) $=
     ( wi ax-i1 ax-i3 syl ) ABACZACABCBCAGDBAEF $.
 
@@ -402,7 +405,6 @@ $)
   id $p |- ( ph -> ph )
     $=
     ( wi ax-i1 mpi ) AAAABBZAAACAECD $.
-
 
   $( Principle of identity ~ id with antecedent.  (Contributed by NM,
      26-Nov-1995.) $)
@@ -483,8 +485,7 @@ $)
 
   $( A closed form of syllogism (see ~ syl ).  Theorem *2.05 of
      [WhiteheadRussell] p. 100.  Its associated inference is ~ imim2i .  Its
-     associated deduction is ~ imim2d .  An alternate proof from more basic
-     results is given by ~ ax-1 followed by ~ a2d .  (Contributed by film2860, 23-Jul-2026.) $)
+     associated deduction is ~ imim2d . (Contributed by film2860, 23-Jul-2026.) $)
   imim2 $p |- ( ( ph -> ps ) -> ( ( ch -> ph ) -> ( ch -> ps ) ) ) $=
     ( wi ax-i2 com12 ) CADABDCBDCABEF $.
 
@@ -658,7 +659,7 @@ $)
   ${
     a1dd.1 $e |- ( ph -> ( ps -> ch ) ) $.
     $( Double deduction introducing an antecedent.  Deduction associated with
-       ~ a1d .  Double deduction associated with ~ ax-1 and ~ a1i .
+       ~ a1d .  Double deduction associated with ~ ax-i1 and ~ a1i .
        (Contributed by NM, 17-Dec-2004.)  (Proof shortened by Mel L. O'Cat,
        15-Jan-2008.) $)
     a1dd $p |- ( ph -> ( ps -> ( th -> ch ) ) ) $=
@@ -680,7 +681,7 @@ $)
     $( Inference absorbing redundant antecedent.  Inference associated with
        ~ pm2.43 .  (Contributed by film2860, 24-Jul-2026.) $)
     pm2.43i $p |- ( ph -> ( ph -> ps ) ) $=
-      ( wi ax-i4 ax-i3 ax-mp ) AAABDDZDZHCHADADIHDABEHAFGG $.
+      ( wi ax-i4.1 ax-i3 ax-mp ) AAABDDZDZHCHADADIHDABEHAFGG $.
   $}
   
 
@@ -689,7 +690,7 @@ $)
     $( Deduction absorbing redundant antecedent.  Deduction associated with
        ~ pm2.43 and ~ pm2.43i .  (Contributed by film2860, 24-Jul-2026.) $)
     pm2.43d $p |- ( ph -> ( ps -> ( ps -> ch ) ) ) $=
-      ( wi ax-i4 ax-i3 ax-mp imim2i ) ABBBCEEZEZEAJEDKJAJBEBEKJEBCFJBGHIH $.
+      ( wi ax-i4.1 ax-i3 ax-mp imim2i ) ABBBCEEZEZEAJEDKJAJBEBEKJEBCFJBGHIH $.
   $}
 
   ${
@@ -710,7 +711,7 @@ $)
     $( Absorption of redundant antecedent. Strong form of theorem *2.43 of [WhiteheadRussell] p. 106.
      (Contributed by film2860, 24-Jul-2026.) $)
   pm2.43 $p |- ( ( ph -> ( ph -> ( ph -> ps ) ) ) -> ( ph -> ( ph -> ps ) ) ) $=
-    ( wi ax-i4 ax-i3 ax-mp ) AABCCZACACAGCGCABDGAEF $.
+    ( wi ax-i4.1 ax-i3 ax-mp ) AABCCZACACAGCGCABDGAEF $.
 
   ${
     imim2d.1 $e |- ( ph -> ( ps -> ch ) ) $.
@@ -928,7 +929,7 @@ $)
     a1ddd.1 $e |- ( ph -> ( ps -> ( ch -> ta ) ) ) $.
     $( Triple deduction introducing an antecedent to a wff.  Deduction
        associated with ~ a1dd .  Double deduction associated with ~ a1d .
-       Triple deduction associated with ~ ax-1 and ~ a1i .  (Contributed by
+       Triple deduction associated with ~ ax-i1 and ~ a1i .  (Contributed by
        Jeff Hankins, 4-Aug-2009.) $)
     a1ddd $p |- ( ph -> ( ps -> ( ch -> ( th -> ta ) ) ) ) $=
       ( wi ax-i1 syl8 ) ABCEDEGFEDHI $.
@@ -1124,7 +1125,6 @@ $)
     pm2.86i $p |- ( ph -> ( ps -> ch ) ) $=
       ( wi jarri com12 ) BACABACEDFG $.
   $}
-  
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -1241,6 +1241,15 @@ $)
       ( wn wi pm2.21 syl ) AEABFCABGDH $.
   $}
 
+
+  $( Wajsberg axiom. Analogue of Clavius law, or "consequentia mirabilis" ("admirable consequence").  If a
+     formula is implied by its negation, then it is true.  Can be used in
+     proofs by contradiction.  Analogue of Theorem *2.18 of [WhiteheadRussell] p. 103.  See
+     also the analogous of weak Clavius law ~ pm2.01 . 
+     (Contributed by film2860, 27-Jul-2026.) $)
+  pm2.18 $p |- ( ( ( ph -> -. ph ) -> ph ) -> ph ) $=
+    ( wn wi ax-n1 ax-i3 syl ax-i1 pm2.27 ax-mp ax-i4 ) ABZAKCACZACZACZBZCZMCZMP
+    AMCZMCZMPNACSANDMAEFRSMCALGRMHIFMPCPCQMCAKOJMPEII $.
 
   $( Double negation elimination.  (Contributed by Lllllllllwith10ls,
      26-May-2026.) $)
@@ -1498,6 +1507,16 @@ $)
   pm2.521 $p |- ( -. ( ph -> ps ) -> ( ps -> ph ) ) $=
     ( pm2.521g ) ABAC $.
 
+  $( Exportation theorem ~ pm3.3 (closed form of ~ ex ) expressed with
+     primitive connectives.  (Contributed by NM, 28-Dec-1992.)  (Proof
+     shortened by Garrett Katz, 25-May-2026.) $)
+  expt $p |- ( ( -. ( ph -> -. ps ) -> ch ) -> ( ph -> ( ps -> ch ) ) ) $=
+    ( wn wi pm3.2im id syl9r ) ABABDEDZICEZCABFJGH $.
+
+  $( Importation theorem ~ pm3.1 (closed form of ~ imp ) expressed with
+     primitive connectives.  (Contributed by film2860, 27-Jul-2026) $)
+  impt $p |- ( ( ph -> ( ps -> ch ) ) -> ( -. ( ph -> -. ps ) -> ch ) ) $=
+    ( wn wi id com3l impi com12 ) ABDEDABCEEZCABJCEJABCJFGHI $.
 
   ${
     mt2.1 $e |- ps $.
@@ -3406,7 +3425,7 @@ $)
      (Contributed by Lllllllllwith10ls, 26-Jun-2026.) $)
   pm1.2s $p |- ( ( ( ph (+) ph ) (+) ph ) -> ( ph (+) ph ) ) $=
     ( wso wn wi pm2.53s con3i ai2i con1 wo id con2 mpi pm2.54 syl orri pm2.32
-    ax-i5 pm1.4 mp2b ori pm1.5 pm2.4 ax-mp 3syl sorrd ) AABZABZAAUGUFCZADACZADZ
+    ax-i4 pm1.4 mp2b ori pm1.5 pm2.4 ax-mp 3syl sorrd ) AABZABZAAUGUFCZADACZADZ
     CZADZUJUFAEUKUHAUFUJAAEFGULUIUJDUJUJAHUIUJUIUIUJIZIUMUIUMUIUMDAAADZCZDZUMDU
     MUPUIUMUPUNUIAJAUNKLGUPUMUIUPIZUJIZUIUPUJIIUPUMIUJUIIZUPIUJUQIURUSUPUSUPDUJ
     UIDUIDZUPDUPUTUSUPUJUIMGUIAUOQNOUJUIUPPUJUQRSUIUPUJPUIUPUJUASTNOUIUJUBUCTNU
