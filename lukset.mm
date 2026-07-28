@@ -562,10 +562,9 @@ $)
     syl6.2 $e |- ( ch -> th ) $.
     $( A syllogism rule of inference.  The second premise is used to replace
        the consequent of the first premise.  (Contributed by Lllllllllwith10ls,
-       25-May-2026.) $)
+       25-May-2026.)  (Proof shortened by film2860, 28-Jul-2026.) $)
     syl6 $p |- ( ph -> ( ps -> th ) ) $=
-      ( wi ax-i2 a1i ax-i3 ax-mp syl ) ABCGZBDGZEMCDGZNGZNBCDHNOGZOGPNGOQFINOJK
-      LL $.
+      ( wi imim2i syl ) ABCGBDGECDBFHI $.
   $}
 
   ${
@@ -1241,7 +1240,7 @@ $)
   $( Absorption of redundant antecedent. Negation form of theorem *2.43 of [WhiteheadRussell] p. 106.
      (Contributed by film2860, 28-Jul-2026.) $)
   pm2.43n $p |- ( ( ph -> ( ph -> -. ph ) ) -> ( ph -> -. ph ) ) $=
-    ( wn wi pm2.18 ax-i3 ax-mp ) AABCZACACAGCGCADGAEF $.
+    ( wn wi pm2.18 ai3i ) AABCAADE $.
 
   ${
     pm2.43na.1 $e |- ( ps -> ( ps -> ( ph -> -. ps ) ) ) $.
@@ -1281,7 +1280,7 @@ $)
   $( Absorption of redundant antecedent. Strong form of theorem *2.43 of [WhiteheadRussell] p. 106.
      (Contributed by film2860, 24-Jul-2026.) $)
   pm2.43 $p |- ( ( ph -> ( ph -> ( ph -> ps ) ) ) -> ( ph -> ( ph -> ps ) ) ) $=
-    ( wi axi4.1 ax-i3 ax-mp ) AABCCZACACAGCGCABDGAEF $.
+    ( wi axi4.1 ai3i ) AABCCAABDE $.
 
   ${
     pm2.43a.1 $e |- ( ps -> ( ps -> ( ph -> ( ps -> ch ) ) ) ) $.
@@ -1785,10 +1784,10 @@ $)
     $( And defined by implication (Contributed by Lllllllllwith10ls,
        31-May-2026.) $)
     impandd $p |- ( ph -> -. ( ( -. ps -> -. ch ) -> -. ch ) ) $=
-      ( wn notnoti notnot con3 ax-i3 con3i ai2i syl11 ax-i1 syl6 syl7 con3rr3
-      wi mpi syl mtoi ) ABFZCFZRZUCRZABRZFZUFDGAAFZFUEUGRAHUEUFUHUEACRZUFUHREUF
-      UBUHRZUEUIUHABIUCUHRZUEUJUHRZUIUKUEUHULUHUCRZUCRUKUHUEUHUCJUMUDUCUBUHUCAB
-      DKLLMUHUJNOACIMPSQTUA $.
+      ( wn notnoti notnot con3 ax-i3 con3i ai2i syl11 a1dd syl7 mpi con3rr3 syl
+      wi mtoi ) ABFZCFZSZUBSZABSZFZUEDGAAFZFUDUFSAHUDUEUGUDACSZUEUGSEUEUAUGSZUD
+      UHUGABIUBUGSZUDUIUGSUHUJUDUGUIUGUBSZUBSUJUGUDUGUBJUKUCUBUAUGUBABDKLLMNACI
+      MOPQRT $.
   $}
 
   $( Property of the biconditional connective.  (Contributed by
