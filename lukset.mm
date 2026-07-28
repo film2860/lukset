@@ -349,8 +349,8 @@ $)
     $( A nested modus ponens inference. (Contributed by Lllllllllwith10ls,
        25-May-2026.) (Remove dependence of an unnecessary axiom by film2860, 22-Jul-2026.) $)
     mpi $p |- ( ph -> ch ) $=
-      ( wi a1i ax-i3 ax-i2 ax-mp syl ) CBFZBFZACFZBLDGMBCFZCFZNCBHAOFPNFEAOCIJK
-      J $.
+      ( wi a1i ax-i3 ax-i2 ax-mp mp2b ) CBFZBFBCFZCFZACFZBLDGCBHAMFNOFEAMCIJK
+      $.
   $}
 
   ${
@@ -514,6 +514,22 @@ $)
   $}
 
   ${
+    ai3i.1 $e |- ( ( ph -> ps ) -> ps ) $.
+    $( Inference associated with ~ ax-i3 . 
+       (Contributed by ?who?, 28-Jul-2026.) $)
+    ai3i $p |- ( ( ps -> ph ) -> ph ) $=
+      ( wi ax-i3 ax-mp ) ABDBDBADADCABEF $.
+  $}
+
+  ${
+    ai3d.1 $e |- ( ph -> ( ( ps -> ch ) -> ch ) ) $.
+    $( Deduction associated with ~ ax-i3 . 
+       (Contributed by ?who?, 28-Jul-2026.) $)
+    ai3d $p |- ( ph -> ( ( ch -> ps ) -> ps ) )  $=
+      ( wi ax-i3 syl ) ABCECECBEBEDBCFG $.
+  $}
+
+  ${
     syl5com.1 $e |- ( ph -> ps ) $.
     syl5com.2 $e |- ( ch -> ( ps -> th ) ) $.
     $( Syllogism inference with commuted antecedents.  (Contributed by NM,
@@ -609,8 +625,7 @@ $)
     $( A nested modus ponens deduction.  Deduction associated with ~ mpi .
        (Contributed by film2860, 23-Jul-2026.) $)
     mpid $p |- ( ph -> ( ph -> ( ps -> th ) ) ) $=
-      ( wi pm2.04 ax-i2 ax-mp syl6 ) BADGZGZABDGGZGZANGZBADHAMGOPGABCDGZLFACGQL
-      GEACDIJKAMNIJJ $.
+      ( wi ai2i syl6 pm2.04 mpcom ) BADGZGABDGABCDGLFACDEHIBADJK $.
   $}
 
   ${
@@ -636,11 +651,11 @@ $)
        ~ conventions for the meaning of "associated deduction" or "deduction
        form".  (Contributed by film2860, 23-Jul-2026.) $)
     syld $p |- ( ph -> ( ph -> ( ps -> th ) ) )  $=
-      ( wi ax-i2 syl5 mpcom ) BCGZABDGZEACDGKLFBCDHIJ $.
+      ( wi ax-i2 syl2im ) ABCGACDGBDGEFBCDHI $.
 
     $( Syllogism deduction.  Commuted form of ~ syld .  (Contributed by film2860, 23-Jul-2026.) $)
     syldc $p |- ( ps -> ( ph -> ( ph -> th ) ) )  $=
-      ( com12 syli ) ABCDABCEGACDFGH $.
+      ( com12 sylcom ) BACDABCEGFH $.
   $}
 
   ${
@@ -801,7 +816,7 @@ $)
     syl5d.2 $e |- ( ph -> ( th -> ( ch -> ta ) ) ) $.
     $( A nested syllogism deduction.  Deduction associated with ~ syl5 . (Contributed by film2860, 24-Jul-2026.) $)
     syl5d $p |- ( ph -> ( ph -> ( th -> ( ps -> ta ) ) ) ) $=
-      ( wi ax-i2 imim2i ax-mp syld ) ADCEHZBEHZGABCHZHAMNHZHFOPABCEIJKL $.
+      ( wi ai2d syld ) ADCEHBEHGABCEFIJ $.
   $}
 
 
@@ -1188,28 +1203,79 @@ $)
      also the analogous of weak Clavius law ~ pm2.01 . 
      (Contributed by film2860, 27-Jul-2026.) $)
   pm2.18 $p |- ( ( ( ph -> -. ph ) -> ph ) -> ph ) $=
-    ( wn wi ax-i4 ax-n1 ax-i3 ax-i1 pm2.27 ax-mp 3syl mp2 ) AABZCACZACZLNACZBZC
-    ZCQCQNCNALPDQOACANCZNCZNAOENAFRSNCAMGRNHIJNQFK $.
+    ( wn wi ax-i4 ax-n1 ax-i1 ax-i3 mpisyl mp2 ) AABZCACZACZJLACZBZCZCOCOLCLAJN
+    DOMACALCLAMEAKFLAGHLOGI $.
 
+  ${
+    pm2.18d.1 $e |- ( ph -> ( ( ps -> -. ps ) -> ps ) ) $.
+    $( Deduction form of the Wajsberg axiom ~ pm2.18 .  (Contributed by 
+       film2860, 28-Jul-2026.)  $)
+    pm2.18d $p |- ( ph -> ps ) $=
+      ( wn wi pm2.18 syl ) ABBDEBEBCBFG $.
+  $}
+
+  ${
+    pm2.18i.1 $e |- ( ( ph -> -. ph ) -> ph ) $.
+    $( Inference associated with the Wajsberg axiom ~ pm2.18 .  (Contributed by 
+       film2860, 28-Jul-2026.)  $)
+    pm2.18i $p |- ph $=
+      ( wn wi pm2.18 ax-mp ) AACDADABAEF $.
+  $}
+
+  ${
+    pm2.43ni.1 $e |- ( ph -> ( ph -> -. ph ) ) $.
+    $( Inference absorbing redundant antecedent.  Inference associated with
+       ~ pm2.43n .  (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.43ni $p |- ( ph -> -. ph ) $=
+      ( wn wi pm2.18 ax-i3 mp2 ) AACDZADADAHDHAEBHAFG $.
+  $}
+  
+  ${
+    pm2.43nd.1 $e |- ( ph -> ( ps -> ( ps -> -. ps ) ) ) $.
+    $( Deduction absorbing redundant antecedent.  Deduction associated with
+       ~ pm2.43n and ~ pm2.43ni .  (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.43nd $p |- ( ph -> ( ps -> -. ps ) ) $=
+      ( wn wi pm2.18 ax-i3 mpsyl ) BBDEZBEBEABIEIBFCIBGH $.
+  $}
+
+  $( Absorption of redundant antecedent. Negation form of theorem *2.43 of [WhiteheadRussell] p. 106.
+     (Contributed by film2860, 28-Jul-2026.) $)
+  pm2.43n $p |- ( ( ph -> ( ph -> -. ph ) ) -> ( ph -> -. ph ) ) $=
+    ( wn wi pm2.18 ax-i3 ax-mp ) AABCZACACAGCGCADGAEF $.
+
+  ${
+    pm2.43na.1 $e |- ( ps -> ( ps -> ( ph -> -. ps ) ) ) $.
+    $( Inference absorbing redundant antecedent.  (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.43na $p |- ( ps -> ( ph -> -. ps ) ) $=
+      ( wn com3r pm2.43nd com12 ) ABBDZABBBAHCEFG $.
+  $}
+
+  ${
+    pm2.43nb.1 $e |- ( ps -> ( ph -> ( ps -> -. ps ) ) ) $.
+    $( Inference absorbing redundant antecedent.  (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.43nb $p |- ( ps -> ( ph -> -. ps ) ) $=
+      ( wn wi com12 pm2.43nd ) ABBDZABBABHECFGF $.
+  $}
+
+
+  $( An axiom in the purely implicational Lukasiewicz logic.  (Contributed by film2860, 28-Jul-2026.) $)
   axi4.1 $p |- ( ( ( ph -> ( ph -> ps ) ) -> ph ) -> ph ) $=
-    ( wn wi pm2.18 pm2.21 imim2i ai2i ax-mp ) AACZDZADZADAABDZDZADZADAEOLAKNAJM
-    AABFGHHI $.
+    ( wi wn pm2.21 imim2i ai2i pm2.18d ) AABCZCZACAAADZCJAKIAABEFGH $.
 
   ${
     pm2.43i.1 $e |- ( ph -> ( ph -> ( ph -> ps ) ) ) $.
     $( Inference absorbing redundant antecedent.  Inference associated with
        ~ pm2.43 .  (Contributed by film2860, 24-Jul-2026.) $)
     pm2.43i $p |- ( ph -> ( ph -> ps ) ) $=
-      ( wi axi4.1 ax-i3 ax-mp ) AAABDDZDZHCHADADIHDABEHAFGG $.
+      ( wi axi4.1 ax-i3 mp2 ) AABDDZADADAHDHABECHAFG $.
   $}
   
-
   ${
     pm2.43d.1 $e |- ( ph -> ( ps -> ( ps -> ( ps -> ch ) ) ) ) $.
     $( Deduction absorbing redundant antecedent.  Deduction associated with
        ~ pm2.43 and ~ pm2.43i .  (Contributed by film2860, 24-Jul-2026.) $)
     pm2.43d $p |- ( ph -> ( ps -> ( ps -> ch ) ) ) $=
-      ( wi axi4.1 ax-i3 ax-mp imim2i ) ABBBCEEZEZEAJEDKJAJBEBEKJEBCFJBGHIH $.
+      ( wi axi4.1 ax-i3 mpsyl ) BBCEEZBEBEABIEIBCFDIBGH $.
   $}
 
   $( Absorption of redundant antecedent. Strong form of theorem *2.43 of [WhiteheadRussell] p. 106.
@@ -1221,8 +1287,7 @@ $)
     pm2.43a.1 $e |- ( ps -> ( ps -> ( ph -> ( ps -> ch ) ) ) ) $.
     $( Inference absorbing redundant antecedent.  (Contributed by film2860, 24-Jul-2026.) $)
     pm2.43a $p |- ( ps -> ( ph -> ( ps -> ch ) ) ) $=
-      ( wi pm2.04 imim2i ax-mp com12 pm2.43d ) ABBCEZABCBABKEZBBAKEEZEBALEZEDMN
-      BBAKFGHIJI $.
+      ( wi com3r pm2.43d ) ABBCABCBBABCEDFGF $.
   $}
 
   ${
@@ -1518,6 +1583,76 @@ $)
      primitive connectives.  (Contributed by film2860, 27-Jul-2026) $)
   impt $p |- ( ( ph -> ( ps -> ch ) ) -> ( -. ( ph -> -. ps ) -> ch ) ) $=
     ( wn wi id com3l impi com12 ) ABDEDABCEEZCABJCEJABCJFGHI $.
+
+  ${
+    pm2.61d.1 $e |- ( ph -> ( ps -> ch ) ) $.
+    pm2.61d.2 $e |- ( ph -> ( -. ps -> ch ) ) $.
+    $( Deduction eliminating an antecedent. 
+       (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.61d $p |- ( ph -> ( ph -> ( -. ch -> ch ) ) ) $=
+      ( wn con1d syld ) ACFBCABCEGDH $.
+  $}
+
+   ${
+    pm2.61d1.1 $e |- ( ph -> ( ps -> ch ) ) $.
+    pm2.61d1.2 $e |- ( -. ps -> ch ) $.
+    $( Inference eliminating an antecedent. 
+       (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.61d1 $p |- ( ph -> ( -. ch ->  ch ) ) $=
+  ( wn con1i syl5 ) CFBACBCEGDH $.
+  $}
+
+  ${
+    pm2.61d2.1 $e |- ( ph -> ( -. ps -> ch ) ) $.
+    pm2.61d2.2 $e |- ( ps -> ch ) $.
+    $( Inference eliminating an antecedent. 
+       (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.61d2 $p |-  ( ph -> ( -. ch -> ch ) ) $=
+      ( wn con3i syl5 ) CFBFACBCEGDH $.
+  $}
+
+  ${
+    pm2.61i.1 $e |- ( ph -> ps ) $.
+    pm2.61i.2 $e |- ( -. ph -> ps ) $.
+    $( Inference eliminating an antecedent.  
+       (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.61i $p |- ( -. ps -> ps ) $=
+      ( nsyl4 ) ABBCDE $.
+  $}
+
+  ${
+    pm2.61ii.1 $e |- ( -. ph -> ( -. ps -> ch ) ) $.
+    pm2.61ii.2 $e |- ( ph -> ch ) $.
+    pm2.61ii.3 $e |- ( ps -> ch ) $.
+    $( Inference eliminating two antecedents.   
+       (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.61ii $p |- ( -. ch -> ch ) $=
+      ( wn wi nsyl5 pm2.61d2 con3rr3 pm2.43ni con4i ) CCGZNNNCNBCACBGCHEDIFJKLM
+      $.
+  $}
+
+  ${
+    pm2.61nii.1 $e |- ( ph -> ( ps -> ch ) ) $.
+    pm2.61nii.2 $e |- ( -. ph -> ch ) $.
+    pm2.61nii.3 $e |- ( -. ps -> ch ) $.
+    $( Inference eliminating two antecedents.  
+       (Contributed by ?who?, 28-Jul-2026.) $)
+    pm2.61nii $p |- ( -. ch -> ch ) $=
+      ( wn wi nsyl4 pm2.61d1 con3rr3 pm2.43ni con4i ) CCGZNNNCNBCABCHCDEIFJKLM
+      $.
+  $}
+
+  ${
+    pm2.61iii.1 $e |- ( -. ph -> ( -. ps -> ( -. ch -> th ) ) ) $.
+    pm2.61iii.2 $e |- ( ph -> th ) $.
+    pm2.61iii.3 $e |- ( ps -> th ) $.
+    pm2.61iii.4 $e |- ( ch -> th ) $.
+    $( Inference eliminating three antecedents.  
+       (Contributed by ?who?, 28-Jul-2026.) $)
+    pm2.61iii $p |- ( -. th -> th ) $=
+      ( wn con3i notnot syl8 syl3c pm2.43ni con4i ) DDIZPPAIZBIZCIZPIZADFJBDGJC
+      DHJQRSDTEDKLMNO $.
+  $}
 
   ${
     mt2.1 $e |- ps $.
