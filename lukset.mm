@@ -244,9 +244,6 @@ $)
   ax-i4 $a |- ( ( ( ( ( ph -> ps ) -> ph ) -> ph ) -> ( ps -> ch ) )
   -> ( ps -> ch ) ) $.
 
-  $( Subaxiom of ax-i4. {TODO} Merge with Axiom I4.  (Contributed by film2860, 24-Jul-2026.) $)
-  ax-i4.1 $a |- ( ( ( ph -> ( ph -> ps ) ) -> ph ) -> ph ) $.
-
   $( Subaxiom of ax-i4. {TODO} Merge with Axiom I4.  (Contributed by film2860, 27-Jul-2026.) $)
   ax-i4.2 $a |- ( ( ( ph -> ps ) -> ( ps -> ph ) ) -> ( ps -> ph ) ) $.
 
@@ -674,44 +671,7 @@ $)
        5-Aug-2009.) $)
     2a1dd $p |- ( ph -> ( ps -> ( th -> ( ta -> ch ) ) ) ) $=
       ( wi a1dd ) ABECGDABCEFHH $.
-  $}
- 
-  ${
-    pm2.43i.1 $e |- ( ph -> ( ph -> ( ph -> ps ) ) ) $.
-    $( Inference absorbing redundant antecedent.  Inference associated with
-       ~ pm2.43 .  (Contributed by film2860, 24-Jul-2026.) $)
-    pm2.43i $p |- ( ph -> ( ph -> ps ) ) $=
-      ( wi ax-i4.1 ax-i3 ax-mp ) AAABDDZDZHCHADADIHDABEHAFGG $.
-  $}
-  
-
-  ${
-    pm2.43d.1 $e |- ( ph -> ( ps -> ( ps -> ( ps -> ch ) ) ) ) $.
-    $( Deduction absorbing redundant antecedent.  Deduction associated with
-       ~ pm2.43 and ~ pm2.43i .  (Contributed by film2860, 24-Jul-2026.) $)
-    pm2.43d $p |- ( ph -> ( ps -> ( ps -> ch ) ) ) $=
-      ( wi ax-i4.1 ax-i3 ax-mp imim2i ) ABBBCEEZEZEAJEDKJAJBEBEKJEBCFJBGHIH $.
-  $}
-
-  ${
-    pm2.43a.1 $e |- ( ps -> ( ps -> ( ph -> ( ps -> ch ) ) ) ) $.
-    $( Inference absorbing redundant antecedent.  (Contributed by film2860, 24-Jul-2026.) $)
-    pm2.43a $p |- ( ps -> ( ph -> ( ps -> ch ) ) ) $=
-      ( wi pm2.04 imim2i ax-mp com12 pm2.43d ) ABBCEZABCBABKEZBBAKEEZEBALEZEDMN
-      BBAKFGHIJI $.
-  $}
-
-  ${
-    pm2.43b.1 $e |- ( ps -> ( ph -> ( ps -> ( ps -> ch ) ) ) ) $.
-    $( Inference absorbing redundant antecedent.  (Contributed by film2860, 24-Jul-2026.) $)
-    pm2.43b $p |- ( ps -> ( ph -> ( ps -> ch ) ) ) $=
-      ( wi com12 pm2.43d ) ABBCEZABCBABHEDFGF $.
-  $}
-
-    $( Absorption of redundant antecedent. Strong form of theorem *2.43 of [WhiteheadRussell] p. 106.
-     (Contributed by film2860, 24-Jul-2026.) $)
-  pm2.43 $p |- ( ( ph -> ( ph -> ( ph -> ps ) ) ) -> ( ph -> ( ph -> ps ) ) ) $=
-    ( wi ax-i4.1 ax-i3 ax-mp ) AABCCZACACAGCGCABDGAEF $.
+  $}  
 
   ${
     imim2d.1 $e |- ( ph -> ( ps -> ch ) ) $.
@@ -779,26 +739,6 @@ $)
   $}
 
   ${
-    mp2dc.1 $e |- ( ph -> ps ) $.
-    mp2dc.2 $e |- ( ph -> ch ) $.
-    mp2dc.3 $e |- ( ph -> ( ps -> ( ch -> th ) ) ) $.
-    $( A double modus ponens deduction combined with contaction.  Deduction associated with ~ mp2 .
-       (Contributed by film2860, 24-Jul-2026.) $)
-    mp2dc $p |- ( ph -> ( ph ->  th ) ) $=
-      ( mp2d pm2.43i ) ADABCDEFGHI $.
-  $}
-
-  ${
-    syl3c.1 $e |- ( ph -> ps ) $.
-    syl3c.2 $e |- ( ph -> ch ) $.
-    syl3c.3 $e |- ( ph -> th ) $.
-    syl3c.4 $e |- ( ps -> ( ch -> ( th -> ta ) ) ) $.
-    $( A syllogism inference combined with contraction.  (Contributed by film2860, 24-Jul-2026.) $)
-    syl3c $p |- ( ph -> ( ph -> ta ) ) $=
-      ( wi syl2im mpid pm2.43i ) AEAADEHABACDEJFGIKLM $.
-  $}
-
-   ${
     syl6mpi.1 $e |- ( ph -> ( ps -> ch ) ) $.
     syl6mpi.2 $e |- th $.
     syl6mpi.3 $e |- ( ch -> ( th -> ta ) ) $.
@@ -1248,8 +1188,69 @@ $)
      also the analogous of weak Clavius law ~ pm2.01 . 
      (Contributed by film2860, 27-Jul-2026.) $)
   pm2.18 $p |- ( ( ( ph -> -. ph ) -> ph ) -> ph ) $=
-    ( wn wi ax-n1 ax-i3 syl ax-i1 pm2.27 ax-mp ax-i4 ) ABZAKCACZACZACZBZCZMCZMP
-    AMCZMCZMPNACSANDMAEFRSMCALGRMHIFMPCPCQMCAKOJMPEII $.
+    ( wn wi ax-i4 ax-n1 ax-i3 ax-i1 pm2.27 ax-mp 3syl mp2 ) AABZCACZACZLNACZBZC
+    ZCQCQNCNALPDQOACANCZNCZNAOENAFRSNCAMGRNHIJNQFK $.
+
+  axi4.1 $p |- ( ( ( ph -> ( ph -> ps ) ) -> ph ) -> ph ) $=
+    ( wn wi pm2.18 pm2.21 imim2i ai2i ax-mp ) AACZDZADZADAABDZDZADZADAEOLAKNAJM
+    AABFGHHI $.
+
+  ${
+    pm2.43i.1 $e |- ( ph -> ( ph -> ( ph -> ps ) ) ) $.
+    $( Inference absorbing redundant antecedent.  Inference associated with
+       ~ pm2.43 .  (Contributed by film2860, 24-Jul-2026.) $)
+    pm2.43i $p |- ( ph -> ( ph -> ps ) ) $=
+      ( wi axi4.1 ax-i3 ax-mp ) AAABDDZDZHCHADADIHDABEHAFGG $.
+  $}
+  
+
+  ${
+    pm2.43d.1 $e |- ( ph -> ( ps -> ( ps -> ( ps -> ch ) ) ) ) $.
+    $( Deduction absorbing redundant antecedent.  Deduction associated with
+       ~ pm2.43 and ~ pm2.43i .  (Contributed by film2860, 24-Jul-2026.) $)
+    pm2.43d $p |- ( ph -> ( ps -> ( ps -> ch ) ) ) $=
+      ( wi axi4.1 ax-i3 ax-mp imim2i ) ABBBCEEZEZEAJEDKJAJBEBEKJEBCFJBGHIH $.
+  $}
+
+  $( Absorption of redundant antecedent. Strong form of theorem *2.43 of [WhiteheadRussell] p. 106.
+     (Contributed by film2860, 24-Jul-2026.) $)
+  pm2.43 $p |- ( ( ph -> ( ph -> ( ph -> ps ) ) ) -> ( ph -> ( ph -> ps ) ) ) $=
+    ( wi axi4.1 ax-i3 ax-mp ) AABCCZACACAGCGCABDGAEF $.
+
+  ${
+    pm2.43a.1 $e |- ( ps -> ( ps -> ( ph -> ( ps -> ch ) ) ) ) $.
+    $( Inference absorbing redundant antecedent.  (Contributed by film2860, 24-Jul-2026.) $)
+    pm2.43a $p |- ( ps -> ( ph -> ( ps -> ch ) ) ) $=
+      ( wi pm2.04 imim2i ax-mp com12 pm2.43d ) ABBCEZABCBABKEZBBAKEEZEBALEZEDMN
+      BBAKFGHIJI $.
+  $}
+
+  ${
+    pm2.43b.1 $e |- ( ps -> ( ph -> ( ps -> ( ps -> ch ) ) ) ) $.
+    $( Inference absorbing redundant antecedent.  (Contributed by film2860, 24-Jul-2026.) $)
+    pm2.43b $p |- ( ps -> ( ph -> ( ps -> ch ) ) ) $=
+      ( wi com12 pm2.43d ) ABBCEZABCBABHEDFGF $.
+  $}
+
+  ${
+    mp2dc.1 $e |- ( ph -> ps ) $.
+    mp2dc.2 $e |- ( ph -> ch ) $.
+    mp2dc.3 $e |- ( ph -> ( ps -> ( ch -> th ) ) ) $.
+    $( A double modus ponens deduction combined with contaction.  Deduction associated with ~ mp2 .
+       (Contributed by film2860, 24-Jul-2026.) $)
+    mp2dc $p |- ( ph -> ( ph ->  th ) ) $=
+      ( mp2d pm2.43i ) ADABCDEFGHI $.
+  $}
+
+  ${
+    syl3c.1 $e |- ( ph -> ps ) $.
+    syl3c.2 $e |- ( ph -> ch ) $.
+    syl3c.3 $e |- ( ph -> th ) $.
+    syl3c.4 $e |- ( ps -> ( ch -> ( th -> ta ) ) ) $.
+    $( A syllogism inference combined with contraction.  (Contributed by film2860, 24-Jul-2026.) $)
+    syl3c $p |- ( ph -> ( ph -> ta ) ) $=
+      ( wi syl2im mpid pm2.43i ) AEAADEHABACDEJFGIKLM $.
+  $}
 
   $( Double negation elimination.  (Contributed by Lllllllllwith10ls,
      26-May-2026.) $)
