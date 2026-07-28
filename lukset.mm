@@ -1195,8 +1195,7 @@ $)
   $}
 
 
-  $( Wajsberg axiom. Analogue of Clavius law, or "consequentia mirabilis" ("admirable consequence").  If a
-     formula is implied by its negation, then it is true.  Can be used in
+  $( Wajsberg axiom. Analogue of Clavius law, or "consequentia mirabilis" ("admirable consequence"). Can be used in
      proofs by contradiction.  Analogue of Theorem *2.18 of [WhiteheadRussell] p. 103.  See
      also the analogous of weak Clavius law ~ pm2.01 . 
      (Contributed by film2860, 27-Jul-2026.) $)
@@ -1468,6 +1467,14 @@ $)
   $}
 
   ${
+    nsyld.1 $e |- ( ph -> ( ps -> -. ch ) ) $.
+    nsyld.2 $e |- ( ph -> ( ta -> ch ) ) $.
+    $( A negated syllogism deduction.  (Contributed by NM, 9-Apr-2005.) $)
+    nsyld $p |- ( ph -> ( ph -> ( ps -> -. ta ) ) ) $=
+      ( wn con3d syld ) ABCGDGEADCFHI $.
+  $}
+
+  ${
     nsyli.1 $e |- ( ph -> ( ps -> ch ) ) $.
     nsyli.2 $e |- ( th -> -. ch ) $.
     $( A negated syllogism inference.  (Contributed by NM, 3-May-1994.) $)
@@ -1668,16 +1675,67 @@ $)
       ( wi wn con1 imim12 3syl mpd ) ACDGZBCGDHZDGGZFABHDGNBGMOGEBDINBCDJKL $.
   $}
 
+  $( Negation version of Wajsberg axiom. Analogue of Weak Clavius law. 
+     (Contributed by film2860, 28-Jul-2026.) $)
+  pm2.01 $p |- ( ( ( -. ph -> ph ) -> -. ph ) -> -. ph ) $=
+    ( wn wi con4 ai2i pm2.18d ) ABZACZGCGGGBCHGAGDEF $.
+
   ${
-    mt2.1 $e |- ps $.
-    mt2.2 $e |- ( ph -> -. ps ) $.
-    $( A rule similar to modus tollens.  Inference associated with ~ con2i .
-       (Contributed by NM, 19-Aug-1993.)  (Proof shortened by Wolf Lammen,
-       10-Sep-2013.) $)
-    mt2 $p |- -. ph $=
-      ( wn con2i ax-mp ) BAECABDFG $.
+    pm2.01i.1 $e |- ( ( -. ph -> ph ) -> -. ph ) $.
+    $( Inference associated with the weak Clavius law ~ pm2.01 .   
+       (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.01i $p |- -. ph $=
+      ( wn wi pm2.01 ax-mp ) ACZADGDGBAEF $.
   $}
 
+  ${
+    pm2.01d.1 $e |- ( ph -> ( ( -. ps -> ps ) -> -. ps ) ) $.
+    $( Deduction based on reductio ad absurdum.   
+       (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.01d $p |- ( ph -> -. ps ) $=
+      ( wn wi pm2.01 syl ) ABDZBEHEHCBFG $.
+  $}
+
+   $( Analogue of Theorem *2.6 of [WhiteheadRussell] p. 107.  (Contributed by film2860, 
+      28-Jul-2026.) $)
+  pm2.6 $p |- ( ( -. ph -> ps ) -> ( ( ph -> ps ) -> ( -. ps -> ps ) ) ) $=
+    ( wn wi con1 ai2d ) ACBDBCABABEF $.
+
+  $( Analogue of Theorem *2.61 of [WhiteheadRussell] p. 107.  Useful for eliminating an
+     antecedent.  (Contributed by film2860, 28-Jul-2026.) $)
+  pm2.61 $p |- ( ( ph -> ps ) -> ( ( -. ph -> ps ) -> ( -. ps -> ps ) ) ) $=
+    ( wi wn con3 ai2d ) ABCBDADBABEF $.
+
+  $( Analogue of Theorem *2.65 of [WhiteheadRussell] p. 107.  Proof by contradiction.
+     (Contributed by film2860, 28-Jul-2026.) $)
+  pm2.65 $p |- ( ( ph -> ps ) -> ( ( ph -> -. ps ) -> ( ph -> -. ph ) ) ) $=
+    ( wi wn con3 imim2d ) ABCBDADAABEF $.
+
+  ${
+    pm2.65i.1 $e |- ( ph -> ps ) $.
+    pm2.65i.2 $e |- ( ph -> -. ps ) $.
+    $( Inference for proof by contradiction.  (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.65i $p |- ( ph -> -. ph ) $=
+      ( nsyl ) ABADCE $.
+  $}
+
+  ${
+    pm2.21dd.1 $e |- ( ph -> ps ) $.
+    pm2.21dd.2 $e |- ( ph -> -. ps ) $.
+    $( A contradiction implies anything.  Deduction from ~ pm2.21 .
+       (Contributed by Mario Carneiro, 9-Feb-2017.)  (Proof shortened by Wolf
+       Lammen, 22-Jul-2019.) $)
+    pm2.21dd $p |- ( ph -> ( ph -> ch ) ) $=
+      ( pm2.65i pm2.21d ) AACABDEFG $.
+  $}
+
+  ${
+    pm2.65d.1 $e |- ( ph -> ( ps -> ch ) ) $.
+    pm2.65d.2 $e |- ( ph -> ( ps -> -. ch ) ) $.
+    $( Deduction for proof by contradiction.  (Contributed by film2860, 28-Jul-2026.) $)
+    pm2.65d $p |- ( ph -> ( ph -> ( ps -> -. ps ) ) ) $=
+      ( nsyld ) ABCBEDF $.
+  $}
 
   ${
     mto.1 $e |- -. ps $.
@@ -1691,7 +1749,16 @@ $)
        intuitionistic logic.  Inference associated with ~ con3i .  (Contributed
        by NM, 19-Aug-1993.)  (Proof shortened by Wolf Lammen, 11-Sep-2013.) $)
     mto $p |- -. ph $=
-      ( wn notnot syl mt2 ) ABEZCABIEDBFGH $.
+      ( wn con3i ax-mp ) BEAECABDFG $.
+  $}
+
+  ${
+    mtod.1 $e |- ( ph -> -. ch ) $.
+    mtod.2 $e |- ( ph -> ( ps -> ch ) ) $.
+    $( Modus tollens deduction.   
+       (Contributed by film2860, 29-Jul-2026.) $)
+    mtod $p |- ( ph -> ( ph -> -. ps ) ) $=
+      ( nsyli ) ABCAEDF $.
   $}
 
 
@@ -1703,8 +1770,49 @@ $)
     mtoi $p |- ( ph -> -. ps ) $=
       ( wn con3d mpi ) ACFBFDABCEGH $.
   $}
+  
+  ${
+    mt2.1 $e |- ps $.
+    mt2.2 $e |- ( ph -> -. ps ) $.
+    $( A rule similar to modus tollens.  Inference associated with ~ con2i .
+       (Contributed by NM, 19-Aug-1993.)  (Proof shortened by Wolf Lammen,
+       10-Sep-2013.) $)
+    mt2 $p |- -. ph $=
+      ( wn con2i ax-mp ) BAECABDFG $.
+  $}
 
+  ${
+    mt3.1 $e |- -. ps $.
+    mt3.2 $e |- ( -. ph -> ps ) $.
+    $( A rule similar to modus tollens.  Inference associated with ~ con1i .
+       (Contributed by NM, 18-May-1994.)  (Proof shortened by Wolf Lammen,
+       11-Sep-2013.) $)
+    mt3 $p |- ph $=
+      ( wn mto notnotri ) AAEBCDFG $.
+  $}
 
+  $( Analogue of Peirce's axiom.  When ` F. ` is
+     substituted for ` ps ` , then this becomes the analogue of Clavius law.
+     (Contributed by NM, 29-Dec-1992.)  (Proof shortened by Wolf Lammen,
+     9-Oct-2012.) $)
+  peircew $p |- ( ( ( ph -> ps ) -> ph ) -> ( -. ph -> ph ) ) $=
+    ( jarl ) ABAC $.
+
+  $( A self-implication (see ~ id ) does not imply its own negation.  The
+     justification theorem ~ bijust is one of its instances.  (Contributed by
+     NM, 11-May-1999.)  (Proof shortened by Josh Purinton, 29-Dec-2000.)
+     Extract ~ bijust0 from proof of ~ bijust .  (Revised by BJ,
+     19-Mar-2020.) $)
+  bijust0 $p |- -. ( ( ph -> ph ) -> -. ( ph -> ph ) ) $=
+    ( wi wn id pm2.27 ax-mp mt2 ) AABZHCZBZHADZHJIBKHIEFG $.
+
+  $( Theorem used to justify the definition of the biconditional ~ df-bi .
+     Instance of ~ bijust0 .  (Contributed by NM, 11-May-1999.) $)
+  bijust $p |- -. ( ( -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) )
+                   -> -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) )
+              -> -. ( -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) )
+                   -> -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) ) ) $=
+    ( wi wn bijust0 ) ABCDBACDZCFCDE $.
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   Logical equivalence
@@ -1762,7 +1870,7 @@ $)
     $( And defined by implication (Contributed by Lllllllllwith10ls,
        28-May-2026.) $)
     impandli $p |- ph $=
-      ( wn wi pm2.27 notnot syl mt4 ) ADZBDZEKEZDZACJLMDJKFLGHI $.
+      ( wn wi pm2.27 mt3 ) AADZBDZEIECHIFG $.
   $}
 
 
