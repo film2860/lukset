@@ -45,7 +45,11 @@ img { margin-bottom: -4px }
 ROWSPAN=2><A HREF="./index.html">Home</A></TD>
 <TD NOWRAP ALIGN=CENTER ROWSPAN=2><FONT SIZE="+3" COLOR="#006633"><B>Metamath
 Proof Explorer</B></FONT><BR><FONT SIZE="+2" COLOR="#006633"><B>Theorem List
+<<<<<<< HEAD:docs/mmtheorems2.html
 (p. 2 of 5)</B></FONT>
+=======
+(p. 1 of 5)</B></FONT>
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 </TD><TD NOWRAP ALIGN=RIGHT VALIGN=TOP WIDTH="25%"><FONT
  SIZE=-1 FACE=sans-serif>
 <A HREF="mmtheorems1.html">&lt; Previous</A>&nbsp;&nbsp;<A
@@ -73,8 +77,13 @@ This page:</FONT></B>
 <TABLE BORDER CELLSPACING=0 CELLPADDING=3 BGCOLOR="#EEFFFA"
 SUMMARY="Theorem List for Metamath Proof Explorer">
 <CAPTION><B>Theorem List for Metamath Proof Explorer - </B><SPAN CLASS=r
+<<<<<<< HEAD:docs/mmtheorems2.html
  STYLE="color:#9A7900">101</SPAN><B>-</B><SPAN CLASS=r
  STYLE="color:#029313">200</SPAN> &nbsp; *Has distinct variable
+=======
+ STYLE="color:#FB0000">1</SPAN><B>-</B><SPAN CLASS=r
+ STYLE="color:#9B7800">100</SPAN> &nbsp; *Has distinct variable
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
  group(s)</CAPTION>
 
 <TR><TH>Type</TH><TH>Label</TH><TH>Description</TH></TR>
@@ -84,10 +93,192 @@ SUMMARY="Theorem List for Metamath Proof Explorer">
 
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+<<<<<<< HEAD:docs/mmtheorems2.html
  HREF="com5l.html">com5l</A>&nbsp;<SPAN CLASS=r
  STYLE="color:#9A7900">101</SPAN></TD><TD ALIGN=LEFT><A NAME="com5l"></A>
 Commutation of antecedents.  Rotate left.  (Contributed by Jeff Hankins,
        28-Jun-2009.)  (Proof shortened by Wolf Lammen, 29-Jul-2012.)
+=======
+ HREF="idi.html">idi</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#FB0000">1</SPAN></TD><TD ALIGN=LEFT><A NAME="idi"></A>
+(<I>Note</I>:  This inference rule and the next one, <A
+HREF="a1ii.html">a1ii</A>&nbsp;<SPAN CLASS=r STYLE="color:#FA0000">2</SPAN>,
+will normally
+       never appear in a completed proof.  They can be ignored if you are using
+       this database to assist learning logic; please start with the statement
+       <A HREF="wn.html">wn</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#FA0100">3</SPAN> instead.)
+<P STYLE="margin-bottom:0em">
+       This inference says &quot;if <SPAN CLASS=math><SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN></SPAN> is true then <SPAN CLASS=math><SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN></SPAN> is true&quot;.  This
+       inference requires no axioms for its proof, and is useful as a
+       copy-paste mechanism during proof development in mmj2.  It is normally
+       not referenced in the final version of a proof, since it is always
+       redundant.  You can remove this using the metamath-exe (Metamath
+       program) Proof Assistant using the &quot;MM-PA&gt; MINIMIZE_WITH *&quot;
+command.
+       This is the inference associated with <A
+HREF="id.html">id</A>&nbsp;<SPAN CLASS=r STYLE="color:#F21D00">27</SPAN>, hence
+its name.
+       (Contributed by Alan Sare, 31-Dec-2011.)
+       (Proof modification is discouraged.)  (New usage is discouraged.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="a1ii.html">a1ii</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#FA0000">2</SPAN></TD><TD ALIGN=LEFT><A NAME="a1ii"></A>
+(<I>Note</I>:  This inference rule and the previous one, <A HREF="idi.html">idi</A>&nbsp;<SPAN CLASS=r STYLE="color:#FB0000">1</SPAN>, will
+       normally never appear in a completed proof.)
+
+       This is a technical inference to assist proof development.  It provides
+       a temporary way to add an independent subproof to a proof under
+       development, for later assignment to a normal proof step.
+
+       The Metamath (Metamath-exe) program Proof Assistant requires proofs to
+       be developed backwards from the conclusion with no gaps, and it has no
+       mechanism that lets the user work on isolated subproofs.  This inference
+       provides a workaround for this limitation.  It can be inserted at any
+       point in a proof to allow an independent subproof to be developed on the
+       side, for later use as part of the final proof.
+
+       <I>Instructions</I>:
+       <ol><li>Assign this inference to any unknown step in the proof.
+       Typically, the last unknown step is the most convenient, since
+       <code>MM-PA&gt; ASSIGN LAST</code> can be used.  This step will be
+       replicated in hypothesis a1ii.1, from where the development of the main
+       proof can continue.</li><li>Develop the independent subproof backwards
+       from hypothesis a1ii.2.  If desired, use a
+       <code>MM-PA&gt; LET STEP</code>
+       command to pre-assign the conclusion of the independent subproof to
+       a1ii.2.</li><li>After the independent subproof is complete, use
+       <code>MM-PA&gt; IMPROVE ALL</code>
+       to assign it automatically to an unknown
+       step in the main proof that matches it.</li><li>After the entire proof
+       is complete, use <code>MM-PA> MINIMIZE_WITH *</code> to clean up
+       (discard) all <A HREF="a1ii.html">a1ii</A>&nbsp;<SPAN CLASS=r STYLE="color:#FA0000">2</SPAN> references automatically.</ol>
+
+<P STYLE="margin-bottom:0em">
+       This can also be used to apply subproofs from other theorems.  In step
+       2, simply assign the theorem to a1ii.2, and run
+       <code>MM-PA&gt; EXPAND &lt;theorem&gt;</code>
+
+       to "import" a subproof
+       from another theorem.
+<P STYLE="margin-bottom:0em">
+       This inference was originally designed to assist importing partially
+       completed Proof Worksheets from the mmj2 Proof Assistant GUI, but it can
+       also be useful on its own.  Interestingly, no axioms are required for
+       its proof.  It is the inference associated with <A
+HREF="a1i.html">a1i</A>&nbsp;<SPAN CLASS=r STYLE="color:#F70900">14</SPAN>. 
+(Contributed by
+       NM, 7-Feb-2006.)  (Proof modification is discouraged.)
+       (New usage is discouraged.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN></SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR BGCOLOR="#FFFFF2"><TD COLSPAN=3><CENTER><FONT SIZE="+1"><B><A
+ NAME="mm3b"></A>1.2&nbsp;&nbsp;Propositional calculus</B></FONT></CENTER>
+<P STYLE="margin-bottom:0em">
+Propositional calculus deals with general truths about well-formed formulas
+  (wffs) regardless of how they are constructed.  The simplest propositional
+  truth is <SPAN CLASS=math>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>)</SPAN>, which can be read &quot;if
+something is true, then it
+  is true&quot; - rather trivial and obvious, but nonetheless it must be proved
+from
+  the axioms (see Theorem <A HREF="id.html">id</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F21D00">27</SPAN>).
+<P STYLE="margin-bottom:0em">
+  The propositional calculus used here is a many valued system, using Jan
+  Lukasiewicz's three valued logic. It contains different axioms. {TODO}
+
+</TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+<TR BGCOLOR="#FFFFF2"><TD COLSPAN=3><CENTER><B><A
+ NAME="mm3s"></A>1.2.1&nbsp;&nbsp;Recursively define primitive wffs for
+ propositional calculus</B></CENTER>
+</TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+<TR><TD NOWRAP><B><FONT COLOR="#00CC00">Syntax</FONT></B></TD><TD
+ ALIGN=CENTER><A HREF="wn.html">wn</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#FA0100">3</SPAN></TD><TD ALIGN=LEFT><A NAME="wn"></A>
+If <SPAN CLASS=math><SPAN CLASS=wff STYLE="color:blue">&#x1D711;</SPAN></SPAN>
+is a wff, so is <SPAN CLASS=math>&not; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN></SPAN> or &quot;not <SPAN CLASS=math><SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN></SPAN>&quot;.
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=typecode
+ STYLE="color:gray">wff </SPAN> &not; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP><B><FONT COLOR="#00CC00">Syntax</FONT></B></TD><TD
+ ALIGN=CENTER><A HREF="wi.html">wi</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#FA0200">4</SPAN></TD><TD ALIGN=LEFT><A NAME="wi"></A>
+If <SPAN CLASS=math><SPAN CLASS=wff STYLE="color:blue">&#x1D711;</SPAN></SPAN>
+and <SPAN CLASS=math><SPAN CLASS=wff STYLE="color:blue">&#x1D713;</SPAN></SPAN>
+are wff's, so is <SPAN CLASS=math>(<SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN> or &quot;<SPAN CLASS=math><SPAN
+CLASS=wff STYLE="color:blue">&#x1D711;</SPAN></SPAN> implies
+     <SPAN CLASS=math><SPAN CLASS=wff
+STYLE="color:blue">&#x1D713;</SPAN></SPAN>&quot;.
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=typecode
+ STYLE="color:gray">wff </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR BGCOLOR="#FFFFF2"><TD COLSPAN=3><CENTER><B><A
+ NAME="mm5s"></A>1.2.2&nbsp;&nbsp;The axioms of propositional
+ calculus</B></CENTER>
+<P STYLE="margin-bottom:0em">
+Avron, Arnon. (2000). Natural 3-valued Logics - Characterization and Proof
+  Theory. Journal of Symbolic Logic. 56. 10.2307/2274919.
+
+</TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+<TR><TD NOWRAP><B><FONT COLOR=red>Axiom</FONT></B></TD><TD ALIGN=CENTER><A
+ HREF="ax-mp.html">ax-mp</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#FA0200">5</SPAN></TD><TD ALIGN=LEFT><A NAME="ax-mp"></A>
+Rule of Modus Ponens.  (Contributed by NM, 30-Sep-1992.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN></SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP><B><FONT COLOR=red>Axiom</FONT></B></TD><TD ALIGN=CENTER><A
+ HREF="ax-i1.html">ax-i1</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F90300">6</SPAN></TD><TD ALIGN=LEFT><A NAME="ax-i1"></A>
+Axiom I1.  (Contributed by Lllllllllwith10ls, 25-May-2026.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
  STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
@@ -107,6 +298,7 @@ Commutation of antecedents.  Rotate left.  (Contributed by Jeff Hankins,
  STYLE="color:blue">&#x1D702;</SPAN>)))))</SPAN></TD></TR>
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
+<<<<<<< HEAD:docs/mmtheorems2.html
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
  HREF="com15.html">com15</A>&nbsp;<SPAN CLASS=r
  STYLE="color:#987A00">102</SPAN></TD><TD ALIGN=LEFT><A NAME="com15"></A>
@@ -211,6 +403,12 @@ Closed form of <A HREF="imim12i.html">imim12i</A>&nbsp;<SPAN CLASS=r
 STYLE="color:#CD5700">66</SPAN> and of <A HREF="3syl.html">3syl</A>&nbsp;<SPAN
 CLASS=r STYLE="color:#F60E00">19</SPAN>.  (Contributed by BJ,
      16-Jul-2019.)
+=======
+<TR><TD NOWRAP><B><FONT COLOR=red>Axiom</FONT></B></TD><TD ALIGN=CENTER><A
+ HREF="ax-i2.html">ax-i2</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F90400">7</SPAN></TD><TD ALIGN=LEFT><A NAME="ax-i2"></A>
+Axiom I2.  (Contributed by Lllllllllwith10ls, 25-May-2026.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
  STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
@@ -221,6 +419,7 @@ CLASS=r STYLE="color:#F60E00">19</SPAN>.  (Contributed by BJ,
  STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
  STYLE="color:blue">&#x1D712;</SPAN>) &rarr; (<SPAN CLASS=wff
  STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+<<<<<<< HEAD:docs/mmtheorems2.html
  STYLE="color:blue">&#x1D703;</SPAN>))))</SPAN></TD></TR>
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
@@ -233,47 +432,1913 @@ since it
 CLASS=r STYLE="color:#F90300">6</SPAN> (&quot;Simplification&quot;). 
 (Contributed by
      Wolf Lammen, 9-May-2013.)
+=======
+ STYLE="color:blue">&#x1D712;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP><B><FONT COLOR=red>Axiom</FONT></B></TD><TD ALIGN=CENTER><A
+ HREF="ax-i3.html">ax-i3</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F90500">8</SPAN></TD><TD ALIGN=LEFT><A NAME="ax-i3"></A>
+Axiom I3.  (Contributed by Lllllllllwith10ls, 25-May-2026.)
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
  STYLE="color:gray">&#8866; </SPAN>(((<SPAN CLASS=wff
  STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
  STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D712;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>) &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP><B><FONT COLOR=red>Axiom</FONT></B></TD><TD ALIGN=CENTER><A
+ HREF="ax-i4.html">ax-i4</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F90500">9</SPAN></TD><TD ALIGN=LEFT><A NAME="ax-i4"></A>
+Axiom I4.  (Contributed by Lllllllllwith10ls, 25-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(((((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>) &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP><B><FONT COLOR=red>Axiom</FONT></B></TD><TD ALIGN=CENTER><A
+ HREF="ax-i4.2.html">ax-i4.2</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F80600">10</SPAN></TD><TD ALIGN=LEFT><A NAME="ax-i4.2"></A>
+Subaxiom of ax-i4. {TODO} Merge with Axiom I4.  (Contributed by film2860,
+27-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>)) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP><B><FONT COLOR=red>Axiom</FONT></B></TD><TD ALIGN=CENTER><A
+ HREF="ax-n1.html">ax-n1</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F80700">11</SPAN></TD><TD ALIGN=LEFT><A NAME="ax-n1"></A>
+Axiom N1.  (Contributed by Lllllllllwith10ls, 25-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>((&not; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; &not; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR BGCOLOR="#FFFFF2"><TD COLSPAN=3><CENTER><B><A
+ NAME="mm12s"></A>1.2.3&nbsp;&nbsp;Logical implication</B></CENTER>
+</TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mp2.html">mp2</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F80700">12</SPAN></TD><TD ALIGN=LEFT><A NAME="mp2"></A>
+A double modus ponens inference.  (Contributed by NM, 5-Apr-1994.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN></SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mp2b.html">mp2b</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F80800">13</SPAN></TD><TD ALIGN=LEFT><A NAME="mp2b"></A>
+A double modus ponens inference.  (Contributed by Mario Carneiro,
+       24-Jan-2013.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN></SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="a1i.html">a1i</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F70900">14</SPAN></TD><TD ALIGN=LEFT><A NAME="a1i"></A>
+Inference introducing an antecedent.  (Contributed by Lllllllllwith10ls,
+       25-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>)</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="2a1i.html">2a1i</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F70A00">15</SPAN></TD><TD ALIGN=LEFT><A NAME="2a1i"></A>
+Inference introducing two antecedents.  (Contributed by
+       Lllllllllwith10ls, 25-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="axi1w.html">axi1w</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F70A00">16</SPAN></TD><TD ALIGN=LEFT><A NAME="axi1w"></A>
+Weaken <A HREF="ax-i1.html">ax-i1</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F90300">6</SPAN>. (Contributed by film2860, 22-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mp1i.html">mp1i</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F70B00">17</SPAN></TD><TD ALIGN=LEFT><A NAME="mp1i"></A>
+Inference detaching an antecedent and introducing a new one.
+       (Contributed by Lllllllllwith10ls, 25-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl.html">syl</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F60C00">18</SPAN></TD><TD ALIGN=LEFT><A NAME="syl"></A>
+An inference version of the transitive laws for implication (Contributed
+       by Lllllllllwith10ls, 25-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="3syl.html">3syl</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F60E00">19</SPAN></TD><TD ALIGN=LEFT><A NAME="3syl"></A>
+Inference chaining two syllogisms <A HREF="syl.html">syl</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F60C00">18</SPAN>.  Inference associated with
+       <A HREF="imim12i.html">imim12i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#CD5700">66</SPAN>.  (Contributed by NM, 28-Dec-1992.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="4syl.html">4syl</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F51000">20</SPAN></TD><TD ALIGN=LEFT><A NAME="4syl"></A>
+Inference chaining three syllogisms <A HREF="syl.html">syl</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F60C00">18</SPAN>.  (Contributed by BJ,
+       14-Jul-2018.)  The use of this theorem is marked &quot;discouraged&quot;
+because
+       it can cause the Metamath program &quot;MM-PA&gt; MINIMIZE_WITH *&quot;
+command to
+       have very long run times.  However, feel free to use &quot;MM-PA&gt;
+       MINIMIZE_WITH 4syl / OVERRIDE&quot; if you wish.  Remember to update the
+       &quot;discouraged&quot; file if it gets used.  (New usage is
+discouraged.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mpi.html">mpi</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F51200">21</SPAN></TD><TD ALIGN=LEFT><A NAME="mpi"></A>
+A nested modus ponens inference. (Contributed by Lllllllllwith10ls,
+       25-May-2026.) (Remove dependence of an unnecessary axiom by film2860,
+22-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mpisyl.html">mpisyl</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F41400">22</SPAN></TD><TD ALIGN=LEFT><A NAME="mpisyl"></A>
+A syllogism combined with a modus ponens inference.  (Contributed by
+       Alan Sare, 25-Jul-2011.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="com12.html">com12</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F41600">23</SPAN></TD><TD ALIGN=LEFT><A NAME="com12"></A>
+Inference that swaps (commutes) antecedents in an implication.  Its
+       associated inference is <A HREF="mpi.html">mpi</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F51200">21</SPAN>. (Contributed by Lllllllllwith10ls,
+       25-May-2026.) (Remove dependence of an unnecessary axiom by film2860,
+22-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mpcom.html">mpcom</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F31800">24</SPAN></TD><TD ALIGN=LEFT><A NAME="mpcom"></A>
+Modus ponens inference with commutation of antecedents.  Commuted form
+       of <A HREF="mpd.html">mpd</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F31900">25</SPAN>.  (Contributed by Lllllllllwith10ls,
+25-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
  STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
  STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
- HREF="jarri.html">jarri</A>&nbsp;<SPAN CLASS=r
- STYLE="color:#8F7D00">108</SPAN></TD><TD ALIGN=LEFT><A NAME="jarri"></A>
-Inference associated with <A HREF="jarr.html">jarr</A>&nbsp;<SPAN CLASS=r
-STYLE="color:#907D00">107</SPAN>.  (Contributed by Wolf Lammen,
-       20-Sep-2013.)
+ HREF="mpd.html">mpd</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F31900">25</SPAN></TD><TD ALIGN=LEFT><A NAME="mpd"></A>
+A modus ponens deduction.  (Contributed by Lllllllllwith10ls,
+       25-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="pm2.27.html">pm2.27</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F21B00">26</SPAN></TD><TD ALIGN=LEFT><A NAME="pm2.27"></A>
+This theorem, sometimes called &quot;Assertion&quot; or &quot;Pon&quot; (for
+&quot;ponens&quot;), can be
+     thought of as a closed form of modus ponens <A
+HREF="ax-mp.html">ax-mp</A>&nbsp;<SPAN CLASS=r STYLE="color:#FA0200">5</SPAN>. 
+Theorem *2.27 of
+     [<A HREF="mmset.html#WhiteheadRussell">WhiteheadRussell</A>] p. 104.
+(Contributed by film2860, 22-July-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A HREF="id.html">id</A>&nbsp;<SPAN
+ CLASS=r STYLE="color:#F21D00">27</SPAN></TD><TD ALIGN=LEFT><A NAME="id"></A>
+Principle of identity.  (Contributed by Lllllllllwith10ls,
+     25-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>)</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="idd.html">idd</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F11F00">28</SPAN></TD><TD ALIGN=LEFT><A NAME="idd"></A>
+Principle of identity <A HREF="id.html">id</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F21D00">27</SPAN> with antecedent.  (Contributed by NM,
+     26-Nov-1995.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="a1d.html">a1d</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F02100">29</SPAN></TD><TD ALIGN=LEFT><A NAME="a1d"></A>
+Deduction introducing an embedded antecedent.  Deduction form of <A
+HREF="ax-i1.html">ax-i1</A>&nbsp;<SPAN CLASS=r STYLE="color:#F90300">6</SPAN>
+       and <A HREF="a1i.html">a1i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F70900">14</SPAN>.  (Contributed by NM, 5-Jan-1993.)  (Proof
+shortened by
+       Stefan Allan, 20-Mar-2006.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="2a1d.html">2a1d</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#F02300">30</SPAN></TD><TD ALIGN=LEFT><A NAME="2a1d"></A>
+Deduction introducing two antecedents.  Two applications of <A
+HREF="a1d.html">a1d</A>&nbsp;<SPAN CLASS=r STYLE="color:#F02100">29</SPAN>.
+       Deduction associated with <A HREF="2a1.html">2a1</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#EF2700">32</SPAN> and <A HREF="2a1i.html">2a1i</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F70A00">15</SPAN>.  (Contributed by BJ,
+       10-Aug-2020.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="a1i13.html">a1i13</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#EF2500">31</SPAN></TD><TD ALIGN=LEFT><A NAME="a1i13"></A>
+Add two antecedents to a wff.  (Contributed by Jeff Hankins,
+       4-Aug-2009.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="2a1.html">2a1</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#EF2700">32</SPAN></TD><TD ALIGN=LEFT><A NAME="2a1"></A>
+A double form of <A HREF="ax-i1.html">ax-i1</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F90300">6</SPAN>.  Its associated inference is <A
+HREF="2a1i.html">2a1i</A>&nbsp;<SPAN CLASS=r STYLE="color:#F70A00">15</SPAN>. 
+Its
+     associated deduction is <A HREF="2a1d.html">2a1d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F02300">30</SPAN>.  (Contributed by BJ, 10-Aug-2020.)
+     (Proof shortened by Wolf Lammen, 1-Sep-2020.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="pm2.04.html">pm2.04</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#EE2900">33</SPAN></TD><TD ALIGN=LEFT><A NAME="pm2.04"></A>
+Swap antecedents.  Theorem *2.04 of [<A
+HREF="mmset.html#WhiteheadRussell">WhiteheadRussell</A>] p. 100.  This was
+     the third axiom in Frege's logic system, specifically Proposition 8 of
+     [<A HREF="mmset.html#Frege1879">Frege1879</A>] p. 35.  Its associated
+inference is <A HREF="com12.html">com12</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F41600">23</SPAN>.  (Contributed by
+     NM, 27-Dec-1992.)  (Proof shortened by Wolf Lammen, 12-Sep-2012.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A HREF="a2.html">a2</A>&nbsp;<SPAN
+ CLASS=r STYLE="color:#EE2B00">34</SPAN></TD><TD ALIGN=LEFT><A NAME="a2"></A>
+Analog of ax-2 in classical logic.  (Contributed by Lllllllllwith10ls,
+       26-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)) &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="a2i.html">a2i</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#ED2C00">35</SPAN></TD><TD ALIGN=LEFT><A NAME="a2i"></A>
+Inference &quot;distributing&quot; an antecedent.  (Contributed by
+       Lllllllllwith10ls, 26-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="a2d.html">a2d</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#EC2E00">36</SPAN></TD><TD ALIGN=LEFT><A NAME="a2d"></A>
+Deduction distributing an embedded antecedent. Deduction form of <A
+HREF="a2.html">a2</A>&nbsp;<SPAN CLASS=r STYLE="color:#EE2B00">34</SPAN>. 
+(Contributed by film2860, 23-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="imim2i.html">imim2i</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#EB3000">37</SPAN></TD><TD ALIGN=LEFT><A NAME="imim2i"></A>
+Inference adding common antecedents in an implication.  Its associated
+       inference is <A HREF="syl.html">syl</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F60C00">18</SPAN>.  (Contributed by NM, 28-Dec-1992.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="imim2.html">imim2</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#EA3100">38</SPAN></TD><TD ALIGN=LEFT><A NAME="imim2"></A>
+A closed form of syllogism (see <A HREF="syl.html">syl</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F60C00">18</SPAN>).  Theorem *2.05 of
+     [<A HREF="mmset.html#WhiteheadRussell">WhiteheadRussell</A>] p. 100.  Its
+associated inference is <A HREF="imim2i.html">imim2i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#EB3000">37</SPAN>.  Its
+     associated deduction is <A HREF="imim2d.html">imim2d</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#D15200">62</SPAN>. (Contributed by film2860,
+23-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="sylcom.html">sylcom</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#E93300">39</SPAN></TD><TD ALIGN=LEFT><A NAME="sylcom"></A>
+Syllogism inference with commutation of antecedents.  (Contributed by
+       Lllllllllwith10ls, 26-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="ai2i.html">ai2i</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#E83500">40</SPAN></TD><TD ALIGN=LEFT><A NAME="ai2i"></A>
+Inference adding common consequents in an implication, thereby
+       interchanging the original antecedent and consequent.  Inference
+       associated with <A HREF="ax-i2.html">ax-i2</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F90400">7</SPAN>.  Its associated inference is <A
+HREF="syl.html">syl</A>&nbsp;<SPAN CLASS=r STYLE="color:#F60C00">18</SPAN>.
+       (Contributed by film2860, 24-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="ai2d.html">ai2d</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#E73600">41</SPAN></TD><TD ALIGN=LEFT><A NAME="ai2d"></A>
+Deduction adding nested consequents.  Deduction associated with <A
+HREF="ax-i2.html">ax-i2</A>&nbsp;<SPAN CLASS=r STYLE="color:#F90400">7</SPAN>
+       and <A HREF="ai2i.html">ai2i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#E83500">40</SPAN>.  (Contributed by film2860, 24-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="ai3i.html">ai3i</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#E63800">42</SPAN></TD><TD ALIGN=LEFT><A NAME="ai3i"></A>
+Inference associated with <A HREF="ax-i3.html">ax-i3</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F90500">8</SPAN>.
+       (Contributed by film2860, 28-Jul-2026.)
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
  STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
  STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
  STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D712;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
  FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
- CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
  STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D712;</SPAN>)</SPAN></TD></TR>
+ STYLE="color:blue">&#x1D711;</SPAN>) &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>)</SPAN></TD></TR>
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
- HREF="pm2.86d.html">pm2.86d</A>&nbsp;<SPAN CLASS=r
- STYLE="color:#8D7E00">109</SPAN></TD><TD ALIGN=LEFT><A NAME="pm2.86d"></A>
-Deduction associated with <A HREF="pm2.86.html">pm2.86</A>&nbsp;<SPAN CLASS=r
-STYLE="color:#8B7E00">110</SPAN>.  (Contributed by NM, 29-Jun-1995.)
-       (Proof shortened by Wolf Lammen, 3-Apr-2013.)
+ HREF="ai3d.html">ai3d</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#E53900">43</SPAN></TD><TD ALIGN=LEFT><A NAME="ai3d"></A>
+Deduction associated with <A HREF="ax-i3.html">ax-i3</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F90500">8</SPAN>.
+       (Contributed by film2860, 28-Jul-2026.)
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
  STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
  STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
  STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>) &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl5com.html">syl5com</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#E43B00">44</SPAN></TD><TD ALIGN=LEFT><A NAME="syl5com"></A>
+Syllogism inference with commuted antecedents.  (Contributed by NM,
+       24-May-2005.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl11.html">syl11</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#E33D00">45</SPAN></TD><TD ALIGN=LEFT><A NAME="syl11"></A>
+A syllogism inference.  Commuted form of an instance of <A
+HREF="syl.html">syl</A>&nbsp;<SPAN CLASS=r STYLE="color:#F60C00">18</SPAN>.
+       (Contributed by BJ, 25-Oct-2021.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl5.html">syl5</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#E23E00">46</SPAN></TD><TD ALIGN=LEFT><A NAME="syl5"></A>
+A syllogism rule of inference.  The first premise is used to replace the
+       second antecedent of the second premise.  (Contributed by NM,
+       27-Dec-1992.)  (Proof shortened by Wolf Lammen, 25-May-2013.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl6.html">syl6</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#E14000">47</SPAN></TD><TD ALIGN=LEFT><A NAME="syl6"></A>
+A syllogism rule of inference.  The second premise is used to replace
+       the consequent of the first premise.  (Contributed by Lllllllllwith10ls,
+       25-May-2026.)  (Proof shortened by film2860, 28-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl56.html">syl56</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#E14100">48</SPAN></TD><TD ALIGN=LEFT><A NAME="syl56"></A>
+Combine <A HREF="syl5.html">syl5</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#E23E00">46</SPAN> 35 and <A HREF="syl6.html">syl6</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#E14000">47</SPAN>.  (Contributed by NM, 14-Nov-2013.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl6com.html">syl6com</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#E04300">49</SPAN></TD><TD ALIGN=LEFT><A NAME="syl6com"></A>
+Syllogism inference with commuted antecedents. (Contributed by NM,
+25-May-2005.)
+<P STYLE="margin-bottom:0em">
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syli.html">syli</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#DF4500">50</SPAN></TD><TD ALIGN=LEFT><A NAME="syli"></A>
+Syllogism inference with common nested antecedent. (Contributed by NM,
+4-Nov-2004.)
+<P STYLE="margin-bottom:0em">
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl2im.html">syl2im</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#DE4600">51</SPAN></TD><TD ALIGN=LEFT><A NAME="syl2im"></A>
+Replace two antecedents.  (Contributed by Wolf Lammen, 14-May-2013.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl2imc.html">syl2imc</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#DD4700">52</SPAN></TD><TD ALIGN=LEFT><A NAME="syl2imc"></A>
+A commuted version of <A HREF="syl2im.html">syl2im</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#DE4600">51</SPAN>.  (Contributed by BJ, 20-Oct-2021.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mpdd.html">mpdd</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#DB4900">53</SPAN></TD><TD ALIGN=LEFT><A NAME="mpdd"></A>
+A nested modus ponens deduction.  Double deduction associated with
+       <A HREF="ax-mp.html">ax-mp</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#FA0200">5</SPAN>.  Deduction associated with <A
+HREF="mpd.html">mpd</A>&nbsp;<SPAN CLASS=r STYLE="color:#F31900">25</SPAN>. 
+(Contributed by film2860,
+       23-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mpid.html">mpid</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#DA4A00">54</SPAN></TD><TD ALIGN=LEFT><A NAME="mpid"></A>
+A nested modus ponens deduction.  Deduction associated with <A
+HREF="mpi.html">mpi</A>&nbsp;<SPAN CLASS=r STYLE="color:#F51200">21</SPAN>.
+       (Contributed by film2860, 23-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mpdi.html">mpdi</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#D94B00">55</SPAN></TD><TD ALIGN=LEFT><A NAME="mpdi"></A>
+A nested modus ponens deduction.  (Contributed by film2860, 23-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mpii.html">mpii</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#D84C00">56</SPAN></TD><TD ALIGN=LEFT><A NAME="mpii"></A>
+A doubly nested modus ponens inference.  (Contributed by film2860,
+23-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syld.html">syld</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#D74D00">57</SPAN></TD><TD ALIGN=LEFT><A NAME="syld"></A>
+Syllogism deduction.  Deduction associated with <A
+HREF="syl.html">syl</A>&nbsp;<SPAN CLASS=r STYLE="color:#F60C00">18</SPAN>. 
+See
+       <FONT COLOR=blue >conventions</FONT>&nbsp;<SPAN CLASS=r
+STYLE="color:#000000">(future)</SPAN> for the meaning of &quot;associated
+deduction&quot; or &quot;deduction
+       form&quot;.  (Contributed by film2860, 23-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syldc.html">syldc</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#D64E00">58</SPAN></TD><TD ALIGN=LEFT><A NAME="syldc"></A>
+Syllogism deduction.  Commuted form of <A HREF="syld.html">syld</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#D74D00">57</SPAN>.  (Contributed by film2860,
+23-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mp2d.html">mp2d</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#D54F00">59</SPAN></TD><TD ALIGN=LEFT><A NAME="mp2d"></A>
+A double modus ponens deduction.  Deduction associated with <A
+HREF="mp2.html">mp2</A>&nbsp;<SPAN CLASS=r STYLE="color:#F80700">12</SPAN>.
+       (Contributed by film2860, 23-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="a1dd.html">a1dd</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#D35000">60</SPAN></TD><TD ALIGN=LEFT><A NAME="a1dd"></A>
+Double deduction introducing an antecedent.  Deduction associated with
+       <A HREF="a1d.html">a1d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F02100">29</SPAN>.  Double deduction associated with <A
+HREF="ax-i1.html">ax-i1</A>&nbsp;<SPAN CLASS=r STYLE="color:#F90300">6</SPAN>
+and <A HREF="a1i.html">a1i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F70900">14</SPAN>.
+       (Contributed by NM, 17-Dec-2004.)  (Proof shortened by Mel L. O'Cat,
+       15-Jan-2008.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="2a1dd.html">2a1dd</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#D25100">61</SPAN></TD><TD ALIGN=LEFT><A NAME="2a1dd"></A>
+Double deduction introducing two antecedents.  Two applications of
+       <A HREF="2a1dd.html">2a1dd</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#D25100">61</SPAN>.  Deduction associated with <A
+HREF="2a1d.html">2a1d</A>&nbsp;<SPAN CLASS=r STYLE="color:#F02300">30</SPAN>. 
+Double deduction
+       associated with <A HREF="2a1.html">2a1</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#EF2700">32</SPAN> and <A HREF="2a1i.html">2a1i</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F70A00">15</SPAN>.  (Contributed by Jeff Hankins,
+       5-Aug-2009.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="imim2d.html">imim2d</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#D15200">62</SPAN></TD><TD ALIGN=LEFT><A NAME="imim2d"></A>
+Deduction adding nested antecedents.  Deduction associated with <A
+HREF="imim2.html">imim2</A>&nbsp;<SPAN CLASS=r STYLE="color:#EA3100">38</SPAN>
+       and <A HREF="imim2i.html">imim2i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#EB3000">37</SPAN>.  (Contributed by NM, 10-Jan-1993.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="embantd.html">embantd</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#D05300">63</SPAN></TD><TD ALIGN=LEFT><A NAME="embantd"></A>
+Deduction embedding an antecedent.  (Contributed by Wolf Lammen,
+       4-Oct-2013.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>) &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="3syld.html">3syld</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#CF5400">64</SPAN></TD><TD ALIGN=LEFT><A NAME="3syld"></A>
+Triple syllogism deduction.  Deduction associated with <A
+HREF="3syld.html">3syld</A>&nbsp;<SPAN CLASS=r STYLE="color:#CF5400">64</SPAN>.
+       (Contributed by Jeff Hankins, 4-Aug-2009.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="sylsyld.html">sylsyld</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#CE5500">65</SPAN></TD><TD ALIGN=LEFT><A NAME="sylsyld"></A>
+A double syllogism inference.  (Contributed by Alan Sare,
+       20-Apr-2011.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="imim12i.html">imim12i</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#CD5700">66</SPAN></TD><TD ALIGN=LEFT><A NAME="imim12i"></A>
+Inference joining two implications.  Its associated inference is
+       <A HREF="3syl.html">3syl</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F60E00">19</SPAN>.  (Contributed by NM, 12-Mar-1993.)  (Proof
+shortened by Mel L.
+       O'Cat, 29-Oct-2011.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="imim1i.html">imim1i</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#CB5800">67</SPAN></TD><TD ALIGN=LEFT><A NAME="imim1i"></A>
+Alias for <A HREF="ai2i.html">ai2i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#E83500">40</SPAN>. Inference adding common consequents in an
+implication, thereby
+       interchanging the original antecedent and consequent.  Inference
+       associated with <A HREF="imim1.html">imim1</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#B16C00">85</SPAN>. (Contributed by NM, 28-Dec-1992.)  (Proof
+shortened by Wolf Lammen,
+       4-Aug-2012.) (New usage is discouraged.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="imim3i.html">imim3i</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#CA5900">68</SPAN></TD><TD ALIGN=LEFT><A NAME="imim3i"></A>
+Inference adding three nested antecedents.  (Contributed by NM,
+       19-Dec-2006.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>) &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+<<<<<<< HEAD:docs/mmtheorems2.html
+ HREF="jarri.html">jarri</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#8F7D00">108</SPAN></TD><TD ALIGN=LEFT><A NAME="jarri"></A>
+Inference associated with <A HREF="jarr.html">jarr</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#907D00">107</SPAN>.  (Contributed by Wolf Lammen,
+       20-Sep-2013.)
+=======
+ HREF="syl6mpi.html">syl6mpi</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#C95A00">69</SPAN></TD><TD ALIGN=LEFT><A NAME="syl6mpi"></A>
+A syllogism inference.  (Contributed by Alan Sare, 8-Jul-2011.)  (Proof
+       shortened by Wolf Lammen, 13-Sep-2012.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN><SPAN
+ CLASS=wff STYLE="color:blue">&#x1D703;</SPAN></SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mpsyl.html">mpsyl</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#C75B00">70</SPAN></TD><TD ALIGN=LEFT><A NAME="mpsyl"></A>
+Modus ponens combined with a syllogism inference.  (Contributed by film2860,
+24-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="mpsylsyld.html">mpsylsyld</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#C65C00">71</SPAN></TD><TD ALIGN=LEFT><A NAME="mpsylsyld"></A>
+Modus ponens combined with a double syllogism inference.  (Contributed
+       by Alan Sare, 22-Jul-2012.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN><SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl6c.html">syl6c</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#C45D00">72</SPAN></TD><TD ALIGN=LEFT><A NAME="syl6c"></A>
+Inference combining <A HREF="syl6.html">syl6</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#E14000">47</SPAN>.  (Contributed by Alan Sare,
+       2-May-2011.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl6ci.html">syl6ci</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#C35E00">73</SPAN></TD><TD ALIGN=LEFT><A NAME="syl6ci"></A>
+A syllogism inference combined with contraction.  (Contributed by film2860,
+24-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)</SPAN><SPAN CLASS=math>&nbsp;&nbsp;&nbsp;
+ &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syldd.html">syldd</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#C15F00">74</SPAN></TD><TD ALIGN=LEFT><A NAME="syldd"></A>
+Nested syllogism deduction.  Deduction associated with <A
+HREF="syld.html">syld</A>&nbsp;<SPAN CLASS=r STYLE="color:#D74D00">57</SPAN>. 
+Double
+       deduction associated with <A HREF="syl.html">syl</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F60C00">18</SPAN>.  (Contributed by NM, 12-Dec-2004.)
+       (Proof shortened by Wolf Lammen, 11-May-2013.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl5d.html">syl5d</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#C06100">75</SPAN></TD><TD ALIGN=LEFT><A NAME="syl5d"></A>
+A nested syllogism deduction.  Deduction associated with <A
+HREF="syl5.html">syl5</A>&nbsp;<SPAN CLASS=r STYLE="color:#E23E00">46</SPAN>.
+(Contributed by film2860, 24-Jul-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+<<<<<<< HEAD:docs/mmtheorems2.html
+ HREF="pm2.86d.html">pm2.86d</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#8D7E00">109</SPAN></TD><TD ALIGN=LEFT><A NAME="pm2.86d"></A>
+Deduction associated with <A HREF="pm2.86.html">pm2.86</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#8B7E00">110</SPAN>.  (Contributed by NM, 29-Jun-1995.)
+       (Proof shortened by Wolf Lammen, 3-Apr-2013.)
+=======
+ HREF="syl7.html">syl7</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#BE6200">76</SPAN></TD><TD ALIGN=LEFT><A NAME="syl7"></A>
+A syllogism rule of inference.  The first premise is used to replace the
+       third antecedent of the second premise.  (Contributed by NM,
+       12-Jan-1993.)  (Proof shortened by Wolf Lammen, 3-Aug-2012.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+<<<<<<< HEAD:docs/mmtheorems2.html
  STYLE="color:blue">&#x1D712;</SPAN>) &rarr; (<SPAN CLASS=wff
  STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+=======
+ STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl6d.html">syl6d</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#BD6300">77</SPAN></TD><TD ALIGN=LEFT><A NAME="syl6d"></A>
+A nested syllogism deduction.  Deduction associated with <A
+HREF="syl6.html">syl6</A>&nbsp;<SPAN CLASS=r STYLE="color:#E14000">47</SPAN>.
+       (Contributed by NM, 11-May-1993.)  (Proof shortened by Josh Purinton,
+       29-Dec-2000.)  (Proof shortened by Mel L. O'Cat, 2-Feb-2006.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl8.html">syl8</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#BB6400">78</SPAN></TD><TD ALIGN=LEFT><A NAME="syl8"></A>
+A syllogism rule of inference.  The second premise is used to replace
+       the consequent of the first premise.  (Contributed by NM, 1-Aug-1994.)
+       (Proof shortened by Wolf Lammen, 3-Aug-2012.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl9.html">syl9</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#BA6500">79</SPAN></TD><TD ALIGN=LEFT><A NAME="syl9"></A>
+A nested syllogism inference with different antecedents.  (Contributed
+       by NM, 13-May-1993.)  (Proof shortened by Josh Purinton,
+       29-Dec-2000.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl9r.html">syl9r</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#B86600">80</SPAN></TD><TD ALIGN=LEFT><A NAME="syl9r"></A>
+A nested syllogism inference with different antecedents.  (Contributed
+       by NM, 14-May-1993.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="syl10.html">syl10</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#B76700">81</SPAN></TD><TD ALIGN=LEFT><A NAME="syl10"></A>
+A nested syllogism inference.  (Contributed by Alan Sare,
+       17-Jul-2011.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D702;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D702;</SPAN>)))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="a1ddd.html">a1ddd</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#B56900">82</SPAN></TD><TD ALIGN=LEFT><A NAME="a1ddd"></A>
+Triple deduction introducing an antecedent to a wff.  Deduction
+       associated with <A HREF="a1dd.html">a1dd</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#D35000">60</SPAN>.  Double deduction associated with <A
+HREF="a1d.html">a1d</A>&nbsp;<SPAN CLASS=r STYLE="color:#F02100">29</SPAN>.
+       Triple deduction associated with <A
+HREF="ax-i1.html">ax-i1</A>&nbsp;<SPAN CLASS=r STYLE="color:#F90300">6</SPAN>
+and <A HREF="a1i.html">a1i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F70900">14</SPAN>.  (Contributed by
+       Jeff Hankins, 4-Aug-2009.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="imim12d.html">imim12d</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#B46A00">83</SPAN></TD><TD ALIGN=LEFT><A NAME="imim12d"></A>
+Deduction combining antecedents and consequents.  Deduction associated
+       with <A HREF="imim12.html">imim12</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#927C00">106</SPAN> and <A
+HREF="imim12i.html">imim12i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#CD5700">66</SPAN>.  (Contributed by NM, 7-Aug-1994.)  (Proof
+       shortened by Mel L. O'Cat, 30-Oct-2011.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN><SPAN
+ CLASS=math>&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN
+ CLASS=math><SPAN CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN
+ CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="imim1d.html">imim1d</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#B26B00">84</SPAN></TD><TD ALIGN=LEFT><A NAME="imim1d"></A>
+Strong form of <A HREF="ai2d.html">ai2d</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#E73600">41</SPAN>. Deduction associated with <A
+HREF="imim1.html">imim1</A>&nbsp;<SPAN CLASS=r STYLE="color:#B16C00">85</SPAN>
+       and <A HREF="imim1i.html">imim1i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#CB5800">67</SPAN>.  (Contributed by NM, 3-Apr-1994.)  (Proof
+shortened by
+       Wolf Lammen, 12-Sep-2012.) (New usage is discouraged.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="imim1.html">imim1</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#B16C00">85</SPAN></TD><TD ALIGN=LEFT><A NAME="imim1"></A>
+Stromg form of <A HREF="ax-i2.html">ax-i2</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F90400">7</SPAN>. A closed form of syllogism (see <A
+HREF="syl.html">syl</A>&nbsp;<SPAN CLASS=r STYLE="color:#F60C00">18</SPAN>). 
+Theorem *2.06 of
+     [<A HREF="mmset.html#WhiteheadRussell">WhiteheadRussell</A>] p. 100.  Its
+associated inference is <A HREF="imim1i.html">imim1i</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#CB5800">67</SPAN>.
+     (Contributed by NM, 29-Dec-1992.)  (Proof shortened by Wolf Lammen,
+     25-May-2013.) (New usage is discouraged.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="pm2.83.html">pm2.83</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#AF6D00">86</SPAN></TD><TD ALIGN=LEFT><A NAME="pm2.83"></A>
+Stronger form of theorem *2.83 of [<A
+HREF="mmset.html#WhiteheadRussell">WhiteheadRussell</A>] p. 108.  Closed form
+of <A HREF="syld.html">syld</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#D74D00">57</SPAN>.
+     (Contributed by NM, 3-Jan-2005.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)) &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)) &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="peirceroll.html">peirceroll</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#AE6E00">87</SPAN></TD><TD ALIGN=LEFT><A NAME="peirceroll"></A>
+Over minimal implicational calculus, Peirce's axiom <FONT COLOR=blue
+>peirce</FONT>&nbsp;<SPAN CLASS=r STYLE="color:#000000">(future)</SPAN> implies
+an
+     axiom sometimes called &quot;Roll&quot;,
+     <SPAN CLASS=math>(((<SPAN CLASS=wff STYLE="color:blue">&#x1D711;</SPAN>
+&rarr; <SPAN CLASS=wff STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN
+CLASS=wff STYLE="color:blue">&#x1D712;</SPAN>) &rarr; ((<SPAN CLASS=wff
+STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>) &rarr; <SPAN CLASS=wff
+STYLE="color:blue">&#x1D711;</SPAN>))</SPAN>, of which
+     <A HREF="ax-i3.html">ax-i3</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F90500">8</SPAN> is a special instance.  The converse also holds:
+substitute
+     <SPAN CLASS=math>(<SPAN CLASS=wff STYLE="color:blue">&#x1D711;</SPAN>
+&rarr; <SPAN CLASS=wff STYLE="color:blue">&#x1D713;</SPAN>)</SPAN> for <SPAN
+CLASS=math><SPAN CLASS=wff STYLE="color:blue">&#x1D712;</SPAN></SPAN> in Roll
+and use <A HREF="id.html">id</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F21D00">27</SPAN> and <A HREF="ax-mp.html">ax-mp</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#FA0200">5</SPAN>.
+     (Contributed by BJ, 15-Jun-2021.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>((((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>) &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>) &rarr; (((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>) &rarr; ((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>) &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="com23.html">com23</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#AD6E00">88</SPAN></TD><TD ALIGN=LEFT><A NAME="com23"></A>
+Commutation of antecedents.  Swap 2nd and 3rd.  Deduction associated
+       with <A HREF="com12.html">com12</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#F41600">23</SPAN>.  (Contributed by NM, 27-Dec-1992.)  (Proof
+shortened by
+       Wolf Lammen, 4-Aug-2012.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
  STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
  FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
  CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
@@ -284,6 +2349,7 @@ STYLE="color:#8B7E00">110</SPAN>.  (Contributed by NM, 29-Jun-1995.)
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+<<<<<<< HEAD:docs/mmtheorems2.html
  HREF="pm2.86.html">pm2.86</A>&nbsp;<SPAN CLASS=r
  STYLE="color:#8B7E00">110</SPAN></TD><TD ALIGN=LEFT><A NAME="pm2.86"></A>
 Converse of theorem <A HREF="a2.html">a2</A>&nbsp;<SPAN CLASS=r
@@ -291,6 +2357,12 @@ STYLE="color:#EE2B00">34</SPAN>.  Theorem *2.86 of [<A
 HREF="mmset.html#WhiteheadRussell">WhiteheadRussell</A>] p. 108.
      (Contributed by NM, 25-Apr-1994.)  (Proof shortened by Wolf Lammen,
      3-Apr-2013.)
+=======
+ HREF="com3r.html">com3r</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#AB6F00">89</SPAN></TD><TD ALIGN=LEFT><A NAME="com3r"></A>
+Commutation of antecedents.  Rotate right.  (Contributed by NM,
+       25-Apr-1994.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
  STYLE="color:gray">&#8866; </SPAN>(((<SPAN CLASS=wff
@@ -304,11 +2376,18 @@ HREF="mmset.html#WhiteheadRussell">WhiteheadRussell</A>] p. 108.
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+<<<<<<< HEAD:docs/mmtheorems2.html
  HREF="pm2.86i.html">pm2.86i</A>&nbsp;<SPAN CLASS=r
  STYLE="color:#8A7F00">111</SPAN></TD><TD ALIGN=LEFT><A NAME="pm2.86i"></A>
 Inference associated with <A HREF="pm2.86.html">pm2.86</A>&nbsp;<SPAN CLASS=r
 STYLE="color:#8B7E00">110</SPAN>.  (Contributed by NM, 5-Aug-1993.)
        (Proof shortened by Wolf Lammen, 3-Apr-2013.)
+=======
+ HREF="com13.html">com13</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#AA7000">90</SPAN></TD><TD ALIGN=LEFT><A NAME="com13"></A>
+Commutation of antecedents.  Swap 1st and 3rd.  (Contributed by NM,
+       25-Apr-1994.)  (Proof shortened by Wolf Lammen, 28-Jul-2012.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
  STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
@@ -318,11 +2397,29 @@ STYLE="color:#8B7E00">110</SPAN>.  (Contributed by NM, 5-Aug-1993.)
  STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
  FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
  CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+<<<<<<< HEAD:docs/mmtheorems2.html
+=======
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="com3l.html">com3l</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#A87100">91</SPAN></TD><TD ALIGN=LEFT><A NAME="com3l"></A>
+Commutation of antecedents.  Rotate left.  (Contributed by NM,
+       25-Apr-1994.)  (Proof shortened by Wolf Lammen, 28-Jul-2012.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
  STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
  STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
  STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
+<<<<<<< HEAD:docs/mmtheorems2.html
 <TR BGCOLOR="#FFFFF2"><TD COLSPAN=3><CENTER><B><A
  NAME="mm112s"></A>1.2.4&nbsp;&nbsp;Logical negation</B></CENTER>
 </TD></TR>
@@ -975,10 +3072,22 @@ STYLE="color:#628A00">143</SPAN>.  (Contributed by NM,
  HREF="con2d.html">con2d</A>&nbsp;<SPAN CLASS=r
  STYLE="color:#5F8B00">145</SPAN></TD><TD ALIGN=LEFT><A NAME="con2d"></A>
 A contraposition deduction.  (Contributed by NM, 19-Aug-1993.)
+=======
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="com34.html">com34</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#A77200">92</SPAN></TD><TD ALIGN=LEFT><A NAME="com34"></A>
+Commutation of antecedents.  Swap 3rd and 4th.  Deduction associated
+       with <A HREF="com23.html">com23</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#AD6E00">88</SPAN>.  Double deduction associated with <A
+HREF="com12.html">com12</A>&nbsp;<SPAN CLASS=r STYLE="color:#F41600">23</SPAN>.
+(Contributed
+       by NM, 25-Apr-1994.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
  STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
  STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+<<<<<<< HEAD:docs/mmtheorems2.html
  STYLE="color:blue">&#x1D713;</SPAN> &rarr; &not; <SPAN CLASS=wff
  STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
  FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
@@ -1308,11 +3417,23 @@ A negated syllogism inference.  (Contributed by NM, 15-Feb-1996.)
  STYLE="color:blue">&#x1D712;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
  FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
  CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(&not; <SPAN CLASS=wff
+=======
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
  STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN></TD></TR>
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+<<<<<<< HEAD:docs/mmtheorems2.html
  HREF="nsyl5.html">nsyl5</A>&nbsp;<SPAN CLASS=r
  STYLE="color:#428F00">164</SPAN></TD><TD ALIGN=LEFT><A NAME="nsyl5"></A>
 A negated syllogism inference.  (Contributed by Wolf Lammen,
@@ -1353,84 +3474,214 @@ HREF="mmset.html#Margaris">Margaris</A>]
  STYLE="color:#3F8F00">166</SPAN></TD><TD ALIGN=LEFT><A NAME="impi"></A>
 An importation inference.  (Contributed by NM, 29-Dec-1992.)  (Proof
        shortened by Wolf Lammen, 20-Jul-2013.)
+=======
+ HREF="com4l.html">com4l</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#A57300">93</SPAN></TD><TD ALIGN=LEFT><A NAME="com4l"></A>
+Commutation of antecedents.  Rotate left.  (Contributed by NM,
+       25-Apr-1994.)  (Proof shortened by Mel L. O'Cat, 15-Aug-2004.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
  STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
  STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
- STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D712;</SPAN>))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
  FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
- CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(&not; (<SPAN CLASS=wff
- STYLE="color:blue">&#x1D711;</SPAN> &rarr; &not; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D712;</SPAN>)</SPAN></TD></TR>
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN></TD></TR>
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+<<<<<<< HEAD:docs/mmtheorems2.html
  HREF="expi.html">expi</A>&nbsp;<SPAN CLASS=r
  STYLE="color:#3D8F00">167</SPAN></TD><TD ALIGN=LEFT><A NAME="expi"></A>
 An exportation inference.  (Contributed by NM, 29-Dec-1992.)  (Proof
        shortened by Mel L. O'Cat, 28-Nov-2008.)
+=======
+ HREF="com4t.html">com4t</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#A47300">94</SPAN></TD><TD ALIGN=LEFT><A NAME="com4t"></A>
+Commutation of antecedents.  Rotate twice.  (Contributed by NM,
+       25-Apr-1994.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
- STYLE="color:gray">&#8866; </SPAN>(&not; (<SPAN CLASS=wff
- STYLE="color:blue">&#x1D711;</SPAN> &rarr; &not; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D712;</SPAN>)</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
  FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
  CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
  STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
  STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN></TD></TR>
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="com4r.html">com4r</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#A37400">95</SPAN></TD><TD ALIGN=LEFT><A NAME="com4r"></A>
+Commutation of antecedents.  Rotate right.  (Contributed by NM,
+       25-Apr-1994.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="com24.html">com24</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#A17500">96</SPAN></TD><TD ALIGN=LEFT><A NAME="com24"></A>
+Commutation of antecedents.  Swap 2nd and 4th.  Deduction associated
+       with <A HREF="com13.html">com13</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#AA7000">90</SPAN>.  (Contributed by NM, 25-Apr-1994.)  (Proof
+shortened by
+       Wolf Lammen, 28-Jul-2012.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+<<<<<<< HEAD:docs/mmtheorems2.html
  HREF="simprim.html">simprim</A>&nbsp;<SPAN CLASS=r
  STYLE="color:#3C8F00">168</SPAN></TD><TD ALIGN=LEFT><A NAME="simprim"></A>
 Simplification.  Similar to Theorem *3.27 (Simp) of [<A
 HREF="mmset.html#WhiteheadRussell">WhiteheadRussell</A>]
      p. 112.  (Contributed by NM, 3-Jan-1993.)  (Proof shortened by Wolf
      Lammen, 13-Nov-2012.)
+=======
+ HREF="com14.html">com14</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#A07600">97</SPAN></TD><TD ALIGN=LEFT><A NAME="com14"></A>
+Commutation of antecedents.  Swap 1st and 4th.  (Contributed by NM,
+       25-Apr-1994.)  (Proof shortened by Wolf Lammen, 28-Jul-2012.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
- STYLE="color:gray">&#8866; </SPAN>(&not; (<SPAN CLASS=wff
- STYLE="color:blue">&#x1D711;</SPAN> &rarr; &not; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN>))))</SPAN></TD></TR>
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+<<<<<<< HEAD:docs/mmtheorems2.html
  HREF="simplim.html">simplim</A>&nbsp;<SPAN CLASS=r
  STYLE="color:#3A9000">169</SPAN></TD><TD ALIGN=LEFT><A NAME="simplim"></A>
 Simplification.  Similar to Theorem *3.26 (Simp) of [<A
 HREF="mmset.html#WhiteheadRussell">WhiteheadRussell</A>]
      p. 112.  (Contributed by NM, 3-Jan-1993.)  (Proof shortened by Wolf
      Lammen, 21-Jul-2012.)
+=======
+ HREF="com45.html">com45</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#9E7700">98</SPAN></TD><TD ALIGN=LEFT><A NAME="com45"></A>
+Commutation of antecedents.  Swap 4th and 5th.  Deduction associated
+       with <A HREF="com34.html">com34</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#A77200">92</SPAN>.  Double deduction associated with <A
+HREF="com23.html">com23</A>&nbsp;<SPAN CLASS=r STYLE="color:#AD6E00">88</SPAN>.
+Triple
+       deduction associated with <A HREF="com12.html">com12</A>&nbsp;<SPAN
+CLASS=r STYLE="color:#F41600">23</SPAN>.  (Contributed by Jeff Hankins,
+       28-Jun-2009.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
- STYLE="color:gray">&#8866; </SPAN>(&not; (<SPAN CLASS=wff
- STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D713;</SPAN>) &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D711;</SPAN>)</SPAN></TD></TR>
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D702;</SPAN>)))))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D702;</SPAN>)))))</SPAN></TD></TR>
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+<<<<<<< HEAD:docs/mmtheorems2.html
  HREF="pm2.5g.html">pm2.5g</A>&nbsp;<SPAN CLASS=r
  STYLE="color:#389000">170</SPAN></TD><TD ALIGN=LEFT><A NAME="pm2.5g"></A>
 General instance of Theorem *2.5 of [<A
 HREF="mmset.html#WhiteheadRussell">WhiteheadRussell</A>] p. 107.
      (Contributed by NM, 3-Jan-2005.)  (Proof shortened by Wolf Lammen,
      9-Oct-2012.)
+=======
+ HREF="com35.html">com35</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#9D7800">99</SPAN></TD><TD ALIGN=LEFT><A NAME="com35"></A>
+Commutation of antecedents.  Swap 3rd and 5th.  Deduction associated
+       with <A HREF="com24.html">com24</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#A17500">96</SPAN>.  Double deduction associated with <A
+HREF="com13.html">com13</A>&nbsp;<SPAN CLASS=r STYLE="color:#AA7000">90</SPAN>.
+(Contributed
+       by Jeff Hankins, 28-Jun-2009.)
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
- STYLE="color:gray">&#8866; </SPAN>(&not; (<SPAN CLASS=wff
- STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D713;</SPAN>) &rarr; (&not; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
- STYLE="color:blue">&#x1D712;</SPAN>))</SPAN></TD></TR>
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D702;</SPAN>)))))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D702;</SPAN>)))))</SPAN></TD></TR>
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+<<<<<<< HEAD:docs/mmtheorems2.html
  HREF="pm2.5.html">pm2.5</A>&nbsp;<SPAN CLASS=r
  STYLE="color:#369000">171</SPAN></TD><TD ALIGN=LEFT><A NAME="pm2.5"></A>
 Theorem *2.5 of [<A HREF="mmset.html#WhiteheadRussell">WhiteheadRussell</A>] p.
@@ -2036,6 +4287,30 @@ Modus tollens deduction.
  STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
  STYLE="color:blue">&#x1D711;</SPAN> &rarr; &not; <SPAN CLASS=wff
  STYLE="color:blue">&#x1D713;</SPAN>))</SPAN></TD></TR>
+=======
+ HREF="com25.html">com25</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#9B7800">100</SPAN></TD><TD ALIGN=LEFT><A NAME="com25"></A>
+Commutation of antecedents.  Swap 2nd and 5th.  Deduction associated
+       with <A HREF="com14.html">com14</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#A07600">97</SPAN>.  (Contributed by Jeff Hankins, 28-Jun-2009.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D702;</SPAN>)))))</SPAN>&nbsp;&nbsp;&nbsp; <FONT
+ FACE=sans-serif>&#8658;</FONT>&nbsp;&nbsp;&nbsp;<SPAN CLASS=math><SPAN
+ CLASS=hidden STYLE="color:gray">&#8866; </SPAN>(<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D70F;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D703;</SPAN> &rarr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D702;</SPAN>)))))</SPAN></TD></TR>
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 </TABLE></CENTER>
 
 <TABLE BORDER=0 WIDTH="100%">
@@ -2058,8 +4333,13 @@ Modus tollens deduction.
 </CENTER>
 Jump to page: 
 <A HREF="mmtheorems.html">Contents</A>&nbsp;
+<<<<<<< HEAD:docs/mmtheorems2.html
 <A HREF="mmtheorems1.html">1</A>&nbsp;<SPAN CLASS=r STYLE="color:#FB0000">1</SPAN>-<SPAN CLASS=r STYLE="color:#9B7800">100</SPAN>
 2&nbsp;<SPAN CLASS=r STYLE="color:#9A7900">101</SPAN>-<SPAN CLASS=r STYLE="color:#029313">200</SPAN>
+=======
+1&nbsp;<SPAN CLASS=r STYLE="color:#FB0000">1</SPAN>-<SPAN CLASS=r STYLE="color:#9B7800">100</SPAN>
+<A HREF="mmtheorems2.html">2</A>&nbsp;<SPAN CLASS=r STYLE="color:#9A7900">101</SPAN>-<SPAN CLASS=r STYLE="color:#029313">200</SPAN>
+>>>>>>> 35229a048e613eba0ecb5f57a5b8cda5327314e9:html/mmtheorems1.html
 <A HREF="mmtheorems3.html">3</A>&nbsp;<SPAN CLASS=r STYLE="color:#019315">201</SPAN>-<SPAN CLASS=r STYLE="color:#027FFA">300</SPAN>
 <A HREF="mmtheorems4.html">4</A>&nbsp;<SPAN CLASS=r STYLE="color:#027FFD">301</SPAN>-<SPAN CLASS=r STYLE="color:#C924F9">400</SPAN>
 <A HREF="mmtheorems5.html">5</A>&nbsp;<SPAN CLASS=r STYLE="color:#CA22F9">401</SPAN>-<SPAN CLASS=r STYLE="color:#EE0086">468</SPAN>
