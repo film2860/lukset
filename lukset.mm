@@ -1933,7 +1933,7 @@ $)
       ( wi wb impbi syl2imc ) BCDGADCGCDHEFCDIJ $.
   $}
 
-  ${
+${
     impbid.1 $e |- ( ph -> ( ps -> ch ) ) $.
     impbid.2 $e |- ( ph -> ( ch -> ps ) ) $.
     $( Deduce an equivalence from two implications.  (Contributed by
@@ -1942,6 +1942,10 @@ $)
       ( wi wn wb impandd impbia syl ) ABCFZGCBFZGZFNFGBCHALMDEIBCJK $.
   $}
 
+  $( Relate the biconditional connective to primitive connectives.
+     (Contributed by film2860, 29-Jul-2026) $)
+  dfbi1 $p |- ( ( ph <-> ps ) <-> -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) ) $=
+    ( wb wi wn df-bi impbia ax-mp ) ABCZABDEBADEZDJDEZDEKIDEZDLDEIKCABFIKGH $.
 
   ${
     impbii.1 $e |- ( ph -> ps ) $.
