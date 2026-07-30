@@ -748,7 +748,7 @@ $)
     imim3i.1 $e |- ( ph -> ( ps -> ch ) ) $.
     $( Inference adding three nested antecedents.  (Contributed by NM,
        19-Dec-2006.) $)
-    imim3i $p |- ( ( th -> ph ) -> ( ( th -> ps ) -> ( th ->  ( th -> ch ) ) ) ) $=
+    imim3i $p |- ( ( th -> ph ) -> ( ( th -> ps ) -> ( th -> ( th -> ch ) ) ) ) $=
       ( wi imim2i a2d ) DAFDBCABCFDEGH $.
   $}
 
@@ -1565,7 +1565,7 @@ $)
   ${
     expiw.1 $e |- ( -. ( ( -. ph -> -. ps ) -> -. ps ) -> ch ) $.
     $( Weaken version of ~ expi . 
-       (Contributed by ?who?, 30-Jul-2026.) $)
+       (Contributed by film2860, 30-Jul-2026.) $)
     expiw $p |- ( ph -> ( ps -> ch ) ) $=
       ( wn wi impandsw syl expi ) ABCABEZFEAEJFJFECABGDHI $.
   $}
@@ -2019,11 +2019,20 @@ ${
     impbidd.2 $e |- ( ph -> ( ps -> ( th -> ch ) ) ) $.
     $( Deduce an equivalence from two implications.  Double deduction
        associated with ~ impbi and ~ impbii .  Deduction associated with
-       ~ impbid .  (Contributed by Rodolfo Medina, 12-Oct-2010.) $)
+       ~ impbid .  (Contributed by film2860, 30-Jul-2026.) $)
     impbidd $p |- ( ph -> ( ps -> ( ch <-> th ) ) ) $=
       ( wb wn wi impi impbid expi ) ABCDGABHIHCDABCDIEJABDCIFJKL $.
   $}
 
+  ${
+    impbiddd.1 $e |- ( ph -> ( ps -> ( ch -> ( th -> ta ) ) ) ) $.
+    impbiddd.2 $e |- ( ph -> ( ps -> ( ch -> ( ta -> th ) ) ) ) $.
+    $( Deduce an equivalence from three implications.  Triple deduction
+       associated with ~ impbi and ~ impbii .  Deduction associated with
+       ~ impbid and ~ impbidd .  (Contributed by film2860, 30-Jul-2026.) $)
+    impbiddd $p |- ( ph -> ( ps -> ( ch -> ( th <-> ta ) ) ) ) $=
+      ( wb wi wn impi impbidd expi ) ABCDEHIABJIJCDEABCDEIIFKABCEDIIGKLM $.
+  $}
 
   ${
     impbii.1 $e |- ( ph -> ps ) $.
@@ -2105,6 +2114,14 @@ ${
        NM, 14-May-1993.) $)
     bicomd $p |- ( ph -> ( ch <-> ps ) ) $=
       ( wb bicom sylib ) ABCECBEDBCFG $.
+  $}
+
+  ${
+    bicomdd.1 $e |- ( ph -> ( ps -> ( ch <-> th ) ) ) $.
+    $( Commute two sides of a biconditional in a double deduction.  
+       (Contributed by ?who?, 30-Jul-2026.) $)
+    bicomdd $p |- ( ph -> ( ps -> ( th <-> ch ) ) ) $=
+      ( wb wn wi impi bicomd expi ) ABDCFABGHGCDABCDFEIJK $.
   $}
 
   ${
@@ -2246,6 +2263,32 @@ ${
   $}
 
   ${
+    sylibd.1 $e |- ( ph -> ( ps -> ch ) ) $.
+    sylibd.2 $e |- ( ph -> ( ch <-> th ) ) $.
+    $( A syllogism deduction.  (Contributed by NM, 3-Aug-1994.) $)
+    sylibd $p |- ( ph -> ( ph -> ( ps -> th ) ) ) $=
+      ( biimpd syld ) ABCDEACDFGH $.
+  $}
+
+  ${
+    sylbid.1 $e |- ( ph -> ( ps <-> ch ) ) $.
+    sylbid.2 $e |- ( ph -> ( ch -> th ) ) $.
+    $( A syllogism deduction.  (Contributed by NM, 3-Aug-1994.) $)
+    sylbid $p |- ( ph -> ( ph -> ( ps -> th ) ) ) $=
+      ( biimpd syld ) ABCDABCEGFH $.
+  $}
+
+  ${
+    mpbidi.min $e |- ( th -> ( ph -> ps ) ) $.
+    mpbidi.maj $e |- ( ph -> ( ps <-> ch ) ) $.
+    $( A deduction from a biconditional, related to modus ponens.  (Contributed
+       by NM, 9-Aug-1994.) $)
+    mpbidi $p |- ( th -> ( ph -> ( ph -> ch ) ) ) $=
+      ( biimpd sylcom ) DABCEABCFGH $.
+  $}
+
+
+  ${
     biimtrid.1 $e |- ( ph <-> ps ) $.
     biimtrid.2 $e |- ( ch -> ( ps -> th ) ) $.
     $( A mixed syllogism inference from a nested implication and a
@@ -2365,6 +2408,42 @@ ${
       ( biimpi syl8 ) ABCDEFDEGHI $.
   $}
 
+  ${
+    mpbird.min $e |- ( ph -> ch ) $.
+    mpbird.maj $e |- ( ph -> ( ps <-> ch ) ) $.
+    $( A deduction from a biconditional, related to modus ponens.  (Contributed
+       by NM, 5-Aug-1993.) $)
+    mpbird $p |- ( ph -> ( ph -> ps ) ) $=
+      ( biimprd mpd ) ACBDABCEFG $.
+  $}
+
+  ${
+    mpbiri.min $e |- ch $.
+    mpbiri.maj $e |- ( ph -> ( ps <-> ch ) ) $.
+    $( An inference from a nested biconditional, related to modus ponens.
+       (Contributed by NM, 21-Jun-1993.)  (Proof shortened by Wolf Lammen,
+       25-Oct-2012.) $)
+    mpbiri $p |- ( ph -> ps ) $=
+      ( biimprd mpi ) ACBDABCEFG $.
+  $}
+
+  ${
+    sylibrd.1 $e |- ( ph -> ( ps -> ch ) ) $.
+    sylibrd.2 $e |- ( ph -> ( th <-> ch ) ) $.
+    $( A syllogism deduction.  (Contributed by NM, 3-Aug-1994.) $)
+    sylibrd $p |- ( ph -> ( ph -> ( ps -> th ) ) ) $=
+      ( biimprd syld ) ABCDEADCFGH $.
+  $}
+
+  ${
+    sylbird.1 $e |- ( ph -> ( ch <-> ps ) ) $.
+    sylbird.2 $e |- ( ph -> ( ch -> th ) ) $.
+    $( A syllogism deduction.  (Contributed by NM, 3-Aug-1994.) $)
+    sylbird $p |- ( ph  -> ( ph -> ( ps -> th ) ) ) $=
+      ( biimprd syld ) ABCDACBEGFH $.
+  $}
+
+
   $( Principle of identity for logical equivalence.  Theorem *4.2 of
      [WhiteheadRussell] p. 117.  This is part of Frege's eighth axiom per
      Proposition 54 of [Frege1879] p. 50; see also {TODO} eqid .  (Contributed
@@ -2412,6 +2491,103 @@ ${
   monothetic $p |- ( ( ph -> ph ) <-> ( ps -> ps ) ) $=
     ( wi id 2th ) AACBBCADBDE $.
 
+  ${
+    ibi.1 $e |- ( ph -> ( ph -> ( ph <-> ps ) ) ) $.
+    $( Inference that converts a biconditional implied by one of its arguments,
+       into an implication.  
+       (Contributed by film2860, 30-Jul-2026.) $)
+    ibi $p |- ( ph -> ( ph -> ps ) ) $=
+      ( wb biimp syli pm2.43i ) ABAAABDBCABEFG $.
+  $}
+
+  ${
+    ibir.1 $e |- ( ph -> ( ph -> ( ps <-> ph ) ) ) $.
+    $( Inference that converts a biconditional implied by one of its arguments,
+       into an implication. 
+       (Contributed by film2860, 30-Jul-2026.) $)
+    ibir $p |- ( ph -> ( ph -> ps ) ) $=
+      ( wb biimpr syli pm2.43i ) ABAABADBCBAEFG $.
+  $}
+
+  ${
+    ibd.1 $e |- ( ph -> ( ps -> ( ps -> ( ps <-> ch ) ) ) ) $.
+    $( Deduction that converts a biconditional implied by one of its arguments,
+       into an implication.  Deduction associated with ~ ibi .   
+       (Contributed by film2860, 30-Jul-2026.) $)
+    ibd $p |- ( ph -> ( ps -> ( ps -> ch ) ) ) $=
+      ( wb wi biimp syl8 pm2.43d ) ABCABBBCEBCFDBCGHI $.
+  $}
+
+  $( Distribution of implication over biconditional.  Analogue of Theorem *5.74 of
+     [WhiteheadRussell] p. 126.  
+     (Contributed by film2860, 30-Jul-2026.) $)
+  pm5.74 $p |- ( ( ph -> ( ph -> ( ps <-> ch ) ) ) <->
+               ( ( ph -> ( ph -> ps ) ) <-> ( ph -> ( ph -> ch ) ) ) ) $=
+    ( wb wi biimp imim3i pm2.43 syl6 biimpr impbid pm2.86d pm2.86 syli impbiddd
+    impbii ) AABCDZEZEZAABEZEZAACEZEZDZSUAUCSUAAUCEZUCSUAAUEEUERTUCAQBCABCFGGAU
+    BHIACHISUCAUAEZUASUCAUFEUFRUBUAAQCBABCJGGATHIABHIKUDAABCAUDTUBEBCEUDATUBUAU
+    CFLABCMNAUDUBTECBEUDAUBTUAUCJLACBMNOP $.
+
+  $( Stronger form of ~ pm5.74 .  Analogue of Theorem *5.74 of
+     [WhiteheadRussell] p. 126.  
+     (Contributed by film2860, 30-Jul-2026.) $)
+  pm5.74s $p |-  ( ( ( ph -> ps ) <-> ( ph -> ch ) ) -> 
+                ( ph -> ( ps <-> ch ) ) )  $=
+    ( wi wb biimp pm2.86d biimpr impbidd ) ABDZACDZEZABCLABCJKFGLACBJKHGI $.
+
+  ${
+    pm5.74i.1 $e |- ( ph -> ( ph -> ( ps <-> ch ) ) ) $.
+    $( Distribution of implication over biconditional (inference form).
+        
+       (Contributed by film2860, 30-Jul-2026.) $)
+    pm5.74i $p |- ( ( ph -> ( ph -> ps ) ) <-> ( ph -> ( ph -> ch ) ) ) $=
+      ( wb wi pm5.74 mpbi ) AABCEFFAABFFAACFFEDABCGH $.
+  $}
+
+  ${
+    pm5.74ri.1 $e |- ( ( ph -> ( ph -> ps ) ) <-> ( ph -> ( ph -> ch ) ) ) $.
+    $( Distribution of implication over biconditional (reverse inference form).
+        
+       (Contributed by film2860, 30-Jul-2026.) $)
+    pm5.74ri $p |- ( ph -> ( ph -> ( ps <-> ch ) ) ) $=
+      ( wb wi pm5.74 mpbir ) AABCEFFAABFFAACFFEDABCGH $.
+  $}
+
+  ${
+    pm5.74ris.1 $e |- ( ( ph -> ps  ) <-> (  ph -> ch ) ) $.
+    $( Stronger form of ~ pm5.74ri .
+        
+       (Contributed by ?who?, 30-Jul-2026.) $)
+    pm5.74ris $p |- ( ph -> ( ps <-> ch ) ) $=
+      ( wi wb pm5.74s ax-mp ) ABEACEFABCFEDABCGH $.
+  $}
+
+  ${
+    pm5.74d.1 $e |- ( ph -> ( ps -> ( ps -> ( ch <-> th ) ) ) ) $.
+    $( Distribution of implication over biconditional (deduction form).
+        
+       (Contributed by film2860, 30-Jul-2026.) $)
+    pm5.74d $p |- ( ph -> ( ( ps -> ( ps -> ch ) ) <-> ( ps -> ( ps -> th ) ) ) ) $=
+      ( wb wi pm5.74 sylib ) ABBCDFGGBBCGGBBDGGFEBCDHI $.
+  $}
+
+  ${
+    pm5.74rd.1 $e |- ( ph -> ( ( ps -> ( ps -> ch ) ) <-> ( ps -> ( ps -> th ) ) ) ) $.
+    $( Distribution of implication over biconditional (deduction form).
+        
+       (Contributed by film2860, 30-Jul-2026.) $)
+    pm5.74rd $p |- ( ph -> ( ps -> ( ps -> ( ch <-> th ) ) ) ) $=
+      ( wi wb pm5.74 sylibr ) ABBCFFBBDFFGBBCDGFFEBCDHI $.
+  $}
+
+  ${
+    pm5.74rds.1 $e |- ( ph -> ( ( ps -> ch ) <-> ( ps -> th ) ) ) $.
+    $( Stronger form of ~ pm5.74rd .
+        
+       (Contributed by ?who?, 30-Jul-2026.) $)
+    pm5.74rds $p |- ( ph -> ( ps -> ( ch <-> th ) ) ) $=
+      ( wi wb pm5.74s syl ) ABCFBDFGBCDGFEBCDHI $.
+  $}
 
   ${
     bitri.1 $e |- ( ph <-> ps ) $.
@@ -2455,6 +2631,39 @@ ${
     definition 'dfbi1' for 'wb';
   $)
 
+  ${
+    bitrd.1 $e |- ( ph -> ( ps <-> ch ) ) $.
+    bitrd.2 $e |- ( ph -> ( ch <-> th ) ) $.
+    $( Deduction form of ~ bitri .  (Contributed by NM, 12-Mar-1993.)  (Proof
+       shortened by Wolf Lammen, 14-Apr-2013.) $)
+    bitrd $p |- ( ph -> ( ph -> ( ps <-> th ) ) ) $=
+      ( wi wb a1d pm5.74i bitri pm5.74ri ) ABDAABGGAACGGAADGGABCABCHAEIJACDACDH
+      AFIJKL $.
+  $}
+
+  ${
+    bitr2d.1 $e |- ( ph -> ( ps <-> ch ) ) $.
+    bitr2d.2 $e |- ( ph -> ( ch <-> th ) ) $.
+    $( Deduction form of ~ bitr2i .  (Contributed by NM, 9-Jun-2004.) $)
+    bitr2d $p |- ( ph -> ( ph -> ( th <-> ps ) ) ) $=
+      ( bitrd bicomdd ) AABDABCDEFGH $.
+  $}
+
+  ${
+    bitr3d.1 $e |- ( ph -> ( ps <-> ch ) ) $.
+    bitr3d.2 $e |- ( ph -> ( ps <-> th ) ) $.
+    $( Deduction form of ~ bitr3i .  (Contributed by NM, 14-May-1993.) $)
+    bitr3d $p |- ( ph -> ( ph -> ( ch <-> th ) ) ) $=
+      ( bicomd bitrd ) ACBDABCEGFH $.
+  $}
+
+  ${
+    bitr4d.1 $e |- ( ph -> ( ps <-> ch ) ) $.
+    bitr4d.2 $e |- ( ph -> ( th <-> ch ) ) $.
+    $( Deduction form of ~ bitr4i .  (Contributed by NM, 30-Jun-1993.) $)
+    bitr4d $p |- ( ph -> ( ph -> ( ps <-> th ) ) ) $=
+      ( bicomd bitrd ) ABCDEADCFGH $.
+  $}
 
   ${
     bitrdi.1 $e |- ( ph -> ( ps <-> ch ) ) $.
