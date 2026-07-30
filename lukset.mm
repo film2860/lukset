@@ -1451,12 +1451,38 @@ $)
       ( wn id nsyl ) BDZBAGECF $.
   $}
 
+  $( Strong conjuction implies weak conjuction by implication. 
+     (Contributed by film2860, 30-Jul-2026.) $)
+  impandsw $p |- ( -. ( ph -> -. ps ) -> -. ( ( -. ph -> -. ps ) -> -. ps ) ) $=
+    ( wn wi pm2.24 ai2i con3i ) ACBCZDZHDAHDAIHAHEFG $.
+  
+  ${
+    impandswi.1 $e |- -. ( ph -> -. ps )  $.
+    $( Inference form of ~ impandsw.
+       (Contributed by film2860, 30-Jul-2026.) $)
+    impandswi $p |-  -. ( ( -. ph -> -. ps ) -> -. ps )  $=
+      ( wn wi impandsw ax-mp ) ABDZEDADHEHEDCABFG $.
+  $}
+  
+  ${
+    impandswd.1 $e |- ( ph -> -. ( ps -> -. ch ) ) $.
+    $( Deduction form of ~ impandsw.
+      (Contributed by film2860, 30-Jul-2026.) $)
+    impandswd $p |- ( ph -> -. ( ( -. ps -> -. ch ) -> -. ch ) ) $=
+      ( wn wi impandsw syl ) ABCEZFEBEIFIFEDBCGH $.
+  $}
+
   $( Theorem *3.2 of [WhiteheadRussell] p. 111, expressed with primitive
      connectives (see {TODO} pm3.2 ).  (Contributed by NM, 29-Dec-1992.)
      (Proof shortened by Josh Purinton, 29-Dec-2000.) $)
   pm3.2im $p |- ( ph -> ( ps -> -. ( ph -> -. ps ) ) ) $=
     ( wn wi pm2.27 con2d ) AABCZDBAGEF $.
 
+  $( Weaken of ~pm3.2im expressed with primitive
+     connectives (see {TODO} pm3.2w ). (Contributed by Lllllllllwith10ls, 29-May-2026.)
+     (Proof Shorten by film2860, 30-Jul-2026) $)
+  pm3.2imw $p |- ( ph -> ( ps -> -. ( ( -. ph -> -. ps ) -> -. ps ) ) ) $=
+    ( wn wi pm3.2im impandsw syl6 ) ABABCZDCACHDHDCABEABFG $.
 
   ${
     con3rr3.1 $e |- ( ph -> ( ps -> ch ) ) $.
@@ -1495,12 +1521,30 @@ $)
       ( nsyl4 con1i ) CBABCDEFG $.
   $}
 
+  ${
+    jc.1 $e |- ( ph -> ps ) $.
+    jc.2 $e |- ( ph -> ch ) $.
+    $( Deduction joining the consequents of two premises.  A deduction
+       associated with ~ pm3.2im .  (Contributed by NM, 28-Dec-1992.) $)
+    jc $p |- ( ph -> ( ph -> -. ( ps -> -. ch ) ) ) $=
+      ( wn wi pm3.2im syl2im ) ABACBCFGFDEBCHI $.
+  $}
 
   $( Theorem joining the consequents of two premises.  Theorem 8 of [Margaris]
      p. 60.  (Contributed by NM, 5-Aug-1993.)  (Proof shortened by Josh
      Purinton, 29-Dec-2000.) $)
   jcn $p |- ( ph -> ( -. ps -> -. ( ph -> ps ) ) ) $=
     ( wi pm2.27 con3d ) AABCBABDE $.
+
+  ${
+    jcnd.1 $e |- ( ph -> ps ) $.
+    jcnd.2 $e |- ( ph -> -. ch ) $.
+    $( Deduction joining the consequents of two premises.  (Contributed by
+       Glauco Siliprandi, 11-Dec-2019.)  (Proof shortened by Wolf Lammen,
+       10-Apr-2024.) $)
+    jcnd $p |- ( ph -> ( ph -> -. ( ps -> ch ) ) ) $=
+      ( wn wi jcn syl2im ) ABACFBCGFDEBCHI $.
+  $}
 
   ${
     impi.1 $e |- ( ph -> ( ps -> ch ) ) $.
@@ -1516,6 +1560,14 @@ $)
        shortened by Mel L. O'Cat, 28-Nov-2008.) $)
     expi $p |- ( ph -> ( ps -> ch ) ) $=
       ( wn wi pm3.2im syl6 ) ABABEFECABGDH $.
+  $}
+
+  ${
+    expiw.1 $e |- ( -. ( ( -. ph -> -. ps ) -> -. ps ) -> ch ) $.
+    $( Weaken version of ~ expi . 
+       (Contributed by ?who?, 30-Jul-2026.) $)
+    expiw $p |- ( ph -> ( ps -> ch ) ) $=
+      ( wn wi impandsw syl expi ) ABCABEZFEAEJFJFECABGDHI $.
   $}
 
   $( Simplification.  Similar to Theorem *3.27 (Simp) of [WhiteheadRussell]
@@ -1798,21 +1850,29 @@ $)
   peircew $p |- ( ( ( ph -> ps ) -> ph ) -> ( -. ph -> ph ) ) $=
     ( jarl ) ABAC $.
 
-  $( A self-implication (see ~ id ) does not imply its own negation.  The
-     justification theorem ~ bijust is one of its instances.  (Contributed by
-     NM, 11-May-1999.)  (Proof shortened by Josh Purinton, 29-Dec-2000.)
-     Extract ~ bijust0 from proof of ~ bijust .  (Revised by BJ,
+  $( A self-implication (see ~ id ) does not imply its own negation. (Contributed by
+     NM, 11-May-1999.)  (Proof shortened by Josh Purinton, 29-Dec-2000.) (Revised by BJ,
      19-Mar-2020.) $)
-  bijust0 $p |- -. ( ( ph -> ph ) -> -. ( ph -> ph ) ) $=
+  bijust0s $p |- -. ( ( ph -> ph ) -> -. ( ph -> ph ) ) $=
     ( wi wn id pm2.27 ax-mp mt2 ) AABZHCZBZHADZHJIBKHIEFG $.
 
+  $( A self-implication strongly conjunct with itself is true.  The
+     justification theorem ~ bijust is one of its instances.  (Contributed by
+     film2860, 29-Jul-2026) $)
+  bijust0 $p |- -. ( ( -. ( ph -> ph ) -> -. ( ph -> ph ) ) -> -. ( ph -> ph ) ) $=
+    ( wi wn id pm2.27 ax-mp mt2 ) AABZCZIBZIBZHADJKIBIDJIEFG $.
+
   $( Theorem used to justify the definition of the biconditional ~ df-bi .
-     Instance of ~ bijust0 .  (Contributed by NM, 11-May-1999.) $)
-  bijust $p |- -. ( ( -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) )
-                   -> -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) )
-              -> -. ( -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) )
-                   -> -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) ) ) $=
-    ( wi wn bijust0 ) ABCDBACDZCFCDE $.
+     Instance of ~ bijust0 .  (Contributed by film2860, 29-Jul-2026) $)
+  bijust $p |- -. ( ( -. ( ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) 
+                        -> ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) ) 
+                   -> -. ( ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) 
+                        -> ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) ) ) 
+                   -> -. ( ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) 
+                        -> ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) ) ) 
+  $=
+    ( wi wn bijust0 ) ABCDBACDZCFCE $.
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   Logical equivalence
@@ -1857,14 +1917,17 @@ $)
 
   $( Define the biconditional (logical "iff" or "if and only if"), also called
      biimplication.  (Contributed by Lllllllllwith10ls, 28-May-2026.) $)
-  df-bi $a |- -. ( ( -. ( ( ph <-> ps ) -> -. ( ( -. ( ph -> ps ) ->
-  -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) ) -> -. ( -. ( ( -. ( ph -> ps )
-  -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) -> ( ph <-> ps ) ) ) -> -. ( -.
-  ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) ->
-  ( ph <-> ps ) ) ) $.
+  df-bi $a |- -. ( ( -. ( ( ph <-> ps ) -> -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) ) 
+           -> -. ( -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) -> ( ph <-> ps ) ) ) 
+           -> -. ( -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) -> ( ph <-> ps ) ) ) $.
 
   $( $j justification 'bijust' for 'df-bi'; $)
 
+  $( Property of the biconditional connective.  (Contributed by film2860, 29-Jul-2026.) $)
+  impbiALT $p |- ( ( ph -> ps ) -> ( ( ps -> ph ) -> ( ph <-> ps ) ) ) $=
+    ( wi wb wn df-bi notnot jarri mt4 expiw ) ABCZBACZABDZMKELEZCNCEZCEOMCZEZCZ
+    QCZEZPABFRQTESGHIJ $.
+  
   ${
     impandli.1 $e |- -. ( ( -. ph -> -. ps ) -> -. ps ) $.
     $( And defined by implication (Contributed by Lllllllllwith10ls,
@@ -1894,12 +1957,10 @@ $)
     ( wn wi simprim ) ACBCDBE $.
 
 
-  $( And defined by implication (Contributed by Lllllllllwith10ls,
-     29-May-2026.) $)
+  $( And defined by implication. Renamed ~ pm3.2imw for naming consistency. (Contributed by Lllllllllwith10ls,
+     29-May-2026.) (Proof Shorten by film2860, 30-Jul-2026) $)
   impand $p |- ( ph -> ( ps -> -. ( ( -. ph -> -. ps ) -> -. ps ) ) ) $=
-    ( wn wi notnot pm2.24 ai2i con3rr3 syl ) AACZCBJBCZDZKDZCDAEBMJBKCMJDBEMA
-    KALKAKFGHIHI $.
-
+    ( pm3.2imw ) ABC $.
 
   ${
     impandd.1 $e |- ( ph -> ps ) $.
@@ -1918,11 +1979,22 @@ $)
   impbia $p |- ( -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph )
   ) -> ( ph <-> ps ) ) $=
     ( wb wi wn df-bi impandri ) ABCZABDEBADEZDIDEZDJHDABFG $.
+  
+  $( Strong form of ~ impbia .  
+     (Contributed by film2860, 30-Jul-2026.) $)
+  impbias $p |- ( -. ( ( ph -> ps ) -> -. ( ps -> ph ) ) -> ( ph <-> ps ) ) $=
+    ( wi wn wb impandsw impbia syl ) ABCZBACZDZCDIDKCKCDABEIJFABGH $.
 
   $( Property of the biconditional connective.  (Contributed by NM,
-     11-May-1999.) $)
+     11-May-1999.) (Shorten by film2860, 30-July-2026.) $)
   impbi $p |- ( ( ph -> ps ) -> ( ( ps -> ph ) -> ( ph <-> ps ) ) ) $=
-    ( wi wn wb impand impbia syl6 ) ABCZBACZIDJDZCKCDABEIJFABGH $.
+    ( wi wb impbia expiw ) ABCBACABDABEF $.
+
+  $( Relate the biconditional connective to primitive connectives.
+     (Contributed by film2860, 29-Jul-2026.) $)
+  dfbi1 $p |- ( ( ph <-> ps ) <-> -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) ) $=
+    ( wb wi wn df-bi impbia ax-mp ) ABCZABDEBADEZDJDEZDEKIDEZDLDEIKCABFIKGH $.
+
 
   ${
     impbid21d.1 $e |- ( ps -> ( ch -> th ) ) $.
@@ -1942,10 +2014,16 @@ ${
       ( wi wn wb impandd impbia syl ) ABCFZGCBFZGZFNFGBCHALMDEIBCJK $.
   $}
 
-  $( Relate the biconditional connective to primitive connectives.
-     (Contributed by film2860, 29-Jul-2026) $)
-  dfbi1 $p |- ( ( ph <-> ps ) <-> -. ( ( -. ( ph -> ps ) -> -. ( ps -> ph ) ) -> -. ( ps -> ph ) ) ) $=
-    ( wb wi wn df-bi impbia ax-mp ) ABCZABDEBADEZDJDEZDEKIDEZDLDEIKCABFIKGH $.
+  ${
+    impbidd.1 $e |- ( ph -> ( ps -> ( ch -> th ) ) ) $.
+    impbidd.2 $e |- ( ph -> ( ps -> ( th -> ch ) ) ) $.
+    $( Deduce an equivalence from two implications.  Double deduction
+       associated with ~ impbi and ~ impbii .  Deduction associated with
+       ~ impbid .  (Contributed by Rodolfo Medina, 12-Oct-2010.) $)
+    impbidd $p |- ( ph -> ( ps -> ( ch <-> th ) ) ) $=
+      ( wb wn wi impi impbid expi ) ABCDGABHIHCDABCDIEJABDCIFJKL $.
+  $}
+
 
   ${
     impbii.1 $e |- ( ph -> ps ) $.
@@ -1955,6 +2033,7 @@ ${
     impbii $p |- ( ph <-> ps ) $=
       ( wi wb impbi mp2 ) ABEBAEABFCDABGH $.
   $}
+
 
 
   $( Property of the biconditional connective.  (Contributed by
