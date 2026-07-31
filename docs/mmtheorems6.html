@@ -73,8 +73,8 @@ This page:</FONT></B>
 <TABLE BORDER CELLSPACING=0 CELLPADDING=3 BGCOLOR="#EEFFFA"
 SUMMARY="Theorem List for Metamath Proof Explorer">
 <CAPTION><B>Theorem List for Metamath Proof Explorer - </B><SPAN CLASS=r
- STYLE="color:#ED008C">501</SPAN><B>-</B><SPAN CLASS=r
- STYLE="color:#EE0086">504</SPAN> &nbsp; *Has distinct variable
+ STYLE="color:#EB009C">501</SPAN><B>-</B><SPAN CLASS=r
+ STYLE="color:#EE0086">511</SPAN> &nbsp; *Has distinct variable
  group(s)</CAPTION>
 
 <TR><TH>Type</TH><TH>Label</TH><TH>Description</TH></TR>
@@ -83,9 +83,102 @@ SUMMARY="Theorem List for Metamath Proof Explorer">
 <TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
 
 
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="sor12.html">sor12</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#EB009C">501</SPAN></TD><TD ALIGN=LEFT><A NAME="sor12"></A>
+Swap two disjuncts.  (Contributed by NM, 5-Aug-1993.)  (Proof shortened by
+     Wolf Lammen, 14-Nov-2012.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> <span>&#8853;</span> (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> <span>&#8853;</span> <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)) &harr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> <span>&#8853;</span> (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> <span>&#8853;</span> <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
+ HREF="sorass.html">sorass</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#EB0099">502</SPAN></TD><TD ALIGN=LEFT><A NAME="sorass"></A>
+Associative law for disjunction.  Theorem *4.33 of [<A
+HREF="mmset.html#WhiteheadRussell">WhiteheadRussell</A>]
+     p. 118.  (Contributed by NM, 5-Aug-1993.)  (Proof shortened by Andrew
+     Salmon, 26-Jun-2011.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>(((<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> <span>&#8853;</span> <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN>) <span>&#8853;</span> <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>) &harr; (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> <span>&#8853;</span> (<SPAN CLASS=wff
+ STYLE="color:blue">&#x1D713;</SPAN> <span>&#8853;</span> <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D712;</SPAN>)))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR BGCOLOR="#FFFFF2"><TD COLSPAN=3><CENTER><B><A
+ NAME="mm503s"></A>1.2.8&nbsp;&nbsp;"Modal" operators</B></CENTER>
+</TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+<TR><TD NOWRAP><B><FONT COLOR="#00CC00">Syntax</FONT></B></TD><TD
+ ALIGN=CENTER><A HREF="wpos.html">wpos</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#EC0097">503</SPAN></TD><TD ALIGN=LEFT><A NAME="wpos"></A>
+Extend wff definition to include the possible operator.
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=typecode
+ STYLE="color:gray">wff </SPAN> <span>&#9674;</span> <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP><B><FONT COLOR=blue>Definition</FONT></B></TD><TD
+ ALIGN=CENTER><A HREF="df-pos.html">df-pos</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#EC0095">504</SPAN></TD><TD ALIGN=LEFT><A NAME="df-pos"></A>
+Define the possible operator (Contributed by Lllllllllwith10ls,
+     31-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>( <span>&#9674;</span> <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &harr; (&not; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &rarr; <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN>))</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP><B><FONT COLOR="#00CC00">Syntax</FONT></B></TD><TD
+ ALIGN=CENTER><A HREF="wnec.html">wnec</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#EC0093">505</SPAN></TD><TD ALIGN=LEFT><A NAME="wnec"></A>
+Extend wff definition to include the necessary operator.
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=typecode
+ STYLE="color:gray">wff </SPAN> <span>&#9633;</span> <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP><B><FONT COLOR=blue>Definition</FONT></B></TD><TD
+ ALIGN=CENTER><A HREF="df-nec.html">df-nec</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#ED0091">506</SPAN></TD><TD ALIGN=LEFT><A NAME="df-nec"></A>
+Define the necessary operator (Contributed by Lllllllllwith10ls,
+     31-May-2026.)
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
+ STYLE="color:gray">&#8866; </SPAN>( <span>&#9633;</span> <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN> &harr; &not; <span>&#9674;</span> &not;
+ <SPAN CLASS=wff STYLE="color:blue">&#x1D711;</SPAN>)</SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
+<TR><TD NOWRAP><B><FONT COLOR="#00CC00">Syntax</FONT></B></TD><TD
+ ALIGN=CENTER><A HREF="wdbt.html">wdbt</A>&nbsp;<SPAN CLASS=r
+ STYLE="color:#ED008E">507</SPAN></TD><TD ALIGN=LEFT><A NAME="wdbt"></A>
+Extend wff definition to include the doubtful operator.
+
+</TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=typecode
+ STYLE="color:gray">wff </SPAN> <span>&#10752;</span> <SPAN CLASS=wff
+ STYLE="color:blue">&#x1D711;</SPAN></SPAN></TD></TR>
+<TR BGCOLOR=white><TD COLSPAN=3><FONT SIZE=-3>&nbsp;</FONT></TD></TR>
+
 <TR><TD NOWRAP><B><FONT COLOR=blue>Definition</FONT></B></TD><TD
  ALIGN=CENTER><A HREF="df-dbt.html">df-dbt</A>&nbsp;<SPAN CLASS=r
- STYLE="color:#ED008C">501</SPAN></TD><TD ALIGN=LEFT><A NAME="df-dbt"></A>
+ STYLE="color:#ED008C">508</SPAN></TD><TD ALIGN=LEFT><A NAME="df-dbt"></A>
 Define the doubtful operator (Contributed by Lllllllllwith10ls,
      31-May-2026.)
 
@@ -98,7 +191,7 @@ Define the doubtful operator (Contributed by Lllllllllwith10ls,
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
  HREF="mod-a1.html">mod-a1</A>&nbsp;<SPAN CLASS=r
- STYLE="color:#EE008A">502</SPAN></TD><TD ALIGN=LEFT><A NAME="mod-a1"></A>
+ STYLE="color:#EE008A">509</SPAN></TD><TD ALIGN=LEFT><A NAME="mod-a1"></A>
 (Contributed by Lllllllllwith10ls, 31-May-2026.)
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
@@ -109,7 +202,7 @@ Define the doubtful operator (Contributed by Lllllllllwith10ls,
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
  HREF="mod-a2.html">mod-a2</A>&nbsp;<SPAN CLASS=r
- STYLE="color:#EE0088">503</SPAN></TD><TD ALIGN=LEFT><A NAME="mod-a2"></A>
+ STYLE="color:#EE0088">510</SPAN></TD><TD ALIGN=LEFT><A NAME="mod-a2"></A>
 (Contributed by Lllllllllwith10ls, 31-May-2026.)
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
@@ -120,7 +213,7 @@ Define the doubtful operator (Contributed by Lllllllllwith10ls,
 
 <TR><TD NOWRAP>Theorem</TD><TD ALIGN=CENTER><A
  HREF="mod-a3.html">mod-a3</A>&nbsp;<SPAN CLASS=r
- STYLE="color:#EE0086">504</SPAN></TD><TD ALIGN=LEFT><A NAME="mod-a3"></A>
+ STYLE="color:#EE0086">511</SPAN></TD><TD ALIGN=LEFT><A NAME="mod-a3"></A>
 (Contributed by Lllllllllwith10ls, 1-Jun-2026.)
 
 </TD></TR><TR><TD COLSPAN=3 ALIGN=CENTER><SPAN CLASS=math><SPAN CLASS=hidden
@@ -150,12 +243,12 @@ Define the doubtful operator (Contributed by Lllllllllwith10ls,
 </CENTER>
 Jump to page: 
 <A HREF="mmtheorems.html">Contents</A>&nbsp;
-<A HREF="mmtheorems1.html">1</A>&nbsp;<SPAN CLASS=r STYLE="color:#FB0000">1</SPAN>-<SPAN CLASS=r STYLE="color:#A57300">100</SPAN>
-<A HREF="mmtheorems2.html">2</A>&nbsp;<SPAN CLASS=r STYLE="color:#A47300">101</SPAN>-<SPAN CLASS=r STYLE="color:#1C9301">200</SPAN>
-<A HREF="mmtheorems3.html">3</A>&nbsp;<SPAN CLASS=r STYLE="color:#1A9302">201</SPAN>-<SPAN CLASS=r STYLE="color:#0087C4">300</SPAN>
-<A HREF="mmtheorems4.html">4</A>&nbsp;<SPAN CLASS=r STYLE="color:#0087C8">301</SPAN>-<SPAN CLASS=r STYLE="color:#AB4AFF">400</SPAN>
-<A HREF="mmtheorems5.html">5</A>&nbsp;<SPAN CLASS=r STYLE="color:#AC49FF">401</SPAN>-<SPAN CLASS=r STYLE="color:#ED008F">500</SPAN>
-6&nbsp;<SPAN CLASS=r STYLE="color:#ED008C">501</SPAN>-<SPAN CLASS=r STYLE="color:#EE0086">504</SPAN>
+<A HREF="mmtheorems1.html">1</A>&nbsp;<SPAN CLASS=r STYLE="color:#FB0000">1</SPAN>-<SPAN CLASS=r STYLE="color:#A77100">100</SPAN>
+<A HREF="mmtheorems2.html">2</A>&nbsp;<SPAN CLASS=r STYLE="color:#A67200">101</SPAN>-<SPAN CLASS=r STYLE="color:#209200">200</SPAN>
+<A HREF="mmtheorems3.html">3</A>&nbsp;<SPAN CLASS=r STYLE="color:#1F9200">201</SPAN>-<SPAN CLASS=r STYLE="color:#0089B8">300</SPAN>
+<A HREF="mmtheorems4.html">4</A>&nbsp;<SPAN CLASS=r STYLE="color:#0088BB">301</SPAN>-<SPAN CLASS=r STYLE="color:#A450FF">400</SPAN>
+<A HREF="mmtheorems5.html">5</A>&nbsp;<SPAN CLASS=r STYLE="color:#A64FFF">401</SPAN>-<SPAN CLASS=r STYLE="color:#EB009E">500</SPAN>
+6&nbsp;<SPAN CLASS=r STYLE="color:#EB009C">501</SPAN>-<SPAN CLASS=r STYLE="color:#EE0086">511</SPAN>
 <HR NOSHADE SIZE=1>
 <TABLE BORDER=0 WIDTH="100%">
   <TR>

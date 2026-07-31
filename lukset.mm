@@ -2119,7 +2119,7 @@ ${
   ${
     bicomdd.1 $e |- ( ph -> ( ps -> ( ch <-> th ) ) ) $.
     $( Commute two sides of a biconditional in a double deduction.  
-       (Contributed by ?who?, 30-Jul-2026.) $)
+       (Contributed by film2860, 30-Jul-2026.) $)
     bicomdd $p |- ( ph -> ( ps -> ( th <-> ch ) ) ) $=
       ( wb wn wi impi bicomd expi ) ABDCFABGHGCDABCDFEIJK $.
   $}
@@ -2557,7 +2557,7 @@ ${
     pm5.74ris.1 $e |- ( ( ph -> ps  ) <-> (  ph -> ch ) ) $.
     $( Stronger form of ~ pm5.74ri .
         
-       (Contributed by ?who?, 30-Jul-2026.) $)
+       (Contributed by film2860, 30-Jul-2026.) $)
     pm5.74ris $p |- ( ph -> ( ps <-> ch ) ) $=
       ( wi wb pm5.74s ax-mp ) ABEACEFABCFEDABCGH $.
   $}
@@ -2584,7 +2584,7 @@ ${
     pm5.74rds.1 $e |- ( ph -> ( ( ps -> ch ) <-> ( ps -> th ) ) ) $.
     $( Stronger form of ~ pm5.74rd .
         
-       (Contributed by ?who?, 30-Jul-2026.) $)
+       (Contributed by film2860, 30-Jul-2026.) $)
     pm5.74rds $p |- ( ph -> ( ps -> ( ch <-> th ) ) ) $=
       ( wi wb pm5.74s syl ) ABCFBDFGBCDGFEBCDHI $.
   $}
@@ -3169,6 +3169,24 @@ ${
   pm5.501 $p |- ( ph -> ( ps <-> ( ph <-> ps ) ) ) $=
     ( wb pm5.1im biimp com12 impbid ) ABABCZABDHABABEFG $.
 
+  $( Implication in terms of implication and biconditional.  (Contributed by
+     NM, 31-Mar-1994.)  (Proof shortened by Wolf Lammen, 24-Jan-2013.) $)
+  ibib $p |- ( ( ph -> ( ph -> ps ) ) <-> ( ph -> ( ph -> ( ph <-> ps ) ) ) ) $=
+    ( wb pm5.501 a1d pm5.74i ) ABABCZABGCAABDEF $.
+
+  $( Implication in terms of implication and biconditional.  (Contributed by
+     NM, 29-Apr-2005.)  (Proof shortened by Wolf Lammen, 21-Dec-2013.) $)
+  ibibr $p |- ( ( ph -> ( ph -> ps ) ) <-> ( ph -> ( ph -> ( ps <-> ph ) ) ) ) $=
+    ( wb pm5.501 bicom bitrdi a1d pm5.74i ) ABBACZABICAABABCIABDABEFGH $.
+
+  ${
+    tbt.1 $e |- ph $.
+    $( A wff is equivalent to its equivalence with a truth.  (Contributed by
+       NM, 18-Aug-1993.)  (Proof shortened by Andrew Salmon, 13-May-2011.) $)
+    tbt $p |- ( ps <-> ( ps <-> ph ) ) $=
+      ( wb ibibr pm5.74ri mp2 ) AABBADZDCCABHABEFG $.
+  $}
+
   $( The negation of a wff is equivalent to the wff's equivalence to falsehood.
      (Contributed by Juha Arpiainen, 19-Jan-2006.)  (Proof shortened by Wolf
      Lammen, 28-Jan-2013.) $)
@@ -3228,13 +3246,36 @@ ${
        NM, 16-Feb-1996.)  (Proof shortened by Wolf Lammen, 19-May-2013.) $)
     pm5.21ni $p |- ( -. ps -> ( ph <-> ch ) ) $=
       ( wn con3i 2falsed ) BFACABDGCBEGH $.
-  $}
 
+    ${
+      pm5.21nii.3 $e |- ( ps -> ( ph <-> ch ) ) $.
+      $( Eliminate an antecedent implied by each side of a biconditional.
+         (Contributed by NM, 21-May-1999.) $)
+      pm5.21nii $p |- ( -. ( ph <-> ch ) -> ( ph <-> ch ) ) $=
+        ( wb pm5.21ni pm2.61i ) BACGFABCDEHI $.
+    $}
+  $}
 
   $( Logical equivalence of commuted antecedents.  Part of Theorem *4.87 of
      [WhiteheadRussell] p. 122.  (Contributed by NM, 11-May-1993.) $)
   bi2.04 $p |- ( ( ph -> ( ps -> ch ) ) <-> ( ps -> ( ph -> ch ) ) ) $=
     ( wi pm2.04 impbii ) ABCDDBACDDABCEBACEF $.
+
+  $( Antecedent absorption implication.  Theorem *5.4 of [WhiteheadRussell]
+  p. 125.  (Contributed by NM, 5-Aug-1993.) $)
+  pm5.4 $p |- ( ( ph -> ( ph -> ( ph -> ps ) ) ) <-> ( ph -> ( ph -> ps ) ) ) $=
+    ( wi wb pm5.5 a1d pm5.74i ) AABCZBAHBDAABEFG $.
+  
+  $( Analogue of Theorem *4.8 of [WhiteheadRussell] p. 122.  (Contributed by film2860, 31-Jul-2026.) $)
+  pm4.8 $p |- ( ( ( -. ph -> ph ) -> -. ph ) <-> -. ph ) $=
+    ( wn wi pm2.01 ax-i1 impbii ) ABZACZGCGADGHEF $.
+  
+  $( A formula is equivalent to its negation implying it.  Theorem *4.81 of
+     [WhiteheadRussell] p. 122.  Note that the second step, using ~ pm2.24 ,
+     could also use ~ ax-1 .  (Contributed by NM, 3-Jan-2005.) $)
+  pm4.81 $p |- ( ( ( ph -> -. ph ) -> ph ) <-> ph ) $=
+    ( wn wi pm2.18 ax-i1 impbii ) AABCZACAADAGEF $.
+
 
 
 $(
