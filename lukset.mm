@@ -43,7 +43,7 @@ $)
   $)
 
   $( Declare typographical constant symbols that are not directly used in the
-     formalism but are useful to explain it in comments. $)
+     formalism but are useful to expwlain it in comments. $)
 
   $c & $.  $( Ampersand (read: "and"). $)
   $c => $.  $( Double right arrow (read: "implies"). $)
@@ -1628,7 +1628,7 @@ $)
   pm2.521 $p |- ( -. ( ph -> ps ) -> ( ps -> ph ) ) $=
     ( pm2.521g ) ABAC $.
 
-  $( Exportation theorem ~ pm3.3 (closed form of ~ ex ) expressed with
+  $( exportation theorem ~ pm3.3 (closed form of ~ ex ) expressed with
      primitive connectives.  (Contributed by NM, 28-Dec-1992.)  (Proof
      shortened by Garrett Katz, 25-May-2026.) $)
   expt $p |- ( ( -. ( ph -> -. ps ) -> ch ) -> ( ph -> ( ps -> ch ) ) ) $=
@@ -1958,7 +1958,7 @@ $)
 
 
   $( And defined by implication. Renamed ~ pm3.2imw for naming consistency. (Contributed by Lllllllllwith10ls,
-     29-May-2026.) (Proof Shorten by film2860, 30-Jul-2026) $)
+     29-May-2026.) (Proof Shorten by film2860, 30-Jul-2026.) $)
   impand $p |- ( ph -> ( ps -> -. ( ( -. ph -> -. ps ) -> -. ps ) ) ) $=
     ( pm3.2imw ) ABC $.
 
@@ -1966,8 +1966,18 @@ $)
     impandd.1 $e |- ( ph -> ps ) $.
     impandd.2 $e |- ( ph -> ch ) $.
     $( And defined by implication (Contributed by Lllllllllwith10ls,
-       31-May-2026.) $)
+       31-May-2026.) (Proof shorten by film2860, 1-Aug-2026.) $)
     impandd $p |- ( ph -> -. ( ( -. ps -> -. ch ) -> -. ch ) ) $=
+      ( wn wi con3i ai2i ax-i3 mpisyl con2i ) BFZCFZGZNGZAPAFZNGZNGNQGQRONMQNAB
+      DHIIACEHQNJKL $.
+  $}
+
+  ${
+    impanddOLD.1 $e |- ( ph -> ps ) $.
+    impanddOLD.2 $e |- ( ph -> ch ) $.
+    $( And defined by implication (Contributed by Lllllllllwith10ls,
+       31-May-2026.) $)
+    impanddOLD $p |- ( ph -> -. ( ( -. ps -> -. ch ) -> -. ch ) ) $=
       ( wn notnoti notnot con3 ax-i3 con3i ai2i syl11 a1dd syl7 mpi con3rr3 syl
       wi mtoi ) ABFZCFZSZUBSZABSZFZUEDGAAFZFUDUFSAHUDUEUGUDACSZUEUGSEUEUAUGSZUD
       UHUGABIUBUGSZUDUIUGSUHUJUDUGUIUGUBSZUBSUJUGUDUGUBJUKUCUBUAUGUBABDKLLMNACI
@@ -3276,7 +3286,350 @@ ${
   pm4.81 $p |- ( ( ( ph -> -. ph ) -> ph ) <-> ph ) $=
     ( wn wi pm2.18 ax-i1 impbii ) AABCZACAADAGEF $.
 
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  Logical conjunction
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+  This section defines conjunction of two formulas, denoted by infix " ` /\ ` "
+  and read "and".  It is defined in terms of implication and negation, which is
+  possible in classical logic (but not in intuitionistic logic: see iset.mm).
+
+  As indicated in the "note on definitions" in the section comment for logical
+  equivalence, some theorems containing only implication, negation and
+  conjunction are placed in the section after disjunction since theirs proofs
+  use disjunction (although this is not required since definitions are
+  conservative, see said section comment).
+
+$)
+
+  $( Declare connective for conjunction ("and"). $)
+  $c /\ $.  $( Wedge (read:  "and") $)
+
+  $( Extend wff definition to include conjunction ("and"). $)
+  wa $a wff ( ph /\ ps ) $.
+
+  
+  $( Define conjunction (logical "and"). When
+     both the left and right operand are true, the result is true; when either
+     is false, the result is false.
+
+     This is our first use of the biconditional connective in a definition; we
+     use the biconditional connective in place of the traditional "<=def=>",
+     which means the same thing, except that we can manipulate the
+     biconditional connective directly in proofs rather than having to rely on
+     an informal definition substitution rule.  Note that if we mechanically
+     substitute ` -. ( ( -. ph -> -. ps ) -> -. ps ) ` for ` ( ph /\ ps ) ` , we end up with an
+     instance of previously proved theorem ~ biid .  This is the justification
+     for the definition, along with the fact that it introduces a new symbol
+     ` /\ ` .  Contrast with ` \/ ` ( ~ df-or ), ` -> ` ( ~ wi ), ` -/\ `
+     ( ~ df-nan ), and ` \/_ ` ( ~ df-xor ).  (Contributed by NM,
+     5-Jan-1993.) $)
+  df-an $a |- ( ( ph /\ ps ) <-> -. ( ( -. ph -> -. ps ) -> -. ps ) ) $.
+
+  $( Analogue of theorem *4.63 of [WhiteheadRussell] p. 120.  
+     (Contributed by film2860, 31-Jul-2026.) $)
+  pm4.63 $p |- ( -. ( ( -. ph -> -. ps ) -> -. ps ) <-> ( ph /\ ps ) ) $=
+    ( wa wn wi df-an bicomi ) ABCADBDZEHEDABFG $.
+
+  $( Analogue of theorem *4.67 of [WhiteheadRussell] p. 120.   
+     (Contributed by film2860, 31-Jul-2026.) $)
+  pm4.67 $p |- ( -. ( ( ph -> -. ps ) -> -. ps ) <-> ( -. ph /\ ps ) ) $=
+    ( wn wi wa pm4.63 notnotb imbi1i xchnxbir ) ACZCZBCZDZLDJBEALDZLDJBFNMLAKLA
+    GHHI $.
+
+  $( express an implication in terms of a negated conjunction.   
+     (Contributed by film2860, 31-Jul-2026.) $)
+  imnan $p |- ( ( ( -. ph -> -. ps ) -> -. ps ) <-> -. ( ph /\ ps ) ) $=
+    ( wn wi wa notnotb pm4.63 xchbinx ) ACBCZDIDZJCABEJFABGH $.
+
+  ${
+    imnani.1 $e |- -. ( ph /\ ps ) $.
+    $( Infer an implication from a negated conjunction.   
+       (Contributed by film2860, 31-Jul-2026.) $)
+    imnani $p |- ( ( -. ph -> -. ps ) -> -. ps ) $=
+      ( wa wn wi notnotb df-an bitr3i con4bii mpbi ) ABDZEZAEBEZFNFZCMOMELOELGA
+      BHIJK $.
+  $}
+
+  $( Implication in terms of conjunction and negation.  Analogue of theorem 3.4(27) of
+     [Stoll] p. 176.   
+     (Contributed by film2860, 31-Jul-2026.) $)
+  iman $p |- ( ( ( ph -> ps ) -> ps ) <-> -. ( -. ph /\ -. ps ) ) $=
+    ( wi wn wa notnotb imbi1i imbi2i 3bitri notbii pm4.63 con4bii ) ABCZBCZADZB
+    DZEZDZNDODZPDZCZTCZDQRDNUBNSBCZBCUABCUBMUCBASBAFGGUCUABBTSBFZHGBTUAUDHIJOPK
+    QFIL $.
+
+  $( Law of noncontradiction.  Analogue of theorem *3.24 of [WhiteheadRussell] p. 111 (who
+     call it the "law of contradiction").   
+     (Contributed by film2860, 31-Jul-2026.) $)
+  pm3.24a $p |- -. ( -. ( ph -> -. ph ) /\ -. ph ) $=
+    ( wn wi wa pm2.18 iman mpbi ) AABZCZACACIBHDBAEIAFG $.
+
+  $( Law of noncontradiction.  Analogue of theorem *3.24 of [WhiteheadRussell] p. 111 (who
+     call it the "law of contradiction").   
+     (Contributed by film2860, 31-Jul-2026.) $)
+
+  pm3.24b $p |- ( ph -> -. ( -. ph  /\ -. ph ) ) $=
+    ( wi wn wa pm2.27 iman biimpi syl ) AAABABZACZJDCZAAEIKAAFGH $.
+
+  $( express a conjunction in terms of a negated implication.   
+     (Contributed by film2860, 31-Jul-2026.) $)
+  annim $p |- ( ( -. ph /\ -. ps ) <-> -. ( ( ph -> ps ) -> ps ) ) $=
+    ( wi wn wa iman con2bii ) ABCBCADBDEABFG $.
+
+  $( Theorem *4.61 of [WhiteheadRussell] p. 120.   
+     (Contributed by film2860, 31-Jul-2026.) $)
+  pm4.61 $p |- ( -. ( ( ph -> ps ) -> ps ) <-> ( -. ph /\ -. ps ) ) $=
+    ( wn wa wi annim bicomi ) ACBCDABEBECABFG $.
+
+  $( Theorem *4.65 of [WhiteheadRussell] p. 120.   
+     (Contributed by film2860, 31-Jul-2026.) $)
+  pm4.65 $p |- ( -. ( ( -. ph -> ps ) -> ps ) <-> ( ph /\ -. ps ) ) $=
+    ( wn wi wa pm4.63 notnotb imbi2i imbi12i xchnxbir ) ACZBCZCZDZMDALEKBDZBDAL
+    FONBMBMKBGZHPIJ $.
+
+  ${
+    expw.1 $e |- ( ( ph /\ ps ) -> ch ) $.
+    $( exportation inference.   A translation of natural deduction
+       rule ` -> ` I ( ` -> ` introduction), see ~ natded .   
+       (Contributed by film2860, 1-Aug-2026.) $)
+    expw $p |- ( ph -> ( ps -> ch ) ) $=
+      ( wn wi wa pm4.63 sylbi expiw ) ABCAEBEZFKFEABGCABHDIJ $.
+
+    $( exportation inference with commuted antecedents.  (Contributed by NM,
+       25-May-2005.) $)
+    expwcom $p |- ( ps -> ( ph -> ch ) ) $=
+      ( expw com12 ) ABCABCDEF $.
+  $}
+
+  ${
+    expwd.1 $e |- ( ph -> ( ( ps /\ ch ) -> th ) ) $.
+    $( Commuted form of ~ expwd .  (Contributed by Alan Sare, 18-Mar-2012.)
+       Shorten ~ expwd .  (Revised by Wolf Lammen, 28-Jul-2022.) $)
+    expwdcom $p |- ( ps -> ( ch -> ( ph -> th ) ) ) $=
+      ( wi wa com12 expw ) BCADFABCGDEHI $.
+
+    $( exportation deduction.  (Contributed by NM, 20-Aug-1993.)  (Proof
+       shortened by Wolf Lammen, 28-Jul-2022.) $)
+    expwd $p |- ( ph -> ( ps -> ( ch -> th ) ) ) $=
+      ( expwdcom com3r ) BCADABCDEFG $.
+  $}
+
+  ${
+    expwcomd.1 $e |- ( ph -> ( ( ps /\ ch ) -> th ) ) $.
+    $( Deduction form of ~ expwcom .  (Contributed by Alan Sare,
+       22-Jul-2012.) $)
+    expwcomd $p |- ( ph -> ( ch -> ( ps -> th ) ) ) $=
+      ( expwd com23 ) ABCDABCDEFG $.
+  $} 
+
+  ${
+    expw31.1 $e |- ( ( ( ph /\ ps ) /\ ch ) -> th ) $.
+    $( An exportation inference.  (Contributed by NM, 26-Apr-1994.) $)
+    expw31 $p |- ( ph -> ( ps -> ( ch -> th ) ) ) $=
+      ( wi wa expw ) ABCDFABGCDEHH $.
+  $}
+
+  ${
+    expw32.1 $e |- ( ( ph /\ ( ps /\ ch ) ) -> th ) $.
+    $( An exportation inference.  (Contributed by NM, 26-Apr-1994.) $)
+    expw32 $p |- ( ph -> ( ps -> ( ch -> th ) ) ) $=
+      ( wa expw expwd ) ABCDABCFDEGH $.
+  $}
+
+   ${
+    expw4b.1 $e |- ( ( ph /\ ps ) -> ( ( ch /\ th ) -> ta ) ) $.
+    $( An exportation inference.  (Contributed by NM, 26-Apr-1994.)  (Proof
+       shortened by Wolf Lammen, 23-Nov-2012.)  Shorten ~ expw4a .  (Revised by
+       Wolf Lammen, 20-Jul-2021.) $)
+    expw4b $p |- ( ph -> ( ps -> ( ch -> ( th -> ta ) ) ) ) $=
+      ( wi wa expwd expw ) ABCDEGGABHCDEFIJ $.
+  $}
+
+  ${
+    expw4a.1 $e |- ( ph -> ( ps -> ( ( ch /\ th ) -> ta ) ) ) $.
+    $( An exportation inference.  (Contributed by film2860, 1-Aug-2026.)   $)
+    expw4a $p |- ( ph -> ( ps -> ( ch -> ( th -> ta ) ) ) ) $=
+      ( wi wn wa impi expwd expi ) ABCDEGGABHGHCDEABCDIEGFJKL $.
+  $}
+
+  ${
+    expw4c.1 $e |- ( ph -> ( ( ( ps /\ ch ) /\ th ) -> ta ) ) $.
+    $( An exportation inference.  (Contributed by NM, 26-Apr-1994.) $)
+    expw4c $p |- ( ph -> ( ps -> ( ch -> ( th -> ta ) ) ) ) $=
+      ( wi wa expwd ) ABCDEGABCHDEFII $.
+  $}
+
+  ${
+    expw4d.1 $e |- ( ph -> ( ( ps /\ ( ch /\ th ) ) -> ta ) ) $.
+    $( An exportation inference.  (Contributed by NM, 26-Apr-1994.) $)
+    expw4d $p |- ( ph -> ( ps -> ( ch -> ( th -> ta ) ) ) ) $=
+      ( wa expwd expw4a ) ABCDEABCDGEFHI $.
+  $}
+
+  ${
+    expw41.1 $e |- ( ( ( ( ph /\ ps ) /\ ch ) /\ th ) -> ta ) $.
+    $( An exportation inference.  (Contributed by NM, 26-Apr-1994.) $)
+    expw41 $p |- ( ph -> ( ps -> ( ch -> ( th -> ta ) ) ) ) $=
+      ( wi wa expw expw31 ) ABCDEGABHCHDEFIJ $.
+  $}
+
+  ${
+    expw42.1 $e |- ( ( ( ph /\ ( ps /\ ch ) ) /\ th ) -> ta ) $.
+    $( An exportation inference.  (Contributed by NM, 26-Apr-1994.) $)
+    expw42 $p |- ( ph -> ( ps -> ( ch -> ( th -> ta ) ) ) ) $=
+      ( wi wa expw31 expwd ) ABCDEGABCHDEFIJ $.
+  $}
+
+  ${
+    expw43.1 $e |- ( ( ( ph /\ ps ) /\ ( ch /\ th ) ) -> ta ) $.
+    $( An exportation inference.  (Contributed by NM, 26-Apr-1994.) $)
+    expw43 $p |- ( ph -> ( ps -> ( ch -> ( th -> ta ) ) ) ) $=
+      ( wa expw expw4b ) ABCDEABGCDGEFHI $.
+  $}
+
+  ${
+    expw44.1 $e |- ( ( ph /\ ( ( ps /\ ch ) /\ th ) ) -> ta ) $.
+    $( An exportation inference.  (Contributed by NM, 26-Apr-1994.) $)
+    expw44 $p |- ( ph -> ( ps -> ( ch -> ( th -> ta ) ) ) ) $=
+      ( wi wa expw32 expwd ) ABCDEGABCHDEFIJ $.
+  $}
+
+  ${
+    expw45.1 $e |- ( ( ph /\ ( ps /\ ( ch /\ th ) ) ) -> ta ) $.
+    $( An exportation inference.  (Contributed by NM, 26-Apr-1994.) $)
+    expw45 $p |- ( ph -> ( ps -> ( ch -> ( th -> ta ) ) ) ) $=
+      ( wa expw32 expw4a ) ABCDEABCDGEFHI $.
+  $}
+
+  ${
+    expw5c.1 $e |- ( ph -> ( ( ps /\ ch ) -> ( ( th /\ ta ) -> et ) ) ) $.
+    $( An exportation inference.  (Contributed by Jeff Hankins, 7-Jul-2009.) $)
+    expw5c $p |- ( ph -> ( ps -> ( ch -> ( th -> ( ta -> et ) ) ) ) ) $=
+      ( wi wa expw4a expwd ) ABCDEFHHABCIDEFGJK $.
+  $}
+
+  ${
+    expw5j.1 $e |- ( ph -> ( ( ( ( ps /\ ch ) /\ th ) /\ ta ) -> et ) ) $.
+    $( An exportation inference.  (Contributed by Jeff Hankins, 7-Jul-2009.) $)
+    expw5j $p |- ( ph -> ( ps -> ( ch -> ( th -> ( ta -> et ) ) ) ) ) $=
+      ( wi wa expwd expw4c ) ABCDEFHABCIDIEFGJK $.
+  $}
+
+  ${
+    expw5l.1 $e |- ( ph -> ( ( ( ps /\ ch ) /\ ( th /\ ta ) ) -> et ) ) $.
+    $( An exportation inference.  (Contributed by Jeff Hankins, 7-Jul-2009.) $)
+    expw5l $p |- ( ph -> ( ps -> ( ch -> ( th -> ( ta -> et ) ) ) ) ) $=
+      ( wa expwd expw5c ) ABCDEFABCHDEHFGIJ $.
+  $}
+
+  ${
+    expw53.1 $e |- ( ( ( ( ph /\ ps ) /\ ( ch /\ th ) ) /\ ta ) -> et ) $.
+    $( An exportation inference.  (Contributed by Jeff Hankins,
+       30-Aug-2009.) $)
+    expw53 $p |- ( ph -> ( ps -> ( ch -> ( th -> ( ta -> et ) ) ) ) ) $=
+      ( wi wa expw expw43 ) ABCDEFHABICDIIEFGJK $.
+  $}
+
+  $( Theorem *3.3 (Exp) of [WhiteheadRussell] p. 112.  (Contributed by NM,
+     3-Jan-2005.)  (Proof shortened by Wolf Lammen, 24-Mar-2013.) $)
+  pm3.3 $p |- ( ( ( ph /\ ps ) -> ch ) -> ( ph -> ( ps -> ch ) ) ) $=
+    ( wa wi id expwd ) ABDCEZABCHFG $.
+
+  ${
+    ancoms.1 $e |- ( ( ph /\ ps ) -> ch ) $.
+    $( Inference commuting conjunction in antecedent.  
+       (Contributed by ?who?, 1-Aug-2026.) $)
+    ancoms $p |- ( ( ps /\ ph ) -> ch ) $=
+      ( wa wn wi df-an biimpi ax-i3 con3i pm4.63 4syl ) BAEZBFZAFZGPGZFZPOGOGZF
+      ZABEZCNRBAHISQPOJKTUAABLIDM $.
+  $}
+
+  $( Theorem *3.22 of [WhiteheadRussell] p. 111.  (Contributed by NM,
+     3-Jan-2005.)  (Proof shortened by Wolf Lammen, 13-Nov-2012.) $)
+  pm3.22 $p |- ( ( ph /\ ps ) -> ( ps /\ ph ) ) $=
+    ( wa id ancoms ) BABACZFDE $.
+
+  $( Commutative law for conjunction.  Theorem *4.3 of [WhiteheadRussell]
+     p. 118.  (Contributed by NM, 25-Jun-1998.)  (Proof shortened by Wolf
+     Lammen, 4-Nov-2012.) $)
+  ancom $p |- ( ( ph /\ ps ) <-> ( ps /\ ph ) ) $=
+    ( wa pm3.22 impbii ) ABCBACABDBADE $.
+
+  ${
+    ancomd.1 $e |- ( ph -> ( ps /\ ch ) ) $.
+    $( Commutation of conjuncts in consequent.  (Contributed by Jeff Hankins,
+       14-Aug-2009.) $)
+    ancomd $p |- ( ph -> ( ch /\ ps ) ) $=
+      ( wa ancom sylib ) ABCECBEDBCFG $.
+  $}
+
+  ${
+    biancomi.1 $e |- ( ph <-> ( ch /\ ps ) ) $.
+    $( Commuting conjunction in a biconditional.  (Contributed by Peter Mazsa,
+       17-Jun-2018.) $)
+    biancomi $p |- ( ph <-> ( ps /\ ch ) ) $=
+      ( wa ancom bitr4i ) ACBEBCEDBCFG $.
+  $}
+
+  ${
+    biancomd.1 $e |- ( ph -> ( ps <-> ( th /\ ch ) ) ) $.
+    $( Commuting conjunction in a biconditional, deduction form.  (Contributed
+       by Peter Mazsa, 3-Oct-2018.) $)
+    biancomd $p |- ( ph -> ( ps <-> ( ch /\ th ) ) ) $=
+      ( wa ancom bitrdi ) ABDCFCDFEDCGH $.
+  $}
+
+  $( Closed form of ~ ancoms .  (Contributed by Alan Sare, 31-Dec-2011.) $)
+  ancomst $p |- ( ( ( ph /\ ps ) -> ch ) <-> ( ( ps /\ ph ) -> ch ) ) $=
+    ( wa ancom imbi1i ) ABDBADCABEF $.
+
+  ${
+    ancomsd.1 $e |- ( ph -> ( ( ps /\ ch ) -> th ) ) $.
+    $( Deduction commuting conjunction in antecedent.  (Contributed by NM,
+       12-Dec-2004.) $)
+    ancomsd $p |- ( ph -> ( ( ch /\ ps ) -> th ) ) $=
+      ( wa pm3.22 syl5 ) CBFBCFADCBGEH $.
+  $}
+
+  $( Join antecedents with conjunction ("conjunction introduction").  Theorem
+     *3.2 of [WhiteheadRussell] p. 111.  Its associated inference is ~ pm3.2i
+     and its associated deduction is ~ jca (and the double deduction is
+     ~ jcad ).  See ~ pm3.2im for a version using only implication and
+     negation.  (Contributed by NM, 5-Jan-1993.)  (Proof shortened by Wolf
+     Lammen, 12-Nov-2012.) $)
+  pm3.2 $p |- ( ph -> ( ps -> ( ph /\ ps ) ) ) $=
+    ( wa id expw ) ABABCZFDE $.
+
+  ${
+    pm3.2i.1 $e |- ph $.
+    pm3.2i.2 $e |- ps $.
+    $( Infer conjunction of premises.  Inference associated with ~ pm3.2 .  Its
+       associated deduction is ~ jca (and the double deduction is ~ jcad ).
+       (Contributed by NM, 21-Jun-1993.) $)
+    pm3.2i $p |- ( ph /\ ps ) $=
+      ( wa pm3.2 mp2 ) ABABECDABFG $.
+  $}
+
+  $( Join antecedents with conjunction.  Theorem *3.21 of [WhiteheadRussell]
+     p. 111.  (Contributed by NM, 5-Aug-1993.) $)
+  pm3.21 $p |- ( ph -> ( ps -> ( ps /\ ph ) ) ) $=
+    ( wa id expwcom ) BABACZFDE $.
+
+  $( A theorem similar to the standard definition of the biconditional.
+     Definition of [Margaris] p. 49.  (Contributed by NM, 24-Jan-1993.) $)
+  dfbi2 $p |- ( ( ph <-> ps ) <-> ( ( ph -> ps ) /\ ( ps -> ph ) ) ) $=
+    ( wb wi wn wa dfbi1 df-an bitr4i ) ABCABDZEBADZEZDLDEJKFABGJKHI $.
+
+  $( Definition ~ df-bi rewritten in an abbreviated form to help intuitive
+     understanding of that definition.  Note that it is a conjunction of two
+     implications; one which asserts properties that follow from the
+     biconditional and one which asserts properties that imply the
+     biconditional.  (Contributed by NM, 15-Aug-2008.) $)
+  dfbi $p |- ( ( ( ph <-> ps ) -> ( ( ph -> ps ) /\ ( ps -> ph ) ) )
+        /\ ( ( ( ph -> ps ) /\ ( ps -> ph ) ) -> ( ph <-> ps ) ) ) $=
+    ( wb wi wa dfbi2 mpbi ) ABCZABDBADEZCHIDIHDEABFHIFG $.
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -4234,7 +4587,7 @@ htmlcss '<STYLE TYPE="text/css">\n' +
 htmlfont 'CLASS=math';
 
 /* Page title, home page link */
-htmltitle "Metamath Proof Explorer";
+htmltitle "Metamath Proof expwlorer";
 htmlhome '<A HREF="./index.html">Home</A>';
 /* Optional file where bibliographic references are kept */
 /* If specified, e.g., "mmset.html", Metamath will hyperlink all strings of the
