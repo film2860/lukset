@@ -43,7 +43,7 @@ $)
   $)
 
   $( Declare typographical constant symbols that are not directly used in the
-     formalism but are useful to expwlain it in comments. $)
+     formalism but are useful to explain it in comments. $)
 
   $c & $.  $( Ampersand (read: "and"). $)
   $c => $.  $( Double right arrow (read: "implies"). $)
@@ -3540,7 +3540,7 @@ $)
   ${
     ancoms.1 $e |- ( ( ph /\ ps ) -> ch ) $.
     $( Inference commuting conjunction in antecedent.  
-       (Contributed by ?who?, 1-Aug-2026.) $)
+       (Contributed by film2860, 1-Aug-2026.) $)
     ancoms $p |- ( ( ps /\ ph ) -> ch ) $=
       ( wa wn wi df-an biimpi ax-i3 con3i pm4.63 4syl ) BAEZBFZAFZGPGZFZPOGOGZF
       ZABEZCNRBAHISQPOJKTUAABLIDM $.
@@ -3631,6 +3631,7 @@ $)
         /\ ( ( ( ph -> ps ) /\ ( ps -> ph ) ) -> ( ph <-> ps ) ) ) $=
     ( wb wi wa dfbi2 mpbi ) ABCZABDBADEZCHIDIHDEABFHIFG $.
 
+  
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   Logical disjunction
@@ -4587,7 +4588,7 @@ htmlcss '<STYLE TYPE="text/css">\n' +
 htmlfont 'CLASS=math';
 
 /* Page title, home page link */
-htmltitle "Metamath Proof expwlorer";
+htmltitle "Metamath Proof Explorer";
 htmlhome '<A HREF="./index.html">Home</A>';
 /* Optional file where bibliographic references are kept */
 /* If specified, e.g., "mmset.html", Metamath will hyperlink all strings of the
