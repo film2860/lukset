@@ -35,7 +35,7 @@ img { margin-bottom: -4px }
     rel="stylesheet" type="text/css">
 <LINK href="mmsetalt.css" title="mmsetalt"
     rel="alternate stylesheet" type="text/css">
-<TITLE>df-an - Metamath Proof expwlorer</TITLE>
+<TITLE>df-an - Metamath Proof Explorer</TITLE>
 <LINK REL="shortcut icon" HREF="favicon.ico" TYPE="image/x-icon">
 </HEAD>
 <BODY BGCOLOR="#FFFFFF">
@@ -44,12 +44,12 @@ img { margin-bottom: -4px }
     <TD ALIGN=LEFT VALIGN=TOP WIDTH="25%"><A HREF=
     "./index.html"><IMG SRC=""
       BORDER=0
-      ALT="MP Home"
-      TITLE="MP Home"
+      ALT="MPE Home"
+      TITLE="MPE Home"
       HEIGHT=32 WIDTH=32 ALIGN=TOP STYLE="margin-bottom:0px"></A>
     </TD>
     <TD ALIGN=CENTER COLSPAN=2 VALIGN=TOP><FONT SIZE="+3" COLOR="#006633"><B>
-Metamath Proof expwlorer
+Metamath Proof Explorer
       </B></FONT></TD>
     <TD ALIGN=RIGHT VALIGN=TOP WIDTH="25%">
       <FONT SIZE=-1 FACE=sans-serif>
@@ -64,9 +64,7 @@ Metamath Proof expwlorer
   <TR>
     <TD COLSPAN=2 ALIGN=LEFT VALIGN=TOP><FONT SIZE=-2
       FACE=sans-serif>
-      <A HREF="../mm.html">Mirrors</A>&nbsp; &gt;
-      &nbsp;<A HREF="../index.html">Home</A>&nbsp; &gt;
-      &nbsp;<A HREF="./index.html">MP Home</A>&nbsp; &gt;
+&nbsp;<A HREF="index.html">Home</A>&nbsp; &gt;
       &nbsp;<A HREF="mmtheorems.html">Th. List</A>&nbsp; &gt;
       &nbsp;df-an
       </FONT>
@@ -81,11 +79,10 @@ Metamath Proof expwlorer
 <HR NOSHADE SIZE=1>
 <CENTER><B><FONT SIZE="+1">Definition <FONT
 COLOR="#006633">df-an</FONT></FONT></B>&nbsp;<SPAN CLASS=r
-STYLE="color:#5174FF">385</SPAN></CENTER>
+STYLE="color:#008C9D">389</SPAN></CENTER>
 <CENTER><TABLE><TR><TD ALIGN=LEFT><B>Description: </B>Define conjunction
-(logical &quot;and&quot;). When
-     both the left and right operand are true, the result is true; when either
-     is false, the result is false.
+(logical &quot;and&quot;).  When both the left and right operand
+     are true, the result is true; when either is false, the result is false.
 <P STYLE="margin-bottom:0em">
      This is our first use of the biconditional connective in a definition; we
      use the biconditional connective in place of the traditional
@@ -98,21 +95,18 @@ STYLE="color:blue">&#x1D711;</SPAN> &rarr; &not; <SPAN CLASS=wff
 STYLE="color:blue">&#x1D713;</SPAN>) &rarr; &not; <SPAN CLASS=wff
 STYLE="color:blue">&#x1D713;</SPAN>)</SPAN> for <SPAN CLASS=math>(<SPAN
 CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=wff
-STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>, we end up with an
-     instance of previously proved theorem <A
-HREF="biid.html">biid</A>&nbsp;<SPAN CLASS=r STYLE="color:#00905F">281</SPAN>. 
-This is the justification
-     for the definition, along with the fact that it introduces a new symbol
-     <SPAN CLASS=math>&and;</SPAN>.  Contrast with <SPAN CLASS=math>&or;</SPAN>
-(<A HREF="df-or.html">df-or</A>&nbsp;<SPAN CLASS=r
-STYLE="color:#9B56FF">431</SPAN>), <SPAN CLASS=math>&rarr;</SPAN> (<A
-HREF="wi.html">wi</A>&nbsp;<SPAN CLASS=r STYLE="color:#FA0100">4</SPAN>), <SPAN
-CLASS=math>&#8892;</SPAN>
-     (<FONT COLOR=blue >df-nan</FONT>&nbsp;<SPAN CLASS=r
-STYLE="color:#000000">(future)</SPAN>), and <SPAN CLASS=math>&#8891;</SPAN>
-(<FONT COLOR=blue >df-xor</FONT>&nbsp;<SPAN CLASS=r
-STYLE="color:#000000">(future)</SPAN>).  (Contributed by NM,
-     5-Jan-1993.)</TD></TR></TABLE></CENTER>
+STYLE="color:blue">&#x1D713;</SPAN>)</SPAN>,
+     we end up with an instance of previously proved theorem <A
+HREF="biid.html">biid</A>&nbsp;<SPAN CLASS=r STYLE="color:#119309">281</SPAN>. 
+This is
+     the justification for the definition, along with the fact that it
+     introduces a new symbol <SPAN CLASS=math>&and;</SPAN>.  Contrast with
+<SPAN CLASS=math>&or;</SPAN> (<A HREF="df-or.html">df-or</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#B63DFF">559</SPAN>), <SPAN CLASS=math>&rarr;</SPAN>
+     (<A HREF="wi.html">wi</A>&nbsp;<SPAN CLASS=r
+STYLE="color:#FA0100">4</SPAN>), <SPAN CLASS=math>&#8892;</SPAN> ( {TODO}
+df-nan ), and <SPAN CLASS=math>&#8891;</SPAN> ( {TODO} df-xor ).
+     (Contributed by NM, 5-Jan-1993.)</TD></TR></TABLE></CENTER>
 
 <CENTER><TABLE BORDER CELLSPACING=0 BGCOLOR="#EEFFFA"
 SUMMARY="Assertion">
@@ -147,20 +141,20 @@ CLASS=wff STYLE="color:blue">&#x1D713;</SPAN></SPAN></TD></TR>
 <TR ALIGN=LEFT><TD>3</TD><TD><A HREF="#1">1</A>, <A HREF="#2">2</A></TD><TD><A
 HREF="wa.html"
 TITLE="Extend wff definition to include conjunction ('and').">wa</A>&nbsp;<SPAN
-CLASS=r STYLE="color:#4F74FF">384</SPAN></TD><TD><A NAME="3"></A>
+CLASS=r STYLE="color:#008C9C">388</SPAN></TD><TD><A NAME="3"></A>
 <SPAN CLASS=i>. 2</SPAN>
 <SPAN CLASS=math><SPAN CLASS=typecode STYLE="color:gray">wff </SPAN>(<SPAN
 CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=wff
 STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
 <TR ALIGN=LEFT><TD>4</TD><TD><A HREF="#1">1</A></TD><TD><A HREF="wn.html"
 TITLE="If ` ph ` is a wff, so is ` -. ph ` or 'not ` ph ` '.">wn</A>&nbsp;<SPAN
-CLASS=r STYLE="color:#FA0100">3</SPAN></TD><TD><A NAME="4"></A>
+CLASS=r STYLE="color:#FA0000">3</SPAN></TD><TD><A NAME="4"></A>
 <SPAN CLASS=i>. . . . 5</SPAN>
 <SPAN CLASS=math><SPAN CLASS=typecode STYLE="color:gray">wff </SPAN> &not;
 <SPAN CLASS=wff STYLE="color:blue">&#x1D711;</SPAN></SPAN></TD></TR>
 <TR ALIGN=LEFT><TD>5</TD><TD><A HREF="#2">2</A></TD><TD><A HREF="wn.html"
 TITLE="If ` ph ` is a wff, so is ` -. ph ` or 'not ` ph ` '.">wn</A>&nbsp;<SPAN
-CLASS=r STYLE="color:#FA0100">3</SPAN></TD><TD><A NAME="5"></A>
+CLASS=r STYLE="color:#FA0000">3</SPAN></TD><TD><A NAME="5"></A>
 <SPAN CLASS=i>. . . . 5</SPAN>
 <SPAN CLASS=math><SPAN CLASS=typecode STYLE="color:gray">wff </SPAN> &not;
 <SPAN CLASS=wff STYLE="color:blue">&#x1D713;</SPAN></SPAN></TD></TR>
@@ -183,7 +177,7 @@ CLASS=wff STYLE="color:blue">&#x1D713;</SPAN>) &rarr; &not; <SPAN CLASS=wff
 STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
 <TR ALIGN=LEFT><TD>8</TD><TD><A HREF="#7">7</A></TD><TD><A HREF="wn.html"
 TITLE="If ` ph ` is a wff, so is ` -. ph ` or 'not ` ph ` '.">wn</A>&nbsp;<SPAN
-CLASS=r STYLE="color:#FA0100">3</SPAN></TD><TD><A NAME="8"></A>
+CLASS=r STYLE="color:#FA0000">3</SPAN></TD><TD><A NAME="8"></A>
 <SPAN CLASS=i>. 2</SPAN>
 <SPAN CLASS=math><SPAN CLASS=typecode STYLE="color:gray">wff </SPAN> &not;
 ((&not; <SPAN CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &rarr; &not; <SPAN
@@ -192,7 +186,7 @@ STYLE="color:blue">&#x1D713;</SPAN>)</SPAN></TD></TR>
 <TR ALIGN=LEFT><TD>9</TD><TD><A HREF="#3">3</A>, <A HREF="#8">8</A></TD><TD><A
 HREF="wb.html"
 TITLE="Extend wff definition to include the biconditional connective.">wb</A>&nbsp;<SPAN
-CLASS=r STYLE="color:#259200">215</SPAN></TD><TD><A NAME="9"></A>
+CLASS=r STYLE="color:#5C8B00">215</SPAN></TD><TD><A NAME="9"></A>
 <SPAN CLASS=i>1</SPAN>
 <SPAN CLASS=math><SPAN CLASS=typecode STYLE="color:gray">wff </SPAN>((<SPAN
 CLASS=wff STYLE="color:blue">&#x1D711;</SPAN> &and; <SPAN CLASS=wff
@@ -206,16 +200,20 @@ variables:</B>  <SPAN CLASS=wff STYLE="color:blue;font-style:normal">wff</SPAN>
 <SPAN CLASS=setvar STYLE="color:red;font-style:normal">setvar</SPAN> <SPAN
 CLASS=class STYLE="color:#C3C;font-style:normal">class</SPAN></FONT></TD></TR>
 <TR><TD ALIGN=LEFT><FONT SIZE=-1><B>This definition is referenced by:</B> &nbsp;<A HREF="pm4.63.html">pm4.63</A>
-&nbsp;<SPAN CLASS=r STYLE="color:#5373FF">386</SPAN> &nbsp;<A HREF="imnani.html">imnani</A>
-&nbsp;<SPAN CLASS=r STYLE="color:#5972FF">389</SPAN> &nbsp;<A HREF="ancoms.html">ancoms</A>
-&nbsp;<SPAN CLASS=r STYLE="color:#8564FF">417</SPAN> &nbsp;<A HREF="dfbi2.html">dfbi2</A>
-&nbsp;<SPAN CLASS=r STYLE="color:#965AFF">428</SPAN></FONT></TD></TR></TABLE></CENTER>
+&nbsp;<SPAN CLASS=r STYLE="color:#008C9F">390</SPAN> &nbsp;<A HREF="imnani.html">imnani</A>
+&nbsp;<SPAN CLASS=r STYLE="color:#008CA4">393</SPAN> &nbsp;<A HREF="ancoms.html">ancoms</A>
+&nbsp;<SPAN CLASS=r STYLE="color:#0084DF">421</SPAN> &nbsp;<A HREF="dfbi2.html">dfbi2</A>
+&nbsp;<SPAN CLASS=r STYLE="color:#0181EF">432</SPAN> &nbsp;<A HREF="adantr.html">adantr</A>
+&nbsp;<SPAN CLASS=r STYLE="color:#0280F2">434</SPAN> &nbsp;<A HREF="jca.html">jca</A>
+&nbsp;<SPAN CLASS=r STYLE="color:#3778FF">461</SPAN> &nbsp;<A HREF="ancl.html">ancl</A>
+&nbsp;<SPAN CLASS=r STYLE="color:#6E6DFF">491</SPAN> &nbsp;<A HREF="sylan.html">sylan</A>
+&nbsp;<SPAN CLASS=r STYLE="color:#8564FF">512</SPAN></FONT></TD></TR></TABLE></CENTER>
 <TABLE BORDER=0 WIDTH="100%">
 <TR><TD WIDTH="25%">&nbsp;</TD>
 <TD ALIGN=CENTER VALIGN=BOTTOM>
 <FONT SIZE=-2 FACE=sans-serif>
 Copyright terms:
-<A HREF="../copyright.html#pd">Public domain</A>
+<A HREF="https://creativecommons.org/licenses/by/2.5/">Public domain</A>
 </FONT></TD><TD ALIGN=RIGHT VALIGN=BOTTOM WIDTH="25%">
 <FONT SIZE=-2 FACE=sans-serif>
 <A HREF="http://validator.w3.org/check?uri=referer">
